@@ -102,3 +102,8 @@ max    3.677767e+07    289.000000      1.000000    2560.000000    512.000000    
  has_multiple_behavioral_keywords_in_one_object: 29 valores únicos
  used_ocr: 2 valores únicos
  label: 2 valores únicos
+
+Contando balanceamento das classes alvo label
+1    9999
+0    9297
+Name: count, dtype: int64

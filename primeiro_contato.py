@@ -9,6 +9,8 @@ pd.set_option('display.width', None)
 
 df = pd.read_csv("data/PDF_All_features.csv")
 
+
+
 # buffer = io.StringIO()
 
 # with redirect_stdout(buffer):
@@ -16,4 +18,9 @@ df = pd.read_csv("data/PDF_All_features.csv")
 
 # saida = buffer.getvalue()
 
-documentar('primeiro_contato',df.describe().to_string())
+# documentar('primeiro_contato',df.describe().to_string())
+
+# string = ""
+# string += 'Contando balanceamento das classes alvo'
+# string += str(df['label'].value_counts())
+# documentar('primeiro_contato',string)
