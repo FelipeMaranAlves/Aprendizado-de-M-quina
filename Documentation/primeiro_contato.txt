@@ -1,0 +1,104 @@
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 19296 entries, 0 to 19295
+Data columns (total 42 columns):
+ #   Column                                          Non-Null Count  Dtype  
+---  ------                                          --------------  -----  
+ 0   file_path                                       19296 non-null  object 
+ 1   file_size                                       19296 non-null  int64  
+ 2   title_chars                                     19296 non-null  int64  
+ 3   encrypted                                       19296 non-null  int64  
+ 4   metadata_size                                   19296 non-null  int64  
+ 5   page_count                                      19296 non-null  int64  
+ 6   valid_pdf_header                                19296 non-null  int64  
+ 7   image_count                                     19296 non-null  int64  
+ 8   text_length                                     19296 non-null  int64  
+ 9   object_count                                    19296 non-null  int64  
+ 10  font_object_count                               19296 non-null  int64  
+ 11  embedded_file_count                             19296 non-null  int64  
+ 12  average_embedded_file_size                      19296 non-null  int64  
+ 13  stream_count                                    19296 non-null  int64  
+ 14  endstream_count                                 19296 non-null  int64  
+ 15  average_stream_size                             19296 non-null  float64
+ 16  entropy_of_streams                              19296 non-null  float64
+ 17  xref_count                                      19296 non-null  int64  
+ 18  xref_entries                                    19296 non-null  int64  
+ 19  name_obfuscations                               19296 non-null  int64  
+ 20  total_filters                                   19296 non-null  int64  
+ 21  nested_filter_objects                           19296 non-null  int64  
+ 22  objstm_count                                    19296 non-null  int64  
+ 23  js_count                                        19296 non-null  int64  
+ 24  javascript_count                                19296 non-null  int64  
+ 25  uri_count                                       19296 non-null  int64  
+ 26  uses_nonstandard_port                           19296 non-null  int64  
+ 27  action_count                                    19296 non-null  int64  
+ 28  aa_count                                        19296 non-null  int64  
+ 29  openaction_count                                19296 non-null  int64  
+ 30  launch_count                                    19296 non-null  int64  
+ 31  submitform_count                                19296 non-null  int64  
+ 32  acroform_count                                  19296 non-null  int64  
+ 33  xfa_count                                       19296 non-null  int64  
+ 34  jbig2decode_count                               19296 non-null  int64  
+ 35  colors_count                                    19296 non-null  int64  
+ 36  richmedia_count                                 19296 non-null  int64  
+ 37  trailer_count                                   19296 non-null  int64  
+ 38  startxref_count                                 19296 non-null  int64  
+ 39  has_multiple_behavioral_keywords_in_one_object  19296 non-null  int64  
+ 40  used_ocr                                        19296 non-null  int64  
+ 41  label                                           19296 non-null  int64  
+dtypes: float64(2), int64(39), object(1)
+memory usage: 6.2+ MB 
+
+          file_size   title_chars     encrypted  metadata_size    page_count  valid_pdf_header   image_count   text_length   object_count  font_object_count  embedded_file_count  average_embedded_file_size  stream_count  endstream_count  average_stream_size  entropy_of_streams  xref_count  xref_entries  name_obfuscations  total_filters  nested_filter_objects  objstm_count      js_count  javascript_count     uri_count  uses_nonstandard_port  action_count      aa_count  openaction_count  launch_count  submitform_count  acroform_count     xfa_count  jbig2decode_count  colors_count  richmedia_count  trailer_count  startxref_count  has_multiple_behavioral_keywords_in_one_object      used_ocr         label
+count  1.929600e+04  19296.000000  19296.000000   19296.000000  19296.000000      19296.000000  19296.000000  1.929600e+04   19296.000000       19296.000000              19296.0                     19296.0  19296.000000     19296.000000         19296.000000        19296.000000     19296.0       19296.0       19296.000000   19296.000000           19296.000000  19296.000000  19296.000000      19296.000000  19296.000000           19296.000000  19296.000000  19296.000000      19296.000000  19296.000000           19296.0    19296.000000  19296.000000            19296.0  19296.000000     19296.000000        19296.0          19296.0                                    19296.000000  19296.000000  19296.000000
+mean   7.130837e+04     14.792548      0.004353     150.339138      3.232017          0.611578      1.389096  8.761265e+03     270.254042           2.025601                  0.0                         0.0     33.240309        16.619040          2647.336621            3.597990         0.0           0.0           0.630338      12.871424               0.172782      1.490568      0.233261          0.304934      1.388112               0.004405      0.063692      0.217351          0.089293      0.008292               0.0        0.292703      0.046538                0.0      0.052187         0.003006            0.0              0.0                                        0.247720      0.176928      0.518190
+std    4.186992e+05     19.411976      0.065837     149.862796      9.918278          0.487404      9.600749  3.792156e+04    5074.942888           6.618683                  0.0                         0.0    116.071443        58.032505          9512.135178            2.942377         0.0           0.0           8.343265      41.390530               2.575222      5.108931      3.468999          3.504928     43.492334               0.066226      1.484143      4.110778          0.299706      0.558321               0.0        0.621412      0.213099                0.0      0.739667         0.179808            0.0              0.0                                        3.449648      0.381618      0.499682
+min    2.400000e+01      0.000000      0.000000       0.000000      0.000000          0.000000      0.000000  0.000000e+00       0.000000           0.000000                  0.0                         0.0      0.000000         0.000000             0.000000            0.000000         0.0           0.0           0.000000       0.000000               0.000000      0.000000      0.000000          0.000000      0.000000               0.000000      0.000000      0.000000          0.000000      0.000000               0.0        0.000000      0.000000                0.0      0.000000         0.000000            0.0              0.0                                        0.000000      0.000000      0.000000
+25%    9.620000e+03      0.000000      0.000000       0.000000      0.000000          0.000000      0.000000  0.000000e+00       0.000000           0.000000                  0.0                         0.0      0.000000         0.000000             0.000000            0.000000         0.0           0.0           0.000000       0.000000               0.000000      0.000000      0.000000          0.000000      0.000000               0.000000      0.000000      0.000000          0.000000      0.000000               0.0        0.000000      0.000000                0.0      0.000000         0.000000            0.0              0.0                                        0.000000      0.000000      0.000000
+50%    1.746200e+04      8.000000      0.000000     137.000000      1.000000          1.000000      0.000000  1.195000e+03      20.000000           0.000000                  0.0                         0.0      6.000000         3.000000           702.804167            5.317352         0.0           0.0           0.000000       3.000000               0.000000      0.000000      0.000000          0.000000      0.000000               0.000000      0.000000      0.000000          0.000000      0.000000               0.0        0.000000      0.000000                0.0      0.000000         0.000000            0.0              0.0                                        0.000000      0.000000      1.000000
+75%    7.787650e+04     25.000000      0.000000     251.000000      2.000000          1.000000      0.000000  6.292500e+03      70.000000           3.000000                  0.0                         0.0     32.000000        16.000000          2109.597222            6.131907         0.0           0.0           0.000000      14.000000               0.000000      0.000000      0.000000          0.000000      0.000000               0.000000      0.000000      0.000000          0.000000      0.000000               0.0        0.000000      0.000000                0.0      0.000000         0.000000            0.0              0.0                                        0.000000      0.000000      1.000000
+max    3.677767e+07    289.000000      1.000000    2560.000000    512.000000          1.000000    592.000000  3.415343e+06  200006.000000         794.000000                  0.0                         0.0   7952.000000      3976.000000        353253.000000            7.177038         0.0           0.0         571.000000    3967.000000             320.000000    108.000000    404.000000        404.000000   5682.000000               1.000000    180.000000    213.000000          8.000000     77.000000               0.0       15.000000      5.000000                0.0     53.000000        16.000000            0.0              0.0                                      404.000000      1.000000      1.000000
+
+
+ VALORES ÚNICOS POR COLUNA:
+ file_path: 19296 valores únicos
+ file_size: 13729 valores únicos
+ title_chars: 135 valores únicos
+ encrypted: 2 valores únicos
+ metadata_size: 562 valores únicos
+ page_count: 108 valores únicos
+ valid_pdf_header: 2 valores únicos
+ image_count: 104 valores únicos
+ text_length: 6610 valores únicos
+ object_count: 1342 valores únicos
+ font_object_count: 31 valores únicos
+ embedded_file_count: 1 valores únicos
+ average_embedded_file_size: 1 valores únicos
+ stream_count: 315 valores únicos
+ endstream_count: 307 valores únicos
+ average_stream_size: 10251 valores únicos
+ entropy_of_streams: 11387 valores únicos
+ xref_count: 1 valores únicos
+ xref_entries: 1 valores únicos
+ name_obfuscations: 60 valores únicos
+ total_filters: 200 valores únicos
+ nested_filter_objects: 30 valores únicos
+ objstm_count: 64 valores únicos
+ js_count: 30 valores únicos
+ javascript_count: 31 valores únicos
+ uri_count: 80 valores únicos
+ uses_nonstandard_port: 2 valores únicos
+ action_count: 21 valores únicos
+ aa_count: 46 valores únicos
+ openaction_count: 5 valores únicos
+ launch_count: 4 valores únicos
+ submitform_count: 1 valores únicos
+ acroform_count: 8 valores únicos
+ xfa_count: 3 valores únicos
+ jbig2decode_count: 1 valores únicos
+ colors_count: 14 valores únicos
+ richmedia_count: 5 valores únicos
+ trailer_count: 1 valores únicos
+ startxref_count: 1 valores únicos
+ has_multiple_behavioral_keywords_in_one_object: 29 valores únicos
+ used_ocr: 2 valores únicos
+ label: 2 valores únicos
