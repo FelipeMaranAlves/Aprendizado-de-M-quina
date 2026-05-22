@@ -1,2 +1,2 @@
-from sessions.segundo_contato import rodar
+from sessions.terceiro_contato import rodar
 rodar()

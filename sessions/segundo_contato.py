@@ -38,8 +38,8 @@ def rodar():
     # documentar('segundo_contato',)
     # for col in colunas:
     #     if(df[col].unique().__len__() == 1):
-    #         df.drop(col,axis=1)
-    # df.to_csv("data/PDF_All_feature_Clean.csv")
+    #         df.drop(col,axis=1,inplace=True)
+    # df.to_csv("data/PDF_All_feature_Clean.csv", index=False)
 
     # # Separar por classe
     # df_label_0 = df[df['label'] == 0]
