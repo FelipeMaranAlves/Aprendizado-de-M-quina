@@ -1,2 +1,24 @@
 colunas a remover por que as features não tem variação no seu valor: 
 , embedded_file_count, average_embedded_file_size, xref_count, xref_entries, submitform_count, jbig2decode_count, trailer_count, startxref_count
+
+exemplo de como ficou a entropia baseada no titulo e sua relacao com label                                   file_path  title_entropy  label
+0                                   rp-08-58       2.500000      0
+1                             notice_2009-77       3.521641      0
+2                                   amerrfin       2.750000      0
+3                                  73fr79425       2.947703      0
+4   038169c46bf6dca2279866135e70f86e9af9c482       3.827567      1
+5                                        210       1.584963      0
+6   be371ae17c745d1a137f2bca7b44b500efa09b62       3.734830      1
+7                                    rr-01-4       2.235926      0
+8   70063c89be5505634cf7afcb57265303c7ce862b       3.622574      1
+9   324ba980bebbb64e32f8787b0d80caad318411c2       3.730710      1
+10                                    f720cs       2.584963      0
+11  6062e44e433920f3e254bf7df25081c84dca6a56       3.837326      1
+12  3b59ba0e5b44a33660c3d6c33533985248c44ffa       3.556198      1
+13                                   n-05-57       2.235926      0
+14  d5eeed092649ab52be3571f05b09e133b2d8b936       3.684830      1
+15                             alphonso_labs       3.085055      0
+16  196f589c57bce82b5e4d9cecf97d0757c575038d       3.647085      1
+17                                     cdpwr       2.321928      0
+18  4f7e1efdbe1c43aa9a570e918a7b01513bbc80af       3.684830      1
+19                             cp51a_english       3.700440      0

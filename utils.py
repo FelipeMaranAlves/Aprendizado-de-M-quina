@@ -2,6 +2,7 @@
 #.
 #\Documentation
 from os import path, makedirs
+from math import log2
 import pandas as pd
 def documentar(titulo: str, conteudo: str):
     '''Exemplos de uso: \n
@@ -20,3 +21,13 @@ def configurar():
     pd.set_option('display.max_columns', None)
     pd.set_option('display.max_rows', None)
     pd.set_option('display.width', None)
+
+def calculate_entropy(text):
+    """Compute Shannon entropy of text content."""
+    if not text:
+        return 0
+    freq = [0] * 256
+    for char in text:
+        freq[ord(char) % 256] += 1
+    freq = [p / len(text) for p in freq if p > 0]
+    return -sum(p * log2(p) for p in freq)
