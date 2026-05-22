@@ -1,0 +1,2 @@
+colunas a remover por que as features não tem variação no seu valor: 
+, embedded_file_count, average_embedded_file_size, xref_count, xref_entries, submitform_count, jbig2decode_count, trailer_count, startxref_count
