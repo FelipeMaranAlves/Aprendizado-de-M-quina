@@ -3,3 +3,4 @@ ambiente/
 *.pyc
 __pycache__
 Documentation/importantissimo.txt
+Documentation/univariate_plots/
