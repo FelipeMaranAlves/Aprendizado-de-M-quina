@@ -10,11 +10,25 @@ from utils import documentar
 #um pipe mais completo como a disciplina propõe
 def rodar():
     df = pd.read_csv("data/PDF_All_feature_Clean.csv")
+    
     # print(df.head(5))
     df_Bening = df.query("label == 0")
-    # df_Malicious = df.query("label == 1")
     df_Bening.drop(columns= 'label', inplace = True)
-    std = StandardScaler()
     
-    isf = IsolationForest(n_estimators=100,random_state=67)
+    #divisao diferente de treino para benigno e teste incluindo ambos.
+    #No momento treino e testa ambos estao com 10% do total dos dados (não balanceado)
+    X_train, _ = train_test_split(df_Bening,test_size=0.2,random_state=2)
+    _, Xy_test = train_test_split(df,test_size=0.2,random_state=2)
+    Xy_validation, Xy_test = train_test_split(Xy_test,test_size=0.5)
+
+    #normalizando bazeado em z
+    std_scaler = StandardScaler()
+    std_scaler = std_scaler.fit(X_train)
+    nomr_X_train = std_scaler.transform(X_train)
+    #normalizando com a mesma escala do treino para nao ter dataleak!
+    norm_Xy_test = std_scaler.transform(Xy_test)
+
+    isf_model = IsolationForest(n_estimators=100,random_state=67).fit(nomr_X_train)
+    
+
     
