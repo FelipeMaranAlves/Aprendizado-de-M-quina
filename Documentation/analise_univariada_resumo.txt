@@ -1,0 +1,12 @@
+Dataset: PDF_All_feature_Clean.csv
+Total de amostras: 19296
+Total de features: 33
+
+Distribuicao das classes:
+  Classe 0 (Benigno): 9297 (48.18%)
+  Classe 1 (Malicioso): 9999 (51.82%)
+
+Principais insights:
+  - Features com variancia zero: 0
+  - Features com >5%% outliers: 20
+  - Features com alta assimetria: 28
