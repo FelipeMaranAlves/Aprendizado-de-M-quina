@@ -1,0 +1,2 @@
+IsolationForest treinado sem selecao de features e melhor tratamento dos daods
+{'acc': np.float64(0.4844559585492228), 'tpr': np.float64(0.9451913133402275), 'fpr': np.float64(0.9781931464174455), 'precision': np.float64(0.49245689655172414), 'f1-score': np.float64(0.6475380800566773)}
