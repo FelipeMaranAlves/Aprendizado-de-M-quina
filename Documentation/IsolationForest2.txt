@@ -1,3 +1,4 @@
+TREINADO COM BENIGNOS E MALIGNOS
 Metricas com o valor de contaminacao: 0.05
 {'acc': np.float64(0.5233160621761658), 'tpr': np.float64(0.9723643807574207), 'fpr': np.float64(0.9370409233997902), 'precision': np.float64(0.5154639175257731), 'f1-score': np.float64(0.6737588652482268)}
 Metricas com o valor de contaminacao: 0.10

@@ -1,3 +1,4 @@
+TREINADO SO COM DADOS BENIGNOS
 Metricas com o valor de contaminacao: 0.01
 {'acc': np.float64(0.505699481865285), 'tpr': np.float64(0.9928352098259979), 'fpr': np.float64(0.993704092339979), 'precision': np.float64(0.5059989567031821), 'f1-score': np.float64(0.6703524533517623)}
 Metricas com o valor de contaminacao: 0.02
