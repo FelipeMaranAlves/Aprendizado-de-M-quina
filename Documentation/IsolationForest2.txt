@@ -1,0 +1,22 @@
+Metricas com o valor de contaminacao: 0.05
+{'acc': np.float64(0.5233160621761658), 'tpr': np.float64(0.9723643807574207), 'fpr': np.float64(0.9370409233997902), 'precision': np.float64(0.5154639175257731), 'f1-score': np.float64(0.6737588652482268)}
+Metricas com o valor de contaminacao: 0.10
+{'acc': np.float64(0.5544041450777202), 'tpr': np.float64(0.9539406345957011), 'fpr': np.float64(0.8551941238195173), 'precision': np.float64(0.5334859759587864), 'f1-score': np.float64(0.6842878120411159)}
+Metricas com o valor de contaminacao: 0.15
+{'acc': np.float64(0.5632124352331607), 'tpr': np.float64(0.917093142272262), 'fpr': np.float64(0.7995802728226653), 'precision': np.float64(0.5404101326899879), 'f1-score': np.float64(0.6800759013282733)}
+Metricas com o valor de contaminacao: 0.20
+{'acc': np.float64(0.6025906735751295), 'tpr': np.float64(0.9037871033776868), 'fpr': np.float64(0.7061909758656874), 'precision': np.float64(0.5674807197943444), 'f1-score': np.float64(0.6971969996052112)}
+Metricas com o valor de contaminacao: 0.25
+{'acc': np.float64(0.6341968911917099), 'tpr': np.float64(0.8915046059365405), 'fpr': np.float64(0.6295907660020986), 'precision': np.float64(0.592114208021754), 'f1-score': np.float64(0.7116013071895426)}
+Metricas com o valor de contaminacao: 0.30
+{'acc': np.float64(0.6502590673575129), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.5676810073452256), 'precision': np.float64(0.6091040462427746), 'f1-score': np.float64(0.7141041931385006)}
+Metricas com o valor de contaminacao: 0.35
+{'acc': np.float64(0.6450777202072538), 'tpr': np.float64(0.8014329580348004), 'fpr': np.float64(0.5152151101783841), 'precision': np.float64(0.6145996860282574), 'f1-score': np.float64(0.6956908040870723)}
+Metricas com o valor de contaminacao: 0.40
+{'acc': np.float64(0.6621761658031088), 'tpr': np.float64(0.7625383828045036), 'fpr': np.float64(0.440713536201469), 'precision': np.float64(0.6394849785407726), 'f1-score': np.float64(0.6956115779645192)}
+Metricas com o valor de contaminacao: 0.45
+{'acc': np.float64(0.6932642487046632), 'tpr': np.float64(0.744114636642784), 'fpr': np.float64(0.3588667366211962), 'precision': np.float64(0.6800748362956034), 'f1-score': np.float64(0.7106549364613881)}
+Metricas com o valor de contaminacao: 0.50
+{'acc': np.float64(0.7207253886010363), 'tpr': np.float64(0.7154554759467758), 'fpr': np.float64(0.2738719832109129), 'precision': np.float64(0.728125), 'f1-score': np.float64(0.7217346411977285)}
+A contaminacao real dos dados de validação é 0.5 então ele foi melhorando conforme vai se aproximando dos dados reais.
+Porém dada a usência de desbalanceamento entre as classes provavelmente um algorítimo tradicional de classificação se dê melhor.

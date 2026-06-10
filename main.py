@@ -1,2 +1,2 @@
-from sessions.baseline import rodar
+from sessions.clustering import rodar
 rodar()

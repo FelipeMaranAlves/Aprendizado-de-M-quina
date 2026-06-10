@@ -1,30 +1,30 @@
+Metricas com o valor de contaminacao: 0.01
+{'acc': np.float64(0.505699481865285), 'tpr': np.float64(0.9928352098259979), 'fpr': np.float64(0.993704092339979), 'precision': np.float64(0.5059989567031821), 'f1-score': np.float64(0.6703524533517623)}
+Metricas com o valor de contaminacao: 0.02
+{'acc': np.float64(0.5015544041450777), 'tpr': np.float64(0.9785056294779939), 'fpr': np.float64(0.9874081846799581), 'precision': np.float64(0.503953610964681), 'f1-score': np.float64(0.6652748782185107)}
+Metricas com o valor de contaminacao: 0.03
+{'acc': np.float64(0.4875647668393782), 'tpr': np.float64(0.9375639713408394), 'fpr': np.float64(0.9737670514165793), 'precision': np.float64(0.4967462039045553), 'f1-score': np.float64(0.6494151010280043)}
+Metricas com o valor de contaminacao: 0.04
+{'acc': np.float64(0.48601036269430054), 'tpr': np.float64(0.9242579324462641), 'fpr': np.float64(0.9632738719832109), 'precision': np.float64(0.4958813838550247), 'f1-score': np.float64(0.6454610436025733)}
 Metricas com o valor de contaminacao: 0.05
 {'acc': np.float64(0.483419689119171), 'tpr': np.float64(0.9078812691914022), 'fpr': np.float64(0.9517313746065058), 'precision': np.float64(0.4944258639910814), 'f1-score': np.float64(0.6402020931071816)}
-Metricas com o valor de contaminacao: 0.1
+Metricas com o valor de contaminacao: 0.10
 {'acc': np.float64(0.4813471502590674), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.9024134312696747), 'precision': np.float64(0.49292452830188677), 'f1-score': np.float64(0.625514403292181)}
-Metricas com o valor de contaminacao: 0.15000000000000002
+Metricas com o valor de contaminacao: 0.15
 {'acc': np.float64(0.5005181347150259), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.8614900314795383), 'precision': np.float64(0.5039274924471299), 'f1-score': np.float64(0.6337386018237082)}
-Metricas com o valor de contaminacao: 0.2
+Metricas com o valor de contaminacao: 0.20
 {'acc': np.float64(0.14766839378238342), 'tpr': np.float64(0.10133060388945753), 'fpr': np.float64(0.8048268625393494), 'precision': np.float64(0.11431870669745958), 'f1-score': np.float64(0.10743353228431905)}
 Metricas com o valor de contaminacao: 0.25
 {'acc': np.float64(0.17461139896373057), 'tpr': np.float64(0.09723643807574207), 'fpr': np.float64(0.7460650577124869), 'precision': np.float64(0.11786600496277916), 'f1-score': np.float64(0.1065619742007852)}
-Metricas com o valor de contaminacao: 0.30000000000000004
+Metricas com o valor de contaminacao: 0.30
 {'acc': np.float64(0.19689119170984457), 'tpr': np.float64(0.09723643807574207), 'fpr': np.float64(0.7009443861490031), 'precision': np.float64(0.12450851900393185), 'f1-score': np.float64(0.10919540229885058)}
-Metricas com o valor de contaminacao: 0.35000000000000003
+Metricas com o valor de contaminacao: 0.35
 {'acc': np.float64(0.22020725388601037), 'tpr': np.float64(0.09723643807574207), 'fpr': np.float64(0.6537250786988458), 'precision': np.float64(0.13231197771587744), 'f1-score': np.float64(0.112094395280236)}
-Metricas com o valor de contaminacao: 0.4
+Metricas com o valor de contaminacao: 0.40
 {'acc': np.float64(0.24404145077720207), 'tpr': np.float64(0.09723643807574207), 'fpr': np.float64(0.6054564533053515), 'precision': np.float64(0.14136904761904762), 'f1-score': np.float64(0.11522134627046696)}
 Metricas com o valor de contaminacao: 0.45
 {'acc': np.float64(0.2699481865284974), 'tpr': np.float64(0.09723643807574207), 'fpr': np.float64(0.55299055613851), 'precision': np.float64(0.1527331189710611), 'f1-score': np.float64(0.11882426516572858)}
-Metricas com o valor de contaminacao: 0.5
+Metricas com o valor de contaminacao: 0.50
 {'acc': np.float64(0.29585492227979276), 'tpr': np.float64(0.09621289662231321), 'fpr': np.float64(0.4994753410283316), 'precision': np.float64(0.1649122807017544), 'f1-score': np.float64(0.12152553329023918)}
-Vale ressaltar que o balanceamento dos dados no conjunto de validação élabel
+Vale ressaltar que o balanceamento dos dados no conjunto de validação é label
 1    977 | 0    953
-Metricas com o valor de contaminacao: 0.04
-{'acc': np.float64(0.48601036269430054), 'tpr': np.float64(0.9242579324462641), 'fpr': np.float64(0.9632738719832109), 'precision': np.float64(0.4958813838550247), 'f1-score': np.float64(0.6454610436025733)}
-Metricas com o valor de contaminacao: 0.030000000000000002
-{'acc': np.float64(0.4875647668393782), 'tpr': np.float64(0.9375639713408394), 'fpr': np.float64(0.9737670514165793), 'precision': np.float64(0.4967462039045553), 'f1-score': np.float64(0.6494151010280043)}
-Metricas com o valor de contaminacao: 0.020000000000000004
-{'acc': np.float64(0.5015544041450777), 'tpr': np.float64(0.9785056294779939), 'fpr': np.float64(0.9874081846799581), 'precision': np.float64(0.503953610964681), 'f1-score': np.float64(0.6652748782185107)}
-Metricas com o valor de contaminacao: 0.010000000000000002
-{'acc': np.float64(0.505699481865285), 'tpr': np.float64(0.9928352098259979), 'fpr': np.float64(0.993704092339979), 'precision': np.float64(0.5059989567031821), 'f1-score': np.float64(0.6703524533517623)}

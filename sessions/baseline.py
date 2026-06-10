@@ -13,19 +13,15 @@ def rodar():
     df = pd.read_csv("data/PDF_All_feature_Clean.csv")
     df.drop(columns= 'file_path', inplace = True)
     
-    # print(df.head(5))
-    df_Bening = df.query("label == 0")
-    # df_Bening.drop(columns= 'label', inplace = True)
     
-    #divisao diferente de treino para benigno e teste incluindo ambos.
+    #monitora falou que nao era pra deixar o treino so com dados benignos oq ue contradiz o slide do professor
     #No momento treino e testa ambos estao com 10% do total dos dados (não balanceado)
     RAND_STATE = 2
-    X_train, _ = train_test_split(df_Bening,test_size=0.2,random_state=RAND_STATE)
-    _, Xy_tmp = train_test_split(df,test_size=0.2,random_state=RAND_STATE)
+    Xy_train, Xy_tmp = train_test_split(df,test_size=0.2,random_state=RAND_STATE)
     Xy_val, Xy_test = train_test_split(Xy_tmp,test_size=0.5, random_state=RAND_STATE)
 
-    y_train = X_train['label']
-    X_train = X_train.drop(columns = ['label'])
+    y_train = Xy_train['label']
+    X_train = Xy_train.drop(columns = ['label'])
     y_val = Xy_val['label']
     X_val = Xy_val.drop(columns = ['label'])
     y_test = Xy_test['label']
@@ -40,11 +36,11 @@ def rodar():
     norm_X_val = std_scaler.transform(X_val)
     norm_X_test = std_scaler.transform(X_test)
 
-    for i in range(4):
-        CONTAMINATION = (0.05 - (0.01 * (i+1)))
+    for i in range(10):
+        CONTAMINATION = (0.05 * (i+1))
         isf_model = IsolationForest(n_estimators=100,random_state=RAND_STATE,contamination=CONTAMINATION).fit(nomr_X_train)
 
         predicoes_val = isf_model.predict(norm_X_val)
         predicoes_val[predicoes_val == 1] = 1
         predicoes_val[predicoes_val == -1] = 0
-        documentar("IsolationForest1",f"Metricas com o valor de contaminacao: {CONTAMINATION}\n"+str(get_overall_metrics(y_val,predicoes_val)))
+        documentar("IsolationForest2",f"Metricas com o valor de contaminacao: {CONTAMINATION}\n"+str(get_overall_metrics(y_val,predicoes_val)))
