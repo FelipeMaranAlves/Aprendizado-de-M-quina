@@ -4,9 +4,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 from utils import configurar, documentar
+from pipeline import carregar
 def rodar():
     configurar()
-    df = pd.read_csv('data/PDF_All_feature_Clean.csv')
+    df = carregar()
     # corr_matrix = df.select_dtypes(include=['number']).corr('kendall')
     # with open("matrix.txt",'w') as file:
     #     file.write(str(corr_matrix))
