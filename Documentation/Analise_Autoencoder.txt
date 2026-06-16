@@ -1,0 +1,212 @@
+================================================================
+  ANÁLISE DO AUTOENCODER PARA DETECÇÃO DE ANOMALIAS
+  Dataset: PDF_All_feature_Clean.csv
+  Problema: Detecção de PDFs maliciosos (Tema 5 - CIN0144)
+================================================================
+
+----------------------------------------------------------------
+1. O QUE É UM AUTOENCODER E POR QUE USÁ-LO AQUI
+----------------------------------------------------------------
+
+Um autoencoder é uma rede neural com arquitetura simétrica:
+  - Encoder: comprime a entrada para um espaço latente menor
+  - Decoder: reconstrói a entrada a partir da representação latente
+
+A ideia central para detecção de anomalias é:
+  1. Treinar o autoencoder SOMENTE com PDFs benignos
+  2. O modelo aprende a comprimir e reconstruir PDFs normais
+  3. Quando um PDF malicioso é apresentado, a rede não consegue
+     reconstruí-lo bem (padrão desconhecido = erro alto)
+  4. O erro de reconstrução (MSE) é o score de anomalia
+
+O Autoencoder representa a categoria "Deep Learning" exigida pelo
+Tema 5, completando o trio de modelos:
+  - K-Means (probabilístico/distância)
+  - DBSCAN (densidade)
+  - Autoencoder (Deep Learning)
+
+----------------------------------------------------------------
+2. ARQUITETURA ADOTADA
+----------------------------------------------------------------
+
+  Entrada (33 features)
+       |
+  [Linear(33->24) | BatchNorm | ReLU | Dropout(0.2)]
+       |
+  [Linear(24->8)  | BatchNorm | ReLU]          <- bottleneck
+       |
+  [Linear(8->24)  | BatchNorm | ReLU | Dropout(0.2)]
+       |
+  [Linear(24->33) | BatchNorm | Sigmoid]
+       |
+  Saída (33 features reconstruídas)
+
+Decisões de arquitetura:
+  - Bottleneck de 8 neurônios: força compressão eficiente.
+    Se fosse maior, o modelo copiaria qualquer entrada sem
+    aprender estrutura — incluindo anomalias.
+  - BatchNorm: estabiliza o treinamento com features de escalas
+    muito diferentes (contagens vs. proporções vs. flags binárias).
+  - Dropout 20%: regularização para evitar memorização dos
+    exemplos de treino (overfitting nos benignos).
+  - Sigmoid na saída: restringe a saída a (0,1), coerente com
+    a normalização MinMaxScaler da entrada.
+
+----------------------------------------------------------------
+3. PRÉ-PROCESSAMENTO: POR QUE MINMAXSCALER?
+----------------------------------------------------------------
+
+Os outros modelos (K-Means, DBSCAN) usam StandardScaler (z-score).
+O Autoencoder usa MinMaxScaler por uma razão específica:
+
+A camada de saída usa Sigmoid, que produz valores em (0, 1).
+Para que o MSE entre entrada e saída seja semanticamente coerente
+— ou seja, "reconstrução correta" signifique "saída ≈ entrada" —
+a entrada também precisa estar no intervalo [0, 1].
+
+Com StandardScaler, a entrada pode ser negativa ou muito acima
+de 1, criando um descompasso: o modelo tentaria reconstruir um
+valor de, digamos, 3.5 com uma Sigmoid que nunca passa de 1,
+tornando o erro sistematicamente alto para qualquer PDF e
+impedindo a discriminação entre normal e anômalo.
+
+O MinMaxScaler mapeia todas as features para [0, 1]:
+  X_norm = (X - X_min) / (X_max - X_min)
+aplicado com min/max calculados APENAS no treino de benignos
+para evitar data leakage.
+
+----------------------------------------------------------------
+4. TREINAMENTO E EARLY STOPPING
+----------------------------------------------------------------
+
+Configuração usada:
+  - Otimizador: Adam (lr=5e-3)
+  - Loss: MSELoss (erro de reconstrução médio por feature)
+  - Batch size: 256
+  - Máximo de épocas: 50
+  - Early stopping: patience=5, delta=1e-4
+
+Curva de aprendizado (50 épocas completas, sem early stopping forçado):
+  Época  1: train=0.21615 | val_benign=0.16668
+  Época 10: train=0.05426 | val_benign=0.04494
+  Época 20: train=0.02582 | val_benign=0.02235
+  Época 30: train=0.01833 | val_benign=0.01543
+  Época 40: train=0.01503 | val_benign=0.01256
+  Época 50: train=0.01428 | val_benign=0.01093
+
+O modelo convergiu progressivamente ao longo de todas as 50 épocas,
+com a val_loss de benignos caindo de 0.167 para 0.011 — redução de
+93%. O early stopping monitorou a loss mas não interrompeu antes do
+fim porque o modelo continuou melhorando com pequenas oscilações
+dentro da tolerância delta=1e-4. O checkpoint da melhor época foi
+restaurado ao final (época 50, val_benign=0.01093).
+
+Imagem gerada: Images/autoencoder_loss.png
+
+Por que Early Stopping com benignos da validação?
+A loss de validação monitora a qualidade da reconstrução de
+PDFs normais. Se usássemos todo o conjunto de validação (incluindo
+maliciosos), uma queda na loss poderia significar que o modelo
+está aprendendo a reconstruir anomalias — o oposto do desejado.
+Ao monitorar apenas os benignos da validação, paramos quando
+a reconstrução de "normalidade" está no pico, antes que o modelo
+generalize demais para padrões maliciosos.
+
+O checkpoint com menor val_loss de benignos é restaurado ao final.
+
+----------------------------------------------------------------
+5. SELEÇÃO DO THRESHOLD E AVALIAÇÃO
+----------------------------------------------------------------
+
+O score de anomalia de um PDF X é:
+  score(X) = MSE(X, Autoencoder(X)) = mean((X - X_recon)²)
+
+PDFs maliciosos têm score alto; benignos, score baixo.
+
+O threshold é escolhido varrendo percentis (10% a 95%) dos scores
+no conjunto de VALIDAÇÃO COMPLETO (benignos + maliciosos),
+selecionando o que maximiza o F1-Score. Essa estratégia é idêntica
+à usada pelo K-Means e DBSCAN, garantindo comparação justa.
+
+O conjunto de TESTE é reservado exclusivamente para avaliação
+final — nunca toca o processo de calibragem do threshold.
+
+Métricas avaliadas no teste:
+  - Accuracy, Precision, Recall, F1-Score, AUC-ROC
+
+----------------------------------------------------------------
+6. RESULTADOS (conjunto de teste)
+----------------------------------------------------------------
+
+  Arquitetura:  33 -> 24 -> 8 -> 24 -> 33
+  Épocas:       50
+  Threshold:    0.003802 (MSE, calibrado no val por max F1)
+  F1 no val:    0.9195
+
+  Accuracy:     0.9150
+  Precision:    0.8821
+  Recall:       0.9625   <- maior recall dos três modelos
+  F1-Score:     0.9205
+  AUC-ROC:      0.9658
+
+Imagens geradas:
+  - Images/anomaly_autoencoder_roc.png  (curva ROC no teste)
+  - Images/autoencoder_loss.png          (curva de aprendizado)
+
+Detalhes completos: Documentation/AnomalyDetection_Autoencoder.txt
+
+----------------------------------------------------------------
+7. COMPARAÇÃO COM OS OUTROS MODELOS
+----------------------------------------------------------------
+
+  Modelo       | Accuracy | Precision | Recall | F1    | AUC-ROC
+  -------------|----------|-----------|--------|-------|--------
+  K-Means      | 0.8974   | 0.8677    | 0.9433 | 0.9039| 0.9722
+  Autoencoder  | 0.9150   | 0.8821    | 0.9625 | 0.9205| 0.9658
+  DBSCAN       | 0.9580   | 0.9613    | 0.9564 | 0.9589| 0.9853
+
+Ranking por métrica:
+  - Recall:    Autoencoder (0.9625) > DBSCAN (0.9564) > K-Means (0.9433)
+  - Precision: DBSCAN (0.9613) > Autoencoder (0.8821) > K-Means (0.8677)
+  - F1-Score:  DBSCAN (0.9589) > Autoencoder (0.9205) > K-Means (0.9039)
+  - AUC-ROC:   DBSCAN (0.9853) > K-Means (0.9722) > Autoencoder (0.9658)
+
+Análise dos resultados:
+
+O Autoencoder supera o K-Means em todas as métricas e tem o maior
+recall dos três modelos (0.9625), detectando mais PDFs maliciosos
+do que qualquer outro — importante para segurança, onde falsos
+negativos (maliciosos não detectados) são mais custosos.
+
+Porém, o DBSCAN vence nas demais métricas. O AUC-ROC mais baixo
+do Autoencoder (0.9658) indica que o score de reconstrução (MSE)
+é menos discriminativo como ranking contínuo do que as distâncias
+do DBSCAN. Uma possível explicação: com apenas 33 features e um
+dataset de tamanho médio, o DBSCAN captura bem a geometria dos
+benignos sem precisar de uma rede neural — o ganho de complexidade
+do Deep Learning não se traduz em ganho de separabilidade aqui.
+
+Ponto forte do Autoencoder: recall. Em segurança, perder um PDF
+malicioso é pior do que um falso alarme — e o autoencoder erra
+menos nesse lado com recall de 96.25%.
+
+Ponto forte do DBSCAN: equilíbrio geral (F1=0.9589, AUC=0.9853).
+
+Ponto fraco do K-Means: menor precision e menor AUC-ROC, indicando
+que a distância euclidiana ao centroide é o descritor menos rico.
+
+----------------------------------------------------------------
+8. LIMITAÇÕES DO AUTOENCODER NESTE CONTEXTO
+----------------------------------------------------------------
+
+- Menos interpretável que K-Means e DBSCAN: não é trivial explicar
+  POR QUE o modelo falhou em reconstruir um PDF específico sem
+  analisar os pesos internos da rede.
+- Custo computacional maior que os outros dois modelos. Exige GPU
+  ou tempo de CPU significativo para >50 épocas.
+- Sensível à arquitetura: um bottleneck muito pequeno (ex: 2
+  neurônios) pode não capturar toda a variabilidade dos benignos;
+  muito grande, e o modelo reconstruirá anomalias também.
+- Sigmoid na saída assume que as features normalizadas em [0,1]
+  têm distribuição unimodal compatível com a função logística.
+  Features com comportamento bimodal podem não ser bem representadas.

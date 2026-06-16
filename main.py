@@ -4,6 +4,7 @@ from sessions.clustering.metrics import avaliar_clusters
 from sessions.clustering.feature_analysis import analisar_features
 from sessions.clustering.anomaly_detection import rodar as rodar_anomaly_kmeans
 from sessions.clustering.dbscan import rodar as rodar_dbscan
+from sessions.clustering.autoencoder import rodar as rodar_autoencoder
 
 clustering_results = rodar()
 
@@ -20,6 +21,7 @@ analisar_features(
 
 rodar_anomaly_kmeans()
 rodar_dbscan()
+rodar_autoencoder()
 
 
 # ============================================================
@@ -58,3 +60,8 @@ rodar_dbscan()
 # 8. rodar_dbscan() - Treina DBSCAN nos PDFs benignos, extrai os
 #    core points e usa distância a eles como score de anomalia.
 #    Testa múltiplos valores de eps e avalia no conjunto de teste.
+#
+# 9. rodar_autoencoder() - Treina um Autoencoder (rede neural encoder-
+#    decoder) nos PDFs benignos com Early Stopping. Usa o erro de
+#    reconstrução (MSE) como score de anomalia. Avalia com AUC-ROC,
+#    precision, recall e F1 no conjunto de teste.

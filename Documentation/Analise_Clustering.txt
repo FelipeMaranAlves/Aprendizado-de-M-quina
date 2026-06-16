@@ -1,0 +1,197 @@
+================================================================
+  ANÁLISE DE CLUSTERING E DETECÇÃO DE ANOMALIAS
+  Dataset: PDF_All_feature_Clean.csv
+  Problema: Detecção de PDFs maliciosos (Tema 5 - CIN0144)
+================================================================
+
+----------------------------------------------------------------
+1. CONTEXTO E ABORDAGEM
+----------------------------------------------------------------
+
+O objetivo central do projeto é identificar PDFs maliciosos sem
+usar rótulos durante o treinamento (aprendizado não supervisionado).
+A estratégia adotada é treinar os modelos APENAS com PDFs benignos
+(label == 0), fazendo-os aprender o padrão "normal" do dataset.
+Em inferência, qualquer PDF que se afaste muito desse padrão
+recebe um score de anomalia alto e é classificado como malicioso.
+
+Divisão dos dados:
+  - Treino: 80% dos PDFs benignos (sem maliciosos, sem viés)
+  - Validação: 10% do dataset completo (benignos + maliciosos)
+  - Teste: 10% do dataset completo (benignos + maliciosos)
+
+O conjunto de validação serve para calibrar o threshold de decisão
+sem contaminar a estimativa final do desempenho no teste.
+
+----------------------------------------------------------------
+2. K-MEANS: ANÁLISE DOS CLUSTERS (clustering.py)
+----------------------------------------------------------------
+
+Testamos K de 2 a 10. Resultados de silhouette e inertia:
+
+  K=2  | silhouette=0.9010 | inertia=219802.6
+  K=3  | silhouette=0.3273 | inertia=203777.7
+  K=4  | silhouette=0.2348 | inertia=189612.2
+  K=5  | silhouette=0.2444 | inertia=174515.8
+  K=6  | silhouette=0.2391 | inertia=165484.3
+  K=7  | silhouette=0.2474 | inertia=159606.2
+  K=8  | silhouette=0.2503 | inertia=152471.0
+  K=9  | silhouette=0.2367 | inertia=146189.5
+  K=10 | silhouette=0.2604 | inertia=138995.2
+
+O silhouette de K=2 (0.9010) é extraordinariamente superior ao
+de todos os outros valores — mais de 2,7x maior que o segundo
+melhor (K=10: 0.2604). Isso indica que os PDFs benignos se
+dividem naturalmente em DOIS grupos bem definidos e separados.
+De K=3 em diante, o silhouette cai abruptamente para ~0.23-0.33,
+sugerindo que fragmentar além de 2 clusters cria partições
+artificiais sem suporte na estrutura real dos dados.
+
+A inertia (elbow method) cai progressivamente, mas o ganho
+marginal diminui muito após K=2, confirmando a escolha.
+
+Métricas adicionais para K=2 (Davies-Bouldin e Calinski-Harabasz):
+  silhouette=0.9010 | davies_bouldin=1.6215 | calinski_harabasz=615.0
+
+O davies_bouldin de 1.62 para K=2 pode parecer alto comparado
+a K=10 (0.87), mas esse índice não captura a separação global
+do mesmo modo que o silhouette. Com dois grupos tão bem separados
+(silhouette ~0.9), o DB é influenciado pela dispersão interna
+de cada grupo. O Calinski-Harabasz de 615 é competitivo com
+valores de K maior, reforçando que K=2 captura bem a estrutura.
+
+CONCLUSÃO DO CLUSTERING: Os PDFs benignos se organizam em dois
+grupos distintos, provavelmente correspondendo a PDFs com e sem
+elementos ativos (JavaScript, OpenAction, etc.). K=2 é a escolha
+justificada pelos dados.
+
+----------------------------------------------------------------
+3. K-MEANS COMO DETECTOR DE ANOMALIAS (anomaly_detection.py)
+----------------------------------------------------------------
+
+Com K=2 treinado nos benignos, usamos a DISTÂNCIA AO CENTROIDE
+MAIS PRÓXIMO como score de anomalia. PDFs maliciosos, por terem
+features atípicas, ficam mais longe dos centroides benignos.
+
+O threshold foi varrido via percentis (10% a 95%) do score de
+validação, escolhendo o que maximiza F1.
+
+Resultados no conjunto de TESTE:
+  Melhor threshold (val): 4.1786
+  F1 no val:              0.9107
+
+  Accuracy:  0.8974
+  Precision: 0.8677
+  Recall:    0.9433
+  F1-Score:  0.9039
+  AUC-ROC:   0.9722
+
+Interpretação:
+- AUC-ROC de 0.9722 é excelente para um método sem supervisão.
+  Significa que 97.2% das vezes o modelo ordena um malicioso
+  acima de um benigno quando escolhidos aleatoriamente.
+- Recall de 0.9433: o modelo detecta 94.3% dos PDFs maliciosos.
+  Alto recall é desejável em segurança — melhor ter falsos alarmes
+  do que deixar maliciosos passarem.
+- Precision de 0.8677: 86.8% dos alertas são realmente maliciosos.
+  Aceitável para um método não supervisionado.
+- F1 de 0.9039: balanço sólido entre precision e recall.
+
+----------------------------------------------------------------
+4. DBSCAN COMO DETECTOR DE ANOMALIAS (dbscan.py)
+----------------------------------------------------------------
+
+O DBSCAN identifica regiões densas nos PDFs benignos. Pontos
+fora das regiões densas (ruído = -1) são candidatos a anomalias.
+Como DBSCAN não tem predict(), extraímos os "core points" e usamos
+a distância ao core point mais próximo como score de anomalia.
+
+Testamos eps de 0.5 a 3.0 com min_samples=5, avaliando AUC-ROC
+no conjunto de validação para escolher o melhor eps:
+
+  eps=0.5 | clusters=76  | ruido_treino=3211 | AUC_val=0.9838
+  eps=0.8 | clusters=48  | ruido_treino=1938 | AUC_val=0.9786
+  eps=1.0 | clusters=42  | ruido_treino=1395 | AUC_val=0.9810
+  eps=1.5 | clusters=20  | ruido_treino=705  | AUC_val=0.9831
+  eps=2.0 | clusters=13  | ruido_treino=417  | AUC_val=0.9851
+  eps=2.5 | clusters=8   | ruido_treino=275  | AUC_val=0.9875
+  eps=3.0 | clusters=9   | ruido_treino=198  | AUC_val=0.9884
+
+Melhor eps: 3.0 (AUC_val=0.9884)
+
+Resultados no conjunto de TESTE com eps=3.0:
+  Threshold (val): 1.7662
+
+  Accuracy:  0.9580
+  Precision: 0.9613
+  Recall:    0.9564
+  F1-Score:  0.9589
+  AUC-ROC:   0.9853
+
+Interpretação:
+- AUC-ROC de 0.9853 supera o K-Means (0.9722) em 1.3 pontos
+  percentuais. O DBSCAN captura melhor a estrutura densa dos
+  benignos porque não força forma esférica nos clusters.
+- Recall de 0.9564 e Precision de 0.9613: DBSCAN tem equilíbrio
+  excelente entre detectar maliciosos e não alarmar benignos.
+- F1 de 0.9589 é 5.5 pp superior ao K-Means (0.9039).
+- Com eps grande (3.0), o modelo cria menos ruído no treino
+  (198 pontos) e agrupa os benignos de forma mais permissiva,
+  capturando melhor a variedade do comportamento normal.
+
+----------------------------------------------------------------
+5. COMPARAÇÃO ENTRE TODOS OS MODELOS
+----------------------------------------------------------------
+
+  Modelo       | Accuracy | Precision | Recall | F1    | AUC-ROC
+  -------------|----------|-----------|--------|-------|--------
+  K-Means      | 0.8974   | 0.8677    | 0.9433 | 0.9039| 0.9722
+  Autoencoder  | 0.9150   | 0.8821    | 0.9625 | 0.9205| 0.9658
+  DBSCAN       | 0.9580   | 0.9613    | 0.9564 | 0.9589| 0.9853
+
+DBSCAN vence em F1, AUC-ROC, Precision e Accuracy. O Autoencoder
+tem o maior recall dos três (0.9625), detectando mais maliciosos
+ao custo de mais falsos positivos. K-Means é o mais fraco em
+métricas gerais, mas é o mais interpretável dos três modelos.
+
+Por que DBSCAN supera K-Means?
+K-Means assume clusters esféricos e de tamanho similar, o que
+pode não refletir a geometria real dos PDFs benignos em 33
+dimensões. O DBSCAN detecta regiões de qualquer forma e trata
+automaticamente pontos isolados como suspeitos.
+
+Por que o Autoencoder não superou o DBSCAN?
+Com 33 features e um dataset de tamanho médio, o DBSCAN já
+captura bem a estrutura dos benignos sem precisar de Deep Learning.
+A complexidade adicional do autoencoder não se traduziu em melhor
+separabilidade — o score MSE é menos discriminativo como ranking
+do que as distâncias dos core points do DBSCAN.
+
+Ponto forte do K-Means: interpretabilidade. Os dois centroides
+têm significado claro (PDFs com e sem elementos ativos), o que
+facilita a explicação para o relatório.
+
+----------------------------------------------------------------
+6. LIMITAÇÕES E PRÓXIMOS PASSOS
+----------------------------------------------------------------
+
+Limitações:
+- K-Means assume clusters convexos/esféricos, o que pode não
+  corresponder à estrutura real dos dados em alta dimensão.
+- DBSCAN é sensível ao parâmetro eps. Varrer apenas 7 valores
+  pode ter deixado de lado um eps ótimo mais refinado.
+- Ambos os modelos não aproveitam a informação de rotulagem
+  dos maliciosos disponível no dataset (abordagem semi-supervisionada
+  poderia melhorar os resultados).
+- A detecção por threshold binário pode ser substituída por
+  um ranking de risco (priorizar inspeção dos PDFs com score
+  mais alto em vez de classificação binária).
+
+Próximos passos:
+- Avaliar significância estatística das diferenças (teste de
+  McNemar ou bootstrap) para validar se DBSCAN > K-Means e
+  DBSCAN > Autoencoder de forma estatisticamente significativa.
+- Explorar variações de arquitetura do Autoencoder (bottleneck
+  maior, mais camadas) para tentar superar o DBSCAN em AUC-ROC.
+- Considerar abordagem semi-supervisionada que use os rótulos
+  de maliciosos disponíveis no dataset.
