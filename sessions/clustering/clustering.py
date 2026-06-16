@@ -36,13 +36,40 @@ def rodar():
     norm_X_val = std_scaler.transform(X_val)
     norm_X_test = std_scaler.transform(X_test)
 
-    s =[]
+    s = []
+    inertias = []
+    clustering_results = []
+
     for i in range(2,11,1):
         K = i
         model = KMeans(n_clusters=K,random_state=RAND_STATE,n_init=10)
-        model.fit(X_train)
-        s.append( (K,silhouette_score(X_train,model.predict(X_train))))
+        model.fit(nomr_X_train)
+        labels = model.predict(nomr_X_train)
+
+        sil_score = silhouette_score(nomr_X_train, labels)
+        inertia = model.inertia_
+
+        s.append((K, sil_score))
+        inertias.append((K, inertia))
+
+        clustering_results.append({
+            "n_clusters": K,
+            "silhouette": sil_score,
+            "inertia": inertia,
+            "labels": labels,
+            "model": model,
+        })
 
     for i in range(len(s)):
-        print(f"Numero de clusters {s[i][0]} s_score{s[i][1]}")
+        print(f"K={s[i][0]} | silhouette={s[i][1]}")
 
+    for i in range(len(inertias)):
+        print(f"K={inertias[i][0]} | inertia={inertias[i][1]}")
+
+    doc_texto = "Experimento K-Means - silhouette e inertia por K\n"
+    for r in clustering_results:
+        doc_texto += f"K={r['n_clusters']} | silhouette={r['silhouette']} | inertia={r['inertia']}\n"
+
+    documentar("Clustering", doc_texto)
+
+    return clustering_results
