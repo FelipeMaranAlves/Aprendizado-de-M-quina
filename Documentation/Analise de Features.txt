@@ -696,3 +696,236 @@ Cluster 1 media: 2.778798124590799
 Maior media: Cluster 0 (3.6219641447125146)
 Menor media: Cluster 1 (2.778798124590799)
 Diferenca: 0.8431660201217155
+
+Analise de Features por Cluster
+
+Feature: file_size
+Cluster 0 media: 6088015.380952381
+Cluster 1 media: 110357.18837648327
+Maior media: Cluster 0 (6088015.380952381)
+Menor media: Cluster 1 (110357.18837648327)
+Diferenca: 5977658.192575897
+
+Feature: title_chars
+Cluster 0 media: 28.19047619047619
+Cluster 1 media: 24.532362459546924
+Maior media: Cluster 0 (28.19047619047619)
+Menor media: Cluster 1 (24.532362459546924)
+Diferenca: 3.6581137309292657
+
+Feature: encrypted
+Cluster 0 media: 0.23809523809523808
+Cluster 1 media: 0.00849514563106796
+Maior media: Cluster 0 (0.23809523809523808)
+Menor media: Cluster 1 (0.00849514563106796)
+Diferenca: 0.22960009246417012
+
+Feature: metadata_size
+Cluster 0 media: 308.0
+Cluster 1 media: 267.35477346278316
+Maior media: Cluster 0 (308.0)
+Menor media: Cluster 1 (267.35477346278316)
+Diferenca: 40.64522653721684
+
+Feature: page_count
+Cluster 0 media: 84.95238095238095
+Cluster 1 media: 6.10180690399137
+Maior media: Cluster 0 (84.95238095238095)
+Menor media: Cluster 1 (6.10180690399137)
+Diferenca: 78.85057404838957
+
+Feature: valid_pdf_header
+Cluster 0 media: 0.9523809523809523
+Cluster 1 media: 0.9986515641855448
+Maior media: Cluster 1 (0.9986515641855448)
+Menor media: Cluster 0 (0.9523809523809523)
+Diferenca: 0.046270611804592465
+
+Feature: image_count
+Cluster 0 media: 44.57142857142857
+Cluster 1 media: 2.6450916936353828
+Maior media: Cluster 0 (44.57142857142857)
+Menor media: Cluster 1 (2.6450916936353828)
+Diferenca: 41.92633687779319
+
+Feature: text_length
+Cluster 0 media: 305478.8095238095
+Cluster 1 media: 16792.605987055016
+Maior media: Cluster 0 (305478.8095238095)
+Menor media: Cluster 1 (16792.605987055016)
+Diferenca: 288686.20353675453
+
+Feature: object_count
+Cluster 0 media: 4199.857142857143
+Cluster 1 media: 270.20806364617044
+Maior media: Cluster 0 (4199.857142857143)
+Menor media: Cluster 1 (270.20806364617044)
+Diferenca: 3929.6490792109726
+
+Feature: font_object_count
+Cluster 0 media: 53.80952380952381
+Cluster 1 media: 3.973975188781014
+Maior media: Cluster 0 (53.80952380952381)
+Menor media: Cluster 1 (3.973975188781014)
+Diferenca: 49.8355486207428
+
+Feature: stream_count
+Cluster 0 media: 1442.4761904761904
+Cluster 1 media: 61.71777238403452
+Maior media: Cluster 0 (1442.4761904761904)
+Menor media: Cluster 1 (61.71777238403452)
+Diferenca: 1380.7584180921558
+
+Feature: endstream_count
+Cluster 0 media: 720.9047619047619
+Cluster 1 media: 30.858009708737864
+Maior media: Cluster 0 (720.9047619047619)
+Menor media: Cluster 1 (30.858009708737864)
+Diferenca: 690.046752196024
+
+Feature: average_stream_size
+Cluster 0 media: 14340.607420277142
+Cluster 1 media: 4211.541233007718
+Maior media: Cluster 0 (14340.607420277142)
+Menor media: Cluster 1 (4211.541233007718)
+Diferenca: 10129.066187269424
+
+Feature: entropy_of_streams
+Cluster 0 media: 5.515033115047619
+Cluster 1 media: 6.023957846269148
+Maior media: Cluster 1 (6.023957846269148)
+Menor media: Cluster 0 (5.515033115047619)
+Diferenca: 0.508924731221529
+
+Feature: name_obfuscations
+Cluster 0 media: 18.333333333333332
+Cluster 1 media: 1.1483279395900756
+Maior media: Cluster 0 (18.333333333333332)
+Menor media: Cluster 1 (1.1483279395900756)
+Diferenca: 17.185005393743257
+
+Feature: total_filters
+Cluster 0 media: 514.7142857142857
+Cluster 1 media: 23.964940668824163
+Maior media: Cluster 0 (514.7142857142857)
+Menor media: Cluster 1 (23.964940668824163)
+Diferenca: 490.7493450454615
+
+Feature: nested_filter_objects
+Cluster 0 media: 0.09523809523809523
+Cluster 1 media: 0.2980043149946063
+Maior media: Cluster 1 (0.2980043149946063)
+Menor media: Cluster 0 (0.09523809523809523)
+Diferenca: 0.20276621975651105
+
+Feature: objstm_count
+Cluster 0 media: 3.5238095238095237
+Cluster 1 media: 3.056499460625674
+Maior media: Cluster 0 (3.5238095238095237)
+Menor media: Cluster 1 (3.056499460625674)
+Diferenca: 0.4673100631838496
+
+Feature: js_count
+Cluster 0 media: 27.857142857142858
+Cluster 1 media: 0.08400755124056095
+Maior media: Cluster 0 (27.857142857142858)
+Menor media: Cluster 1 (0.08400755124056095)
+Diferenca: 27.773135305902297
+
+Feature: javascript_count
+Cluster 0 media: 27.285714285714285
+Cluster 1 media: 0.09196332254584681
+Maior media: Cluster 0 (27.285714285714285)
+Menor media: Cluster 1 (0.09196332254584681)
+Diferenca: 27.193750963168437
+
+Feature: uri_count
+Cluster 0 media: 340.5238095238095
+Cluster 1 media: 2.1023462783171523
+Maior media: Cluster 0 (340.5238095238095)
+Menor media: Cluster 1 (2.1023462783171523)
+Diferenca: 338.42146324549236
+
+Feature: uses_nonstandard_port
+Cluster 0 media: 0.09523809523809523
+Cluster 1 media: 0.009034519956850054
+Maior media: Cluster 0 (0.09523809523809523)
+Menor media: Cluster 1 (0.009034519956850054)
+Diferenca: 0.08620357528124518
+
+Feature: action_count
+Cluster 0 media: 0.23809523809523808
+Cluster 1 media: 0.05960086299892125
+Maior media: Cluster 0 (0.23809523809523808)
+Menor media: Cluster 1 (0.05960086299892125)
+Diferenca: 0.17849437509631683
+
+Feature: aa_count
+Cluster 0 media: 12.666666666666666
+Cluster 1 media: 0.3522114347357066
+Maior media: Cluster 0 (12.666666666666666)
+Menor media: Cluster 1 (0.3522114347357066)
+Diferenca: 12.31445523193096
+
+Feature: openaction_count
+Cluster 0 media: 0.42857142857142855
+Cluster 1 media: 0.07834412081984897
+Maior media: Cluster 0 (0.42857142857142855)
+Menor media: Cluster 1 (0.07834412081984897)
+Diferenca: 0.35022730775157956
+
+Feature: launch_count
+Cluster 0 media: 0.0
+Cluster 1 media: 0.011866235167206042
+Maior media: Cluster 1 (0.011866235167206042)
+Menor media: Cluster 0 (0.0)
+Diferenca: 0.011866235167206042
+
+Feature: acroform_count
+Cluster 0 media: 1.1904761904761905
+Cluster 1 media: 0.44215210355987056
+Maior media: Cluster 0 (1.1904761904761905)
+Menor media: Cluster 1 (0.44215210355987056)
+Diferenca: 0.7483240869163199
+
+Feature: xfa_count
+Cluster 0 media: 0.0
+Cluster 1 media: 0.0008090614886731392
+Maior media: Cluster 1 (0.0008090614886731392)
+Menor media: Cluster 0 (0.0)
+Diferenca: 0.0008090614886731392
+
+Feature: colors_count
+Cluster 0 media: 0.09523809523809523
+Cluster 1 media: 0.10841423948220065
+Maior media: Cluster 1 (0.10841423948220065)
+Menor media: Cluster 0 (0.09523809523809523)
+Diferenca: 0.013176144244105417
+
+Feature: richmedia_count
+Cluster 0 media: 0.0
+Cluster 1 media: 0.0
+Maior media: Cluster 0 (0.0)
+Menor media: Cluster 0 (0.0)
+Diferenca: 0.0
+
+Feature: has_multiple_behavioral_keywords_in_one_object
+Cluster 0 media: 25.80952380952381
+Cluster 1 media: 0.06674757281553398
+Maior media: Cluster 0 (25.80952380952381)
+Menor media: Cluster 1 (0.06674757281553398)
+Diferenca: 25.742776236708277
+
+Feature: used_ocr
+Cluster 0 media: 0.047619047619047616
+Cluster 1 media: 0.24379719525350593
+Maior media: Cluster 1 (0.24379719525350593)
+Menor media: Cluster 0 (0.047619047619047616)
+Diferenca: 0.19617814763445832
+
+Feature: title_entropy
+Cluster 0 media: 3.6219641447125146
+Cluster 1 media: 2.778798124590799
+Maior media: Cluster 0 (3.6219641447125146)
+Menor media: Cluster 1 (2.778798124590799)
+Diferenca: 0.8431660201217155
