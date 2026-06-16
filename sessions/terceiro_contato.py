@@ -1,9 +1,11 @@
 from utils import documentar, configurar
+from pipeline import carregar
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+
 def rodar():
-    df = pd.read_csv('data/PDF_All_feature_Clean.csv')
+    df = carregar()
     configurar()
 
     # Selecionar apenas colunas numéricas

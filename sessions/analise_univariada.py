@@ -5,8 +5,9 @@ import seaborn as sns
 from pathlib import Path
 
 from scipy.stats import skew, kurtosis
+from pipeline import carregar
 
-df = pd.read_csv('data/PDF_All_feature_Clean.csv')
+df = carregar()
 
 print(f"Dataset shape: {df.shape}")
 print(f"Colunas: {df.columns.tolist()}")
