@@ -14,7 +14,7 @@ from sklearn.metrics import roc_curve
 import json
 import os
 
-BEST_MODEL_INFO = "models/best_ae.json"
+BEST_MODEL_INFO = "models/best_ae_3.json"
 BEST_MODEL_PATH = "models/checkpoint_ae_3_camadas.pt"
 def salvar_se_melhor(model, score_atual, threshold, auc_val, metrica="youden"):
     melhor_score = -np.inf
