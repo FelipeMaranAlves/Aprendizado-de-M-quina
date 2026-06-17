@@ -10,6 +10,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score, roc_curve
 from utils import documentar
 from utilsDoProfessor import get_overall_metrics
+from sklearn.metrics import roc_curve
+
 
 
 def _preparar_dados():
@@ -135,7 +137,7 @@ def _treinar(model, X_train_t, X_val_benign_t, criterion, optimizer,
 def _scores_anomalia(model, X_t):
     with torch.no_grad():
         recon = model(X_t)
-        return torch.mean((X_t - recon) ** 2, dim=1).numpy()
+        return torch.mean((X_t - recon) ** 2, dim=1).numpy() # MSELoss
 
 
 def rodar():
@@ -159,18 +161,19 @@ def rodar():
 
     train_losses, val_losses = _treinar(
         model, X_train_t, X_val_benign_t, criterion, optimizer,
-        num_epochs=50, batch_size=256, patience=10, delta=1e-4,
+        num_epochs=50, batch_size=512, patience=5, delta=1e-4,
     )
 
     scores_val = _scores_anomalia(model, X_val_t)
-    thresholds = np.percentile(scores_val, np.arange(10, 95, 5))
+    _, _, thresholds = roc_curve(y_val, scores_val)
+
     best_f1, best_threshold = 0.0, thresholds[0]
 
     for t in thresholds:
         preds = (scores_val > t).astype(int)
-        if preds.sum() == 0 or preds.sum() == len(preds):
-            continue
+
         m = get_overall_metrics(y_val, preds)
+
         if m['f1-score'] > best_f1:
             best_f1 = m['f1-score']
             best_threshold = t

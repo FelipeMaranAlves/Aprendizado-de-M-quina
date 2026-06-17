@@ -23,3 +23,29 @@ Métricas no conjunto de teste:
   Recall:    0.9625
   F1-Score:  0.9205
   AUC-ROC:   0.9658
+
+Autoencoder Anomaly Detection
+Arquitetura: 33 -> 24 -> 8 -> 24 -> 33
+Épocas treinadas: 50
+Melhor threshold (val, max F1): 0.007199
+F1 no val: 0.8830
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8902
+  Precision: 0.9359
+  Recall:    0.8430
+  F1-Score:  0.8870
+  AUC-ROC:   0.9403
+
+Autoencoder Anomaly Detection
+Arquitetura: 33 -> 24 -> 8 -> 24 -> 33
+Épocas treinadas: 50
+Melhor threshold (val, max F1): 0.007199
+F1 no val: 0.8830
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8902
+  Precision: 0.9359
+  Recall:    0.8430
+  F1-Score:  0.8870
+  AUC-ROC:   0.9403

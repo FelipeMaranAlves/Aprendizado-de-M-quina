@@ -1,26 +1,5 @@
-from sessions.clustering import rodar
-from sessions.clustering.visualization import gerar_graficos, gerar_graficos_pca, gerar_graficos_tsne
-from sessions.clustering.metrics import avaliar_clusters
-from sessions.clustering.feature_analysis import analisar_features
-from sessions.anomaly_detection.kmeans_anomaly import rodar as rodar_anomaly_kmeans
-from sessions.anomaly_detection.dbscan_anomaly import rodar as rodar_dbscan
 from sessions.anomaly_detection.autoencoder_anomaly import rodar as rodar_autoencoder
 
-clustering_results = rodar()
-
-gerar_graficos(clustering_results)
-gerar_graficos_pca(clustering_results)
-gerar_graficos_tsne(clustering_results)
-
-avaliar_clusters(None, clustering_results)
-
-analisar_features(
-    None,
-    clustering_results[0]["labels"]  # K=2
-)
-
-rodar_anomaly_kmeans()
-rodar_dbscan()
 rodar_autoencoder()
 
 

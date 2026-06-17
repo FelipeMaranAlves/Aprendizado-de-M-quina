@@ -56,7 +56,7 @@ def rodar():
             contamination=CONTAMINATION,
             random_state=RAND_STATE,
         ).fit(nomr_X_train)
-
+        isf_model.score_samples()
         predicoes_val = isf_model.predict(norm_X_val)
 
         predicoes_val[predicoes_val == 1] = 1
