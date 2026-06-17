@@ -1,4 +1,4 @@
-TREINADO SO COM DADOS BENIGNOS
+TREINADO SO COM DADOS MISTOS
 
 contamination=0.5 | n_estimators=15 | max_samples=0.87 | max_features=0.07
 {'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8870116156282999), 'f1-score': np.float64(0.8731808731808732)}
