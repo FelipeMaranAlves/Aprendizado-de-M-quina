@@ -1,5 +1,6 @@
 .env
 ambiente/
+venv/
 *.pyc
 __pycache__
 Documentation/importantissimo.txt

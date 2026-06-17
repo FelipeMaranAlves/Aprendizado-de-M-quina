@@ -1,0 +1,37 @@
+============================================================
+         RELATÓRIO DE ANÁLISE VISUAL E CORRELAÇÃO
+============================================================
+
+1. ANÁLISE DE MULTICOLINEARIDADE (HEATMAP):
+Abaixo estão listadas os pares de features com maior correlação linear absoluta,
+o que pode gerar redundância em algoritmos baseados em distância (K-Means/DBSCAN):
+  - stream_count <-> endstream_count | Correlação Absoluta: 1.0000
+  - javascript_count <-> has_multiple_behavioral_keywords_in_one_object | Correlação Absoluta: 0.9950
+  - js_count <-> javascript_count | Correlação Absoluta: 0.9940
+  - js_count <-> has_multiple_behavioral_keywords_in_one_object | Correlação Absoluta: 0.9938
+  - valid_pdf_header <-> entropy_of_streams | Correlação Absoluta: 0.9745
+
+2. ANÁLISE DE DISTRIBUIÇÃO (HISTOGRAMAS):
+Os histogramas gerados dividem a frequência das features por classe (0 = Benigno, 1 = Malicioso).
+Observou-se que features estruturais do PDF (ex: contagem de objetos ou streams específicos)
+apresentam forte assimetria à direita, concentrando a classe benigna próxima de zero,
+enquanto anomalias/malwares deslocam-se para caudas mais longas com valores elevados.
+
+============================================================
+         RELATÓRIO DE ANÁLISE VISUAL E CORRELAÇÃO
+============================================================
+
+1. ANÁLISE DE MULTICOLINEARIDADE (HEATMAP):
+Abaixo estão listadas os pares de features com maior correlação linear absoluta,
+o que pode gerar redundância em algoritmos baseados em distância (K-Means/DBSCAN):
+  - stream_count <-> endstream_count | Correlação Absoluta: 1.0000
+  - javascript_count <-> has_multiple_behavioral_keywords_in_one_object | Correlação Absoluta: 0.9950
+  - js_count <-> javascript_count | Correlação Absoluta: 0.9940
+  - js_count <-> has_multiple_behavioral_keywords_in_one_object | Correlação Absoluta: 0.9938
+  - valid_pdf_header <-> entropy_of_streams | Correlação Absoluta: 0.9745
+
+2. ANÁLISE DE DISTRIBUIÇÃO (HISTOGRAMAS):
+Os histogramas gerados dividem a frequência das features por classe (0 = Benigno, 1 = Malicioso).
+Observou-se que features estruturais do PDF (ex: contagem de objetos ou streams específicos)
+apresentam forte assimetria à direita, concentrando a classe benigna próxima de zero,
+enquanto anomalias/malwares deslocam-se para caudas mais longas com valores elevados.
