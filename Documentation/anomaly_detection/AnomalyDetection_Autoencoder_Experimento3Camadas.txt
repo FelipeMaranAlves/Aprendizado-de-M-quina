@@ -1,0 +1,12 @@
+Autoencoder Anomaly Detection
+Arquitetura: 33 -> 24 -> 16 -> 8 -> 16 -> 24 -> 33
+Épocas treinadas: 21
+Melhor threshold (val, max F1): 0.020748
+F1 no val: 0.8581
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8663
+  Precision: 0.9185
+  Recall:    0.8105
+  F1-Score:  0.8611
+  AUC-ROC:   0.9264

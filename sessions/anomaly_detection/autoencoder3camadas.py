@@ -39,7 +39,7 @@ def _preparar_dados():
 
 
 class _EarlyStopping:
-    def __init__(self, patience=5, delta=1e-4, path='checkpoint_ae.pt'):
+    def __init__(self, patience=5, delta=1e-4, path='checkpoint_ae_3_camadas.pt'):
         self.patience = patience
         self.delta = delta
         self.path = path
@@ -69,7 +69,7 @@ class _Autoencoder(nn.Module):
             nn.ReLU(),
             nn.Dropout(dropout_rate),
             nn.Linear(24, 16),
-            nn.BatchNorm1d(61),
+            nn.BatchNorm1d(16),
             nn.ReLU(),
             nn.Dropout(dropout_rate),
             nn.Linear(16, 8),
@@ -159,7 +159,7 @@ def rodar():
 
     train_losses, val_losses = _treinar(
         model, X_train_t, X_val_benign_t, criterion, optimizer,
-        num_epochs=50, batch_size=256, patience=5, delta=1e-4,
+        num_epochs=50, batch_size=256, patience=10, delta=1e-4,
     )
 
     scores_val = _scores_anomalia(model, X_val_t)
@@ -194,7 +194,7 @@ def rodar():
         f"  AUC-ROC:   {auc:.4f}\n"
     )
     print(doc)
-    documentar("AnomalyDetection_Autoencoder_Experimento3Camadas", doc)
+    documentar("AnomalyDetection_Autoencoder_Experimento3Camadas", doc,"anomaly_detection")
 
     fpr, tpr, _ = roc_curve(y_test, scores_test)
     plt.figure()
@@ -202,10 +202,10 @@ def rodar():
     plt.plot([0, 1], [0, 1], 'k--', label='Aleatório')
     plt.xlabel("FPR")
     plt.ylabel("TPR")
-    plt.title("ROC - Autoencoder Anomaly Detection")
+    plt.title("ROC - Autoencoder Anomaly Detection 3")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Images/anomaly_autoencoder_roc.png")
+    plt.savefig("Images/anomaly_autoencoder_3_camadas_roc.png")
     plt.close()
 
     plt.figure()
@@ -214,10 +214,10 @@ def rodar():
     plt.plot(epochs_axis, val_losses, label='Val Loss (benignos)')
     plt.xlabel("Época")
     plt.ylabel("MSE Loss")
-    plt.title("Autoencoder - Curva de Aprendizado")
+    plt.title("Autoencoder - Curva de Aprendizado 3")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Images/autoencoder_loss.png")
+    plt.savefig("Images/autoencoder_3_camadas_loss.png")
     plt.close()
 
     return {
