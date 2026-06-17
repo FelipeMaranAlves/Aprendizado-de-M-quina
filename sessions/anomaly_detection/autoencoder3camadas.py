@@ -11,8 +11,47 @@ from sklearn.metrics import roc_auc_score, roc_curve
 from utils import documentar
 from utilsDoProfessor import get_overall_metrics
 from sklearn.metrics import roc_curve
+import json
+import os
 
+BEST_MODEL_INFO = "models/best_ae.json"
+BEST_MODEL_PATH = "models/checkpoint_ae_3_camadas.pt"
+def salvar_se_melhor(model, score_atual, threshold, auc_val, metrica="youden"):
+    melhor_score = -np.inf
 
+    if os.path.exists(BEST_MODEL_INFO):
+        with open(BEST_MODEL_INFO, "r") as f:
+            dados = json.load(f)
+            melhor_score = dados["score"]
+
+    if score_atual > melhor_score:
+        torch.save(model.state_dict(), BEST_MODEL_PATH)
+
+        with open(BEST_MODEL_INFO, "w") as f:
+            json.dump(
+                {
+                    "score": float(score_atual),
+                    "threshold": float(threshold),
+                    "auc_val": float(auc_val),
+                    "metrica": metrica
+                },
+                f,
+                indent=4
+            )
+
+        print(
+            "-------------------------------------------"
+            f"Novo melhor modelo salvo "
+            f"{melhor_score:.4f} -> {score_atual:.4f}"
+            "-------------------------------------------"
+        )
+    else:
+        print(
+            "-------------------------------------------"
+            f"Modelo descartado. "
+            f"Melhor atual = {melhor_score:.4f}"
+            "-------------------------------------------"
+        )
 
 def _preparar_dados():
     df = pd.read_csv("data/PDF_All_feature_Clean.csv")
@@ -44,15 +83,14 @@ class _EarlyStopping:
     def __init__(self, patience=5, delta=1e-4, path='checkpoint_ae_3_camadas.pt'):
         self.patience = patience
         self.delta = delta
-        self.path = path
+        self.path = BEST_MODEL_PATH
         self.counter = 0
         self.early_stop = False
         self.val_min_loss = np.inf
 
     def __call__(self, val_loss, model):
         if val_loss < self.val_min_loss - self.delta:
-            print(f'Val loss {self.val_min_loss:.5f} -> {val_loss:.5f}. Salvando modelo...')
-            torch.save(model.state_dict(), self.path)
+            print(f'Val loss {self.val_min_loss:.5f} -> {val_loss:.5f}. Melhorou!')
             self.val_min_loss = val_loss
             self.counter = 0
         else:
@@ -159,36 +197,49 @@ def rodar():
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=5e-3)
 
+    NUM_EPOCHS = 100
+    BATCH_SIZE = 256
+    PATIENCE = 5
+    DELTA = 1e-4
     train_losses, val_losses = _treinar(
         model, X_train_t, X_val_benign_t, criterion, optimizer,
-        num_epochs=50, batch_size=512, patience=5, delta=1e-4,
+        num_epochs=NUM_EPOCHS, batch_size=BATCH_SIZE, patience=PATIENCE, delta=DELTA,
     )
 
     scores_val = _scores_anomalia(model, X_val_t)
-    _, _, thresholds = roc_curve(y_val, scores_val)
+    fpr, tpr, thresholds = roc_curve(y_val, scores_val)
 
-    best_f1, best_threshold = 0.0, thresholds[0]
+    youden_index = tpr - fpr
 
-    for t in thresholds:
-        preds = (scores_val > t).astype(int)
+    best_idx = np.argmax(youden_index)
 
-        m = get_overall_metrics(y_val, preds)
 
-        if m['f1-score'] > best_f1:
-            best_f1 = m['f1-score']
-            best_threshold = t
+    best_threshold = thresholds[best_idx]
+    best_youden = youden_index[best_idx]
+
+    auc_val = roc_auc_score(y_val, scores_val)
+
 
     scores_test = _scores_anomalia(model, X_test_t)
     preds_test = (scores_test > best_threshold).astype(int)
     m_test = get_overall_metrics(y_test, preds_test)
+    salvar_se_melhor(
+    model,
+    best_youden,
+    best_threshold,
+    auc_val,
+    "youden"
+    )
     auc = roc_auc_score(y_test, scores_test)
 
     doc = (
+        f"Selecionando modelo usando Youden Index\n"
         f"Autoencoder Anomaly Detection\n"
+        f"Parametros: num_epochs: {NUM_EPOCHS} batch_size: {BATCH_SIZE} patience: {PATIENCE}, delta: {DELTA},"
         f"Arquitetura: {in_features} -> 24 -> 16 -> 8 -> 16 -> 24 -> {in_features}\n"
         f"Épocas treinadas: {len(train_losses)}\n"
-        f"Melhor threshold (val, max F1): {best_threshold:.6f}\n"
-        f"F1 no val: {best_f1:.4f}\n"
+        f"Melhor threshold (val, max Youden_Index): {best_threshold:.6f}\n"
+        f"Melhor Youden Index: {best_youden} "
         "\nMétricas no conjunto de teste:\n"
         f"  Accuracy:  {m_test['acc']:.4f}\n"
         f"  Precision: {m_test['precision']:.4f}\n"
@@ -233,70 +284,3 @@ def rodar():
         "train_losses": train_losses,
         "val_losses": val_losses,
     }
-
-
-# ============================================================
-#                          NOTAS
-# ============================================================
-#
-# Por que Autoencoder para detecção de anomalias?
-# Um autoencoder treinado SOMENTE em PDFs benignos aprende a
-# comprimir e reconstruir o padrão "normal". Quando apresentado
-# a um PDF malicioso — que usa features incomuns como js_count
-# alto, openaction, jbig2decode, etc. — a rede não consegue
-# reconstruí-lo bem, gerando um erro de reconstrução alto.
-# Esse erro é o score de anomalia. É um método de Deep Learning
-# supervisionado apenas pelo comportamento "normal", o que se
-# encaixa perfeitamente no Tema 5 da disciplina.
-#
-# Por que MinMaxScaler e não StandardScaler (como K-Means e DBSCAN)?
-# O decoder termina com uma camada Sigmoid, que força as saídas
-# para o intervalo (0, 1). Para que o MSE entre entrada e saída
-# seja semanticamente coerente, a entrada também precisa estar
-# em [0, 1]. O StandardScaler (z-score) pode produzir valores
-# negativos ou muito acima de 1, tornando o erro de reconstrução
-# assimétrico e prejudicando o treinamento. O MinMaxScaler garante
-# que entrada e saída estejam no mesmo espaço.
-#
-# Por que a arquitetura in -> 24 -> 8 -> 24 -> in?
-# O gargalo no espaço latente (8 neurônios para 33 features)
-# força o encoder a aprender uma representação compacta dos
-# PDFs benignos, descartando redundâncias. Se o bottleneck fosse
-# grande demais, o modelo aprenderia a copiar qualquer entrada —
-# incluindo maliciosas — sem anomalia detectável. A camada
-# intermediária de 24 neurônios serve de transição suave.
-#
-# Por que BatchNorm?
-# As features de PDFs têm distribuições muito diferentes entre
-# si (algumas são contagens inteiras que chegam a centenas,
-# outras são proporções). O BatchNorm normaliza as ativações
-# dentro de cada camada, estabilizando o treinamento e permitindo
-# que o gradiente flua melhor mesmo com esse tipo de dado.
-#
-# Por que Dropout?
-# Previne que o autoencoder memorize os dados de treino
-# (overfitting). Com Dropout, cada passo de treinamento desativa
-# aleatoriamente 20% dos neurônios, forçando o modelo a aprender
-# representações robustas em vez de decorar exemplos individuais.
-#
-# Por que Early Stopping com apenas os benignos da validação?
-# A loss de validação monitora o quão bem o modelo reconstrói
-# PDFs normais. Se usássemos todo o conjunto de validação (benignos
-# + maliciosos), uma queda na loss poderia indicar que o modelo
-# está aprendendo a reconstruir anomalias também — exatamente o
-# que queremos evitar. Usar só os benignos da validação garante
-# que paramos quando a capacidade de reconstruir "normalidade"
-# está no pico.
-#
-# Por que threshold via F1 no conjunto de validação completo?
-# O conjunto de validação completo (benignos + maliciosos) é usado
-# para escolher o threshold que transforma o score contínuo em
-# predição binária. Maximizar F1 na validação é consistente com
-# a estratégia usada pelo K-Means e DBSCAN, permitindo comparação
-# justa entre os três modelos no conjunto de teste.
-#
-# Por que varrer percentis (10% a 95%) para o threshold?
-# A distribuição do MSE não tem um limite natural. Varrer percentis
-# da distribuição dos scores de validação garante que testamos
-# thresholds realistas para os dados observados. O F1 máximo
-# encontrado define onde cortar entre "normal" e "anomalia".

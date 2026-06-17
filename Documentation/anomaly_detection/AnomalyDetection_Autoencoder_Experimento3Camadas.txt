@@ -1,3 +1,5 @@
+Selecionando o modelo usando F1 score
+Parametros: num_epochs: 50 batch_size: 256 patience: 5, delta: 1e-4,"
 Autoencoder Anomaly Detection
 Arquitetura: 33 -> 24 -> 16 -> 8 -> 16 -> 24 -> 33
 Épocas treinadas: 21
