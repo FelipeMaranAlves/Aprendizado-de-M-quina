@@ -5,7 +5,7 @@ from sklearn.cluster import DBSCAN
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import roc_auc_score, fbeta_score
+from sklearn.metrics import roc_auc_score, roc_curve, fbeta_score
 from utils import documentar, caminho_imagem
 from utilsDoProfessor import get_overall_metrics
 
@@ -159,6 +159,21 @@ def rodar():
     plt.legend()
     plt.tight_layout()
     plt.savefig(caminho_imagem("dbscan_fbeta_comparacao.png", "anomaly_detection"))
+    plt.close()
+
+    fpr, tpr, _ = roc_curve(y_test, scores_test_best)
+    plt.figure()
+    plt.plot(fpr, tpr, label=f'DBSCAN eps={best_eps} (AUC = {auc_test:.4f})')
+    plt.plot([0, 1], [0, 1], 'k--', label='Aleatório')
+    for beta in BETAS:
+        m = resultados[beta]["metrics_test"]
+        plt.scatter(m['fpr'], m['tpr'], zorder=5, label=f"beta={_beta_label(beta)} (FPR={m['fpr']:.2f}, TPR={m['tpr']:.2f})")
+    plt.xlabel("FPR")
+    plt.ylabel("TPR")
+    plt.title("ROC - DBSCAN Anomaly Detection (pontos de operação por beta)")
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig(caminho_imagem("dbscan_fbeta_roc.png", "anomaly_detection"))
     plt.close()
 
     return {
