@@ -1,492 +1,492 @@
 TREINADO SO COM DADOS MISTOS
 
 contamination=0.5 | n_estimators=15 | max_samples=0.87 | max_features=0.07
-{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8870116156282999), 'f1-score': np.float64(0.8731808731808732)}
+{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8870116156282999), 'f1-score': np.float64(0.8731808731808732), 'f0.5-score': np.float64(0.881427072402938)}
 contamination=0.5 | n_estimators=15 | max_samples=0.87 | max_features=0.08
-{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8870116156282999), 'f1-score': np.float64(0.8731808731808732)}
+{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8870116156282999), 'f1-score': np.float64(0.8731808731808732), 'f0.5-score': np.float64(0.881427072402938)}
 contamination=0.5 | n_estimators=15 | max_samples=0.87 | max_features=0.09
-{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8870116156282999), 'f1-score': np.float64(0.8731808731808732)}
+{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8870116156282999), 'f1-score': np.float64(0.8731808731808732), 'f0.5-score': np.float64(0.881427072402938)}
 contamination=0.5 | n_estimators=15 | max_samples=0.87 | max_features=0.1
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8648925281473899), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8675564681724846), 'f1-score': np.float64(0.8662224500256278)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8648925281473899), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8675564681724846), 'f1-score': np.float64(0.8662224500256278), 'f0.5-score': np.float64(0.8670223681510363)}
 contamination=0.5 | n_estimators=15 | max_samples=0.87 | max_features=0.11
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8648925281473899), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8675564681724846), 'f1-score': np.float64(0.8662224500256278)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8648925281473899), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8675564681724846), 'f1-score': np.float64(0.8662224500256278), 'f0.5-score': np.float64(0.8670223681510363)}
 contamination=0.5 | n_estimators=15 | max_samples=0.87 | max_features=0.12
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8648925281473899), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8675564681724846), 'f1-score': np.float64(0.8662224500256278)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8648925281473899), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8675564681724846), 'f1-score': np.float64(0.8662224500256278), 'f0.5-score': np.float64(0.8670223681510363)}
 contamination=0.5 | n_estimators=15 | max_samples=0.87 | max_features=0.13
-{'acc': np.float64(0.8119170984455959), 'tpr': np.float64(0.804503582395087), 'fpr': np.float64(0.18048268625393493), 'precision': np.float64(0.8204592901878914), 'f1-score': np.float64(0.8124031007751938)}
+{'acc': np.float64(0.8119170984455959), 'tpr': np.float64(0.804503582395087), 'fpr': np.float64(0.18048268625393493), 'precision': np.float64(0.8204592901878914), 'f1-score': np.float64(0.8124031007751938), 'f0.5-score': np.float64(0.8172177167810356)}
 contamination=0.5 | n_estimators=15 | max_samples=0.88 | max_features=0.07
-{'acc': np.float64(0.8730569948186528), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.11332633788037776), 'precision': np.float64(0.8860759493670886), 'f1-score': np.float64(0.8727272727272727)}
+{'acc': np.float64(0.8730569948186528), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.11332633788037776), 'precision': np.float64(0.8860759493670886), 'f1-score': np.float64(0.8727272727272727), 'f0.5-score': np.float64(0.8806877752149298)}
 contamination=0.5 | n_estimators=15 | max_samples=0.88 | max_features=0.08
-{'acc': np.float64(0.8730569948186528), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.11332633788037776), 'precision': np.float64(0.8860759493670886), 'f1-score': np.float64(0.8727272727272727)}
+{'acc': np.float64(0.8730569948186528), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.11332633788037776), 'precision': np.float64(0.8860759493670886), 'f1-score': np.float64(0.8727272727272727), 'f0.5-score': np.float64(0.8806877752149298)}
 contamination=0.5 | n_estimators=15 | max_samples=0.88 | max_features=0.09
-{'acc': np.float64(0.8730569948186528), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.11332633788037776), 'precision': np.float64(0.8860759493670886), 'f1-score': np.float64(0.8727272727272727)}
+{'acc': np.float64(0.8730569948186528), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.11332633788037776), 'precision': np.float64(0.8860759493670886), 'f1-score': np.float64(0.8727272727272727), 'f0.5-score': np.float64(0.8806877752149298)}
 contamination=0.5 | n_estimators=15 | max_samples=0.88 | max_features=0.1
-{'acc': np.float64(0.8880829015544042), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.1049317943336831), 'precision': np.float64(0.8959417273673257), 'f1-score': np.float64(0.8885448916408669)}
+{'acc': np.float64(0.8880829015544042), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.1049317943336831), 'precision': np.float64(0.8959417273673257), 'f1-score': np.float64(0.8885448916408669), 'f0.5-score': np.float64(0.8929682638456752)}
 contamination=0.5 | n_estimators=15 | max_samples=0.88 | max_features=0.11
-{'acc': np.float64(0.8880829015544042), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.1049317943336831), 'precision': np.float64(0.8959417273673257), 'f1-score': np.float64(0.8885448916408669)}
+{'acc': np.float64(0.8880829015544042), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.1049317943336831), 'precision': np.float64(0.8959417273673257), 'f1-score': np.float64(0.8885448916408669), 'f0.5-score': np.float64(0.8929682638456752)}
 contamination=0.5 | n_estimators=15 | max_samples=0.88 | max_features=0.12
-{'acc': np.float64(0.8880829015544042), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.1049317943336831), 'precision': np.float64(0.8959417273673257), 'f1-score': np.float64(0.8885448916408669)}
+{'acc': np.float64(0.8880829015544042), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.1049317943336831), 'precision': np.float64(0.8959417273673257), 'f1-score': np.float64(0.8885448916408669), 'f0.5-score': np.float64(0.8929682638456752)}
 contamination=0.5 | n_estimators=15 | max_samples=0.88 | max_features=0.13
-{'acc': np.float64(0.7590673575129534), 'tpr': np.float64(0.7574206755373593), 'fpr': np.float64(0.23924449108079748), 'precision': np.float64(0.7644628099173554), 'f1-score': np.float64(0.7609254498714654)}
+{'acc': np.float64(0.7590673575129534), 'tpr': np.float64(0.7574206755373593), 'fpr': np.float64(0.23924449108079748), 'precision': np.float64(0.7644628099173554), 'f1-score': np.float64(0.7609254498714654), 'f0.5-score': np.float64(0.7630439265828006)}
 contamination=0.5 | n_estimators=15 | max_samples=0.89 | max_features=0.07
-{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8778705636743215), 'f1-score': np.float64(0.869250645994832)}
+{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8778705636743215), 'f1-score': np.float64(0.869250645994832), 'f0.5-score': np.float64(0.8744021626117696)}
 contamination=0.5 | n_estimators=15 | max_samples=0.89 | max_features=0.08
-{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8778705636743215), 'f1-score': np.float64(0.869250645994832)}
+{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8778705636743215), 'f1-score': np.float64(0.869250645994832), 'f0.5-score': np.float64(0.8744021626117696)}
 contamination=0.5 | n_estimators=15 | max_samples=0.89 | max_features=0.09
-{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8778705636743215), 'f1-score': np.float64(0.869250645994832)}
+{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8778705636743215), 'f1-score': np.float64(0.869250645994832), 'f0.5-score': np.float64(0.8744021626117696)}
 contamination=0.5 | n_estimators=15 | max_samples=0.89 | max_features=0.1
-{'acc': np.float64(0.8958549222797928), 'tpr': np.float64(0.887410440122825), 'fpr': np.float64(0.09548793284365163), 'precision': np.float64(0.9050104384133612), 'f1-score': np.float64(0.896124031007752)}
+{'acc': np.float64(0.8958549222797928), 'tpr': np.float64(0.887410440122825), 'fpr': np.float64(0.09548793284365163), 'precision': np.float64(0.9050104384133612), 'f1-score': np.float64(0.896124031007752), 'f0.5-score': np.float64(0.9014348097317529)}
 contamination=0.5 | n_estimators=15 | max_samples=0.89 | max_features=0.11
-{'acc': np.float64(0.8958549222797928), 'tpr': np.float64(0.887410440122825), 'fpr': np.float64(0.09548793284365163), 'precision': np.float64(0.9050104384133612), 'f1-score': np.float64(0.896124031007752)}
+{'acc': np.float64(0.8958549222797928), 'tpr': np.float64(0.887410440122825), 'fpr': np.float64(0.09548793284365163), 'precision': np.float64(0.9050104384133612), 'f1-score': np.float64(0.896124031007752), 'f0.5-score': np.float64(0.9014348097317529)}
 contamination=0.5 | n_estimators=15 | max_samples=0.89 | max_features=0.12
-{'acc': np.float64(0.8958549222797928), 'tpr': np.float64(0.887410440122825), 'fpr': np.float64(0.09548793284365163), 'precision': np.float64(0.9050104384133612), 'f1-score': np.float64(0.896124031007752)}
+{'acc': np.float64(0.8958549222797928), 'tpr': np.float64(0.887410440122825), 'fpr': np.float64(0.09548793284365163), 'precision': np.float64(0.9050104384133612), 'f1-score': np.float64(0.896124031007752), 'f0.5-score': np.float64(0.9014348097317529)}
 contamination=0.5 | n_estimators=15 | max_samples=0.89 | max_features=0.13
-{'acc': np.float64(0.7974093264248705), 'tpr': np.float64(0.8280450358239508), 'fpr': np.float64(0.23399790136411333), 'precision': np.float64(0.7839147286821705), 'f1-score': np.float64(0.8053758088601294)}
+{'acc': np.float64(0.7974093264248705), 'tpr': np.float64(0.8280450358239508), 'fpr': np.float64(0.23399790136411333), 'precision': np.float64(0.7839147286821705), 'f1-score': np.float64(0.8053758088601294), 'f0.5-score': np.float64(0.7923604309500489)}
 contamination=0.5 | n_estimators=15 | max_samples=0.9 | max_features=0.07
-{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8769551616266945), 'f1-score': np.float64(0.868801652892562)}
+{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8769551616266945), 'f1-score': np.float64(0.868801652892562), 'f0.5-score': np.float64(0.8736754622896322)}
 contamination=0.5 | n_estimators=15 | max_samples=0.9 | max_features=0.08
-{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8769551616266945), 'f1-score': np.float64(0.868801652892562)}
+{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8769551616266945), 'f1-score': np.float64(0.868801652892562), 'f0.5-score': np.float64(0.8736754622896322)}
 contamination=0.5 | n_estimators=15 | max_samples=0.9 | max_features=0.09
-{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8769551616266945), 'f1-score': np.float64(0.868801652892562)}
+{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8769551616266945), 'f1-score': np.float64(0.868801652892562), 'f0.5-score': np.float64(0.8736754622896322)}
 contamination=0.5 | n_estimators=15 | max_samples=0.9 | max_features=0.1
-{'acc': np.float64(0.8756476683937824), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.8842544316996872), 'f1-score': np.float64(0.8760330578512396)}
+{'acc': np.float64(0.8756476683937824), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.8842544316996872), 'f1-score': np.float64(0.8760330578512396), 'f0.5-score': np.float64(0.8809474340328277)}
 contamination=0.5 | n_estimators=15 | max_samples=0.9 | max_features=0.11
-{'acc': np.float64(0.8756476683937824), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.8842544316996872), 'f1-score': np.float64(0.8760330578512396)}
+{'acc': np.float64(0.8756476683937824), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.8842544316996872), 'f1-score': np.float64(0.8760330578512396), 'f0.5-score': np.float64(0.8809474340328277)}
 contamination=0.5 | n_estimators=15 | max_samples=0.9 | max_features=0.12
-{'acc': np.float64(0.8756476683937824), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.8842544316996872), 'f1-score': np.float64(0.8760330578512396)}
+{'acc': np.float64(0.8756476683937824), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.8842544316996872), 'f1-score': np.float64(0.8760330578512396), 'f0.5-score': np.float64(0.8809474340328277)}
 contamination=0.5 | n_estimators=15 | max_samples=0.9 | max_features=0.13
-{'acc': np.float64(0.8310880829015544), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.18677859391395593), 'precision': np.float64(0.8232373386295928), 'f1-score': np.float64(0.8356854838709677)}
+{'acc': np.float64(0.8310880829015544), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.18677859391395593), 'precision': np.float64(0.8232373386295928), 'f1-score': np.float64(0.8356854838709677), 'f0.5-score': np.float64(0.8281718281718282)}
 contamination=0.5 | n_estimators=15 | max_samples=0.91 | max_features=0.07
-{'acc': np.float64(0.8673575129533678), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.12172088142707241), 'precision': np.float64(0.8782791185729276), 'f1-score': np.float64(0.8673575129533679)}
+{'acc': np.float64(0.8673575129533678), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.12172088142707241), 'precision': np.float64(0.8782791185729276), 'f1-score': np.float64(0.8673575129533679), 'f0.5-score': np.float64(0.873877636249739)}
 contamination=0.5 | n_estimators=15 | max_samples=0.91 | max_features=0.08
-{'acc': np.float64(0.8673575129533678), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.12172088142707241), 'precision': np.float64(0.8782791185729276), 'f1-score': np.float64(0.8673575129533679)}
+{'acc': np.float64(0.8673575129533678), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.12172088142707241), 'precision': np.float64(0.8782791185729276), 'f1-score': np.float64(0.8673575129533679), 'f0.5-score': np.float64(0.873877636249739)}
 contamination=0.5 | n_estimators=15 | max_samples=0.91 | max_features=0.09
-{'acc': np.float64(0.8673575129533678), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.12172088142707241), 'precision': np.float64(0.8782791185729276), 'f1-score': np.float64(0.8673575129533679)}
+{'acc': np.float64(0.8673575129533678), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.12172088142707241), 'precision': np.float64(0.8782791185729276), 'f1-score': np.float64(0.8673575129533679), 'f0.5-score': np.float64(0.873877636249739)}
 contamination=0.5 | n_estimators=15 | max_samples=0.91 | max_features=0.1
-{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8688524590163934), 'f1-score': np.float64(0.8684075780849972)}
+{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8688524590163934), 'f1-score': np.float64(0.8684075780849972), 'f0.5-score': np.float64(0.8686744519565662)}
 contamination=0.5 | n_estimators=15 | max_samples=0.91 | max_features=0.11
-{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8688524590163934), 'f1-score': np.float64(0.8684075780849972)}
+{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8688524590163934), 'f1-score': np.float64(0.8684075780849972), 'f0.5-score': np.float64(0.8686744519565662)}
 contamination=0.5 | n_estimators=15 | max_samples=0.91 | max_features=0.12
-{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8688524590163934), 'f1-score': np.float64(0.8684075780849972)}
+{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8688524590163934), 'f1-score': np.float64(0.8684075780849972), 'f0.5-score': np.float64(0.8686744519565662)}
 contamination=0.5 | n_estimators=15 | max_samples=0.91 | max_features=0.13
-{'acc': np.float64(0.81139896373057), 'tpr': np.float64(0.8034800409416581), 'fpr': np.float64(0.18048268625393493), 'precision': np.float64(0.8202716823406478), 'f1-score': np.float64(0.811789038262668)}
+{'acc': np.float64(0.81139896373057), 'tpr': np.float64(0.8034800409416581), 'fpr': np.float64(0.18048268625393493), 'precision': np.float64(0.8202716823406478), 'f1-score': np.float64(0.811789038262668), 'f0.5-score': np.float64(0.8168574401664932)}
 contamination=0.5 | n_estimators=15 | max_samples=0.92 | max_features=0.07
-{'acc': np.float64(0.8813471502590674), 'tpr': np.float64(0.8751279426816786), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8887733887733887), 'f1-score': np.float64(0.8818978855079938)}
+{'acc': np.float64(0.8813471502590674), 'tpr': np.float64(0.8751279426816786), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8887733887733887), 'f1-score': np.float64(0.8818978855079938), 'f0.5-score': np.float64(0.8860103626943006)}
 contamination=0.5 | n_estimators=15 | max_samples=0.92 | max_features=0.08
-{'acc': np.float64(0.8813471502590674), 'tpr': np.float64(0.8751279426816786), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8887733887733887), 'f1-score': np.float64(0.8818978855079938)}
+{'acc': np.float64(0.8813471502590674), 'tpr': np.float64(0.8751279426816786), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8887733887733887), 'f1-score': np.float64(0.8818978855079938), 'f0.5-score': np.float64(0.8860103626943006)}
 contamination=0.5 | n_estimators=15 | max_samples=0.92 | max_features=0.09
-{'acc': np.float64(0.8813471502590674), 'tpr': np.float64(0.8751279426816786), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8887733887733887), 'f1-score': np.float64(0.8818978855079938)}
+{'acc': np.float64(0.8813471502590674), 'tpr': np.float64(0.8751279426816786), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8887733887733887), 'f1-score': np.float64(0.8818978855079938), 'f0.5-score': np.float64(0.8860103626943006)}
 contamination=0.5 | n_estimators=15 | max_samples=0.92 | max_features=0.1
-{'acc': np.float64(0.8523316062176166), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.14900314795383002), 'precision': np.float64(0.8545081967213115), 'f1-score': np.float64(0.8540706605222734)}
+{'acc': np.float64(0.8523316062176166), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.14900314795383002), 'precision': np.float64(0.8545081967213115), 'f1-score': np.float64(0.8540706605222734), 'f0.5-score': np.float64(0.8543331284572834)}
 contamination=0.5 | n_estimators=15 | max_samples=0.92 | max_features=0.11
-{'acc': np.float64(0.8523316062176166), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.14900314795383002), 'precision': np.float64(0.8545081967213115), 'f1-score': np.float64(0.8540706605222734)}
+{'acc': np.float64(0.8523316062176166), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.14900314795383002), 'precision': np.float64(0.8545081967213115), 'f1-score': np.float64(0.8540706605222734), 'f0.5-score': np.float64(0.8543331284572834)}
 contamination=0.5 | n_estimators=15 | max_samples=0.92 | max_features=0.12
-{'acc': np.float64(0.8523316062176166), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.14900314795383002), 'precision': np.float64(0.8545081967213115), 'f1-score': np.float64(0.8540706605222734)}
+{'acc': np.float64(0.8523316062176166), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.14900314795383002), 'precision': np.float64(0.8545081967213115), 'f1-score': np.float64(0.8540706605222734), 'f0.5-score': np.float64(0.8543331284572834)}
 contamination=0.5 | n_estimators=15 | max_samples=0.92 | max_features=0.13
-{'acc': np.float64(0.8419689119170984), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.16474291710388247), 'precision': np.float64(0.8407707910750507), 'f1-score': np.float64(0.8446255731023943)}
+{'acc': np.float64(0.8419689119170984), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.16474291710388247), 'precision': np.float64(0.8407707910750507), 'f1-score': np.float64(0.8446255731023943), 'f0.5-score': np.float64(0.8423084738874212)}
 contamination=0.5 | n_estimators=15 | max_samples=0.93 | max_features=0.07
-{'acc': np.float64(0.8704663212435233), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8798328108672936), 'f1-score': np.float64(0.8707342295760081)}
+{'acc': np.float64(0.8704663212435233), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8798328108672936), 'f1-score': np.float64(0.8707342295760081), 'f0.5-score': np.float64(0.8761706555671176)}
 contamination=0.5 | n_estimators=15 | max_samples=0.93 | max_features=0.08
-{'acc': np.float64(0.8704663212435233), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8798328108672936), 'f1-score': np.float64(0.8707342295760081)}
+{'acc': np.float64(0.8704663212435233), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8798328108672936), 'f1-score': np.float64(0.8707342295760081), 'f0.5-score': np.float64(0.8761706555671176)}
 contamination=0.5 | n_estimators=15 | max_samples=0.93 | max_features=0.09
-{'acc': np.float64(0.8704663212435233), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8798328108672936), 'f1-score': np.float64(0.8707342295760081)}
+{'acc': np.float64(0.8704663212435233), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8798328108672936), 'f1-score': np.float64(0.8707342295760081), 'f0.5-score': np.float64(0.8761706555671176)}
 contamination=0.5 | n_estimators=15 | max_samples=0.93 | max_features=0.1
-{'acc': np.float64(0.8347150259067357), 'tpr': np.float64(0.8413510747185261), 'fpr': np.float64(0.1720881427072403), 'precision': np.float64(0.8336713995943205), 'f1-score': np.float64(0.8374936321956189)}
+{'acc': np.float64(0.8347150259067357), 'tpr': np.float64(0.8413510747185261), 'fpr': np.float64(0.1720881427072403), 'precision': np.float64(0.8336713995943205), 'f1-score': np.float64(0.8374936321956189), 'f0.5-score': np.float64(0.8351960983539931)}
 contamination=0.5 | n_estimators=15 | max_samples=0.93 | max_features=0.11
-{'acc': np.float64(0.8347150259067357), 'tpr': np.float64(0.8413510747185261), 'fpr': np.float64(0.1720881427072403), 'precision': np.float64(0.8336713995943205), 'f1-score': np.float64(0.8374936321956189)}
+{'acc': np.float64(0.8347150259067357), 'tpr': np.float64(0.8413510747185261), 'fpr': np.float64(0.1720881427072403), 'precision': np.float64(0.8336713995943205), 'f1-score': np.float64(0.8374936321956189), 'f0.5-score': np.float64(0.8351960983539931)}
 contamination=0.5 | n_estimators=15 | max_samples=0.93 | max_features=0.12
-{'acc': np.float64(0.8347150259067357), 'tpr': np.float64(0.8413510747185261), 'fpr': np.float64(0.1720881427072403), 'precision': np.float64(0.8336713995943205), 'f1-score': np.float64(0.8374936321956189)}
+{'acc': np.float64(0.8347150259067357), 'tpr': np.float64(0.8413510747185261), 'fpr': np.float64(0.1720881427072403), 'precision': np.float64(0.8336713995943205), 'f1-score': np.float64(0.8374936321956189), 'f0.5-score': np.float64(0.8351960983539931)}
 contamination=0.5 | n_estimators=15 | max_samples=0.93 | max_features=0.13
-{'acc': np.float64(0.8424870466321244), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.16369359916054566), 'precision': np.float64(0.8416243654822335), 'f1-score': np.float64(0.8450560652395516)}
+{'acc': np.float64(0.8424870466321244), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.16369359916054566), 'precision': np.float64(0.8416243654822335), 'f1-score': np.float64(0.8450560652395516), 'f0.5-score': np.float64(0.8429936953426886)}
 contamination=0.5 | n_estimators=20 | max_samples=0.87 | max_features=0.07
-{'acc': np.float64(0.8792746113989637), 'tpr': np.float64(0.8659160696008188), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8924050632911392), 'f1-score': np.float64(0.878961038961039)}
+{'acc': np.float64(0.8792746113989637), 'tpr': np.float64(0.8659160696008188), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8924050632911392), 'f1-score': np.float64(0.878961038961039), 'f0.5-score': np.float64(0.8869784021807506)}
 contamination=0.5 | n_estimators=20 | max_samples=0.87 | max_features=0.08
-{'acc': np.float64(0.8792746113989637), 'tpr': np.float64(0.8659160696008188), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8924050632911392), 'f1-score': np.float64(0.878961038961039)}
+{'acc': np.float64(0.8792746113989637), 'tpr': np.float64(0.8659160696008188), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8924050632911392), 'f1-score': np.float64(0.878961038961039), 'f0.5-score': np.float64(0.8869784021807506)}
 contamination=0.5 | n_estimators=20 | max_samples=0.87 | max_features=0.09
-{'acc': np.float64(0.8792746113989637), 'tpr': np.float64(0.8659160696008188), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8924050632911392), 'f1-score': np.float64(0.878961038961039)}
+{'acc': np.float64(0.8792746113989637), 'tpr': np.float64(0.8659160696008188), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8924050632911392), 'f1-score': np.float64(0.878961038961039), 'f0.5-score': np.float64(0.8869784021807506)}
 contamination=0.5 | n_estimators=20 | max_samples=0.87 | max_features=0.1
-{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8766700924974307), 'f1-score': np.float64(0.874871794871795)}
+{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8766700924974307), 'f1-score': np.float64(0.874871794871795), 'f0.5-score': np.float64(0.8759498870404601)}
 contamination=0.5 | n_estimators=20 | max_samples=0.87 | max_features=0.11
-{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8766700924974307), 'f1-score': np.float64(0.874871794871795)}
+{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8766700924974307), 'f1-score': np.float64(0.874871794871795), 'f0.5-score': np.float64(0.8759498870404601)}
 contamination=0.5 | n_estimators=20 | max_samples=0.87 | max_features=0.12
-{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8766700924974307), 'f1-score': np.float64(0.874871794871795)}
+{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8766700924974307), 'f1-score': np.float64(0.874871794871795), 'f0.5-score': np.float64(0.8759498870404601)}
 contamination=0.5 | n_estimators=20 | max_samples=0.87 | max_features=0.13
-{'acc': np.float64(0.8595854922279793), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.13955928646379853), 'precision': np.float64(0.8631687242798354), 'f1-score': np.float64(0.8609543355566958)}
+{'acc': np.float64(0.8595854922279793), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.13955928646379853), 'precision': np.float64(0.8631687242798354), 'f1-score': np.float64(0.8609543355566958), 'f0.5-score': np.float64(0.8622816032887975)}
 contamination=0.5 | n_estimators=20 | max_samples=0.88 | max_features=0.07
-{'acc': np.float64(0.8792746113989637), 'tpr': np.float64(0.8659160696008188), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8924050632911392), 'f1-score': np.float64(0.878961038961039)}
+{'acc': np.float64(0.8792746113989637), 'tpr': np.float64(0.8659160696008188), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8924050632911392), 'f1-score': np.float64(0.878961038961039), 'f0.5-score': np.float64(0.8869784021807506)}
 contamination=0.5 | n_estimators=20 | max_samples=0.88 | max_features=0.08
-{'acc': np.float64(0.8792746113989637), 'tpr': np.float64(0.8659160696008188), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8924050632911392), 'f1-score': np.float64(0.878961038961039)}
+{'acc': np.float64(0.8792746113989637), 'tpr': np.float64(0.8659160696008188), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8924050632911392), 'f1-score': np.float64(0.878961038961039), 'f0.5-score': np.float64(0.8869784021807506)}
 contamination=0.5 | n_estimators=20 | max_samples=0.88 | max_features=0.09
-{'acc': np.float64(0.8792746113989637), 'tpr': np.float64(0.8659160696008188), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8924050632911392), 'f1-score': np.float64(0.878961038961039)}
+{'acc': np.float64(0.8792746113989637), 'tpr': np.float64(0.8659160696008188), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8924050632911392), 'f1-score': np.float64(0.878961038961039), 'f0.5-score': np.float64(0.8869784021807506)}
 contamination=0.5 | n_estimators=20 | max_samples=0.88 | max_features=0.1
-{'acc': np.float64(0.8870466321243523), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8940809968847352), 'f1-score': np.float64(0.8876288659793815)}
+{'acc': np.float64(0.8870466321243523), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8940809968847352), 'f1-score': np.float64(0.8876288659793815), 'f0.5-score': np.float64(0.8914889211016773)}
 contamination=0.5 | n_estimators=20 | max_samples=0.88 | max_features=0.11
-{'acc': np.float64(0.8870466321243523), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8940809968847352), 'f1-score': np.float64(0.8876288659793815)}
+{'acc': np.float64(0.8870466321243523), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8940809968847352), 'f1-score': np.float64(0.8876288659793815), 'f0.5-score': np.float64(0.8914889211016773)}
 contamination=0.5 | n_estimators=20 | max_samples=0.88 | max_features=0.12
-{'acc': np.float64(0.8870466321243523), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8940809968847352), 'f1-score': np.float64(0.8876288659793815)}
+{'acc': np.float64(0.8870466321243523), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8940809968847352), 'f1-score': np.float64(0.8876288659793815), 'f0.5-score': np.float64(0.8914889211016773)}
 contamination=0.5 | n_estimators=20 | max_samples=0.88 | max_features=0.13
-{'acc': np.float64(0.8305699481865285), 'tpr': np.float64(0.827021494370522), 'fpr': np.float64(0.1657922350472193), 'precision': np.float64(0.8364389233954451), 'f1-score': np.float64(0.8317035512094699)}
+{'acc': np.float64(0.8305699481865285), 'tpr': np.float64(0.827021494370522), 'fpr': np.float64(0.1657922350472193), 'precision': np.float64(0.8364389233954451), 'f1-score': np.float64(0.8317035512094699), 'f0.5-score': np.float64(0.8345383185292296)}
 contamination=0.5 | n_estimators=20 | max_samples=0.89 | max_features=0.07
-{'acc': np.float64(0.8751295336787565), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.884133611691023), 'f1-score': np.float64(0.875452196382429)}
+{'acc': np.float64(0.8751295336787565), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.884133611691023), 'f1-score': np.float64(0.875452196382429), 'f0.5-score': np.float64(0.8806404657933042)}
 contamination=0.5 | n_estimators=20 | max_samples=0.89 | max_features=0.08
-{'acc': np.float64(0.8751295336787565), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.884133611691023), 'f1-score': np.float64(0.875452196382429)}
+{'acc': np.float64(0.8751295336787565), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.884133611691023), 'f1-score': np.float64(0.875452196382429), 'f0.5-score': np.float64(0.8806404657933042)}
 contamination=0.5 | n_estimators=20 | max_samples=0.89 | max_features=0.09
-{'acc': np.float64(0.8751295336787565), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.884133611691023), 'f1-score': np.float64(0.875452196382429)}
+{'acc': np.float64(0.8751295336787565), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.884133611691023), 'f1-score': np.float64(0.875452196382429), 'f0.5-score': np.float64(0.8806404657933042)}
 contamination=0.5 | n_estimators=20 | max_samples=0.89 | max_features=0.1
-{'acc': np.float64(0.8917098445595855), 'tpr': np.float64(0.8853633572159673), 'fpr': np.float64(0.10178384050367262), 'precision': np.float64(0.8991683991683992), 'f1-score': np.float64(0.892212480660134)}
+{'acc': np.float64(0.8917098445595855), 'tpr': np.float64(0.8853633572159673), 'fpr': np.float64(0.10178384050367262), 'precision': np.float64(0.8991683991683992), 'f1-score': np.float64(0.892212480660134), 'f0.5-score': np.float64(0.8963730569948186)}
 contamination=0.5 | n_estimators=20 | max_samples=0.89 | max_features=0.11
-{'acc': np.float64(0.8917098445595855), 'tpr': np.float64(0.8853633572159673), 'fpr': np.float64(0.10178384050367262), 'precision': np.float64(0.8991683991683992), 'f1-score': np.float64(0.892212480660134)}
+{'acc': np.float64(0.8917098445595855), 'tpr': np.float64(0.8853633572159673), 'fpr': np.float64(0.10178384050367262), 'precision': np.float64(0.8991683991683992), 'f1-score': np.float64(0.892212480660134), 'f0.5-score': np.float64(0.8963730569948186)}
 contamination=0.5 | n_estimators=20 | max_samples=0.89 | max_features=0.12
-{'acc': np.float64(0.8917098445595855), 'tpr': np.float64(0.8853633572159673), 'fpr': np.float64(0.10178384050367262), 'precision': np.float64(0.8991683991683992), 'f1-score': np.float64(0.892212480660134)}
+{'acc': np.float64(0.8917098445595855), 'tpr': np.float64(0.8853633572159673), 'fpr': np.float64(0.10178384050367262), 'precision': np.float64(0.8991683991683992), 'f1-score': np.float64(0.892212480660134), 'f0.5-score': np.float64(0.8963730569948186)}
 contamination=0.5 | n_estimators=20 | max_samples=0.89 | max_features=0.13
-{'acc': np.float64(0.8238341968911918), 'tpr': np.float64(0.827021494370522), 'fpr': np.float64(0.1794333683105981), 'precision': np.float64(0.8253319713993871), 'f1-score': np.float64(0.8261758691206543)}
+{'acc': np.float64(0.8238341968911918), 'tpr': np.float64(0.827021494370522), 'fpr': np.float64(0.1794333683105981), 'precision': np.float64(0.8253319713993871), 'f1-score': np.float64(0.8261758691206543), 'f0.5-score': np.float64(0.8256693235234007)}
 contamination=0.5 | n_estimators=20 | max_samples=0.9 | max_features=0.07
-{'acc': np.float64(0.8678756476683938), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8713991769547325), 'f1-score': np.float64(0.8691636736788096)}
+{'acc': np.float64(0.8678756476683938), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8713991769547325), 'f1-score': np.float64(0.8691636736788096), 'f0.5-score': np.float64(0.8705035971223022)}
 contamination=0.5 | n_estimators=20 | max_samples=0.9 | max_features=0.08
-{'acc': np.float64(0.8678756476683938), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8713991769547325), 'f1-score': np.float64(0.8691636736788096)}
+{'acc': np.float64(0.8678756476683938), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8713991769547325), 'f1-score': np.float64(0.8691636736788096), 'f0.5-score': np.float64(0.8705035971223022)}
 contamination=0.5 | n_estimators=20 | max_samples=0.9 | max_features=0.09
-{'acc': np.float64(0.8678756476683938), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8713991769547325), 'f1-score': np.float64(0.8691636736788096)}
+{'acc': np.float64(0.8678756476683938), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8713991769547325), 'f1-score': np.float64(0.8691636736788096), 'f0.5-score': np.float64(0.8705035971223022)}
 contamination=0.5 | n_estimators=20 | max_samples=0.9 | max_features=0.1
-{'acc': np.float64(0.8808290155440415), 'tpr': np.float64(0.8741044012282497), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8886576482830385), 'f1-score': np.float64(0.8813209494324045)}
+{'acc': np.float64(0.8808290155440415), 'tpr': np.float64(0.8741044012282497), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8886576482830385), 'f1-score': np.float64(0.8813209494324045), 'f0.5-score': np.float64(0.885708359261564)}
 contamination=0.5 | n_estimators=20 | max_samples=0.9 | max_features=0.11
-{'acc': np.float64(0.8808290155440415), 'tpr': np.float64(0.8741044012282497), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8886576482830385), 'f1-score': np.float64(0.8813209494324045)}
+{'acc': np.float64(0.8808290155440415), 'tpr': np.float64(0.8741044012282497), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8886576482830385), 'f1-score': np.float64(0.8813209494324045), 'f0.5-score': np.float64(0.885708359261564)}
 contamination=0.5 | n_estimators=20 | max_samples=0.9 | max_features=0.12
-{'acc': np.float64(0.8808290155440415), 'tpr': np.float64(0.8741044012282497), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8886576482830385), 'f1-score': np.float64(0.8813209494324045)}
+{'acc': np.float64(0.8808290155440415), 'tpr': np.float64(0.8741044012282497), 'fpr': np.float64(0.11227701993704092), 'precision': np.float64(0.8886576482830385), 'f1-score': np.float64(0.8813209494324045), 'f0.5-score': np.float64(0.885708359261564)}
 contamination=0.5 | n_estimators=20 | max_samples=0.9 | max_features=0.13
-{'acc': np.float64(0.8538860103626943), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.14795383001049317), 'precision': np.float64(0.8556806550665302), 'f1-score': np.float64(0.8556806550665302)}
+{'acc': np.float64(0.8538860103626943), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.14795383001049317), 'precision': np.float64(0.8556806550665302), 'f1-score': np.float64(0.8556806550665302), 'f0.5-score': np.float64(0.8556806550665302)}
 contamination=0.5 | n_estimators=20 | max_samples=0.91 | max_features=0.07
-{'acc': np.float64(0.8751295336787565), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.884133611691023), 'f1-score': np.float64(0.875452196382429)}
+{'acc': np.float64(0.8751295336787565), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.884133611691023), 'f1-score': np.float64(0.875452196382429), 'f0.5-score': np.float64(0.8806404657933042)}
 contamination=0.5 | n_estimators=20 | max_samples=0.91 | max_features=0.08
-{'acc': np.float64(0.8751295336787565), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.884133611691023), 'f1-score': np.float64(0.875452196382429)}
+{'acc': np.float64(0.8751295336787565), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.884133611691023), 'f1-score': np.float64(0.875452196382429), 'f0.5-score': np.float64(0.8806404657933042)}
 contamination=0.5 | n_estimators=20 | max_samples=0.91 | max_features=0.09
-{'acc': np.float64(0.8751295336787565), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.884133611691023), 'f1-score': np.float64(0.875452196382429)}
+{'acc': np.float64(0.8751295336787565), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.884133611691023), 'f1-score': np.float64(0.875452196382429), 'f0.5-score': np.float64(0.8806404657933042)}
 contamination=0.5 | n_estimators=20 | max_samples=0.91 | max_features=0.1
-{'acc': np.float64(0.8823834196891192), 'tpr': np.float64(0.8761514841351075), 'fpr': np.float64(0.11122770199370409), 'precision': np.float64(0.8898128898128899), 'f1-score': np.float64(0.8829293450232079)}
+{'acc': np.float64(0.8823834196891192), 'tpr': np.float64(0.8761514841351075), 'fpr': np.float64(0.11122770199370409), 'precision': np.float64(0.8898128898128899), 'f1-score': np.float64(0.8829293450232079), 'f0.5-score': np.float64(0.8870466321243523)}
 contamination=0.5 | n_estimators=20 | max_samples=0.91 | max_features=0.11
-{'acc': np.float64(0.8823834196891192), 'tpr': np.float64(0.8761514841351075), 'fpr': np.float64(0.11122770199370409), 'precision': np.float64(0.8898128898128899), 'f1-score': np.float64(0.8829293450232079)}
+{'acc': np.float64(0.8823834196891192), 'tpr': np.float64(0.8761514841351075), 'fpr': np.float64(0.11122770199370409), 'precision': np.float64(0.8898128898128899), 'f1-score': np.float64(0.8829293450232079), 'f0.5-score': np.float64(0.8870466321243523)}
 contamination=0.5 | n_estimators=20 | max_samples=0.91 | max_features=0.12
-{'acc': np.float64(0.8823834196891192), 'tpr': np.float64(0.8761514841351075), 'fpr': np.float64(0.11122770199370409), 'precision': np.float64(0.8898128898128899), 'f1-score': np.float64(0.8829293450232079)}
+{'acc': np.float64(0.8823834196891192), 'tpr': np.float64(0.8761514841351075), 'fpr': np.float64(0.11122770199370409), 'precision': np.float64(0.8898128898128899), 'f1-score': np.float64(0.8829293450232079), 'f0.5-score': np.float64(0.8870466321243523)}
 contamination=0.5 | n_estimators=20 | max_samples=0.91 | max_features=0.13
-{'acc': np.float64(0.8523316062176166), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.15005246589716684), 'precision': np.float64(0.8537832310838446), 'f1-score': np.float64(0.8542199488491048)}
+{'acc': np.float64(0.8523316062176166), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.15005246589716684), 'precision': np.float64(0.8537832310838446), 'f1-score': np.float64(0.8542199488491048), 'f0.5-score': np.float64(0.8539578645939865)}
 contamination=0.5 | n_estimators=20 | max_samples=0.92 | max_features=0.07
-{'acc': np.float64(0.8761658031088083), 'tpr': np.float64(0.8710337768679631), 'fpr': np.float64(0.11857292759706191), 'precision': np.float64(0.8827800829875518), 'f1-score': np.float64(0.8768675940236991)}
+{'acc': np.float64(0.8761658031088083), 'tpr': np.float64(0.8710337768679631), 'fpr': np.float64(0.11857292759706191), 'precision': np.float64(0.8827800829875518), 'f1-score': np.float64(0.8768675940236991), 'f0.5-score': np.float64(0.8804055452100145)}
 contamination=0.5 | n_estimators=20 | max_samples=0.92 | max_features=0.08
-{'acc': np.float64(0.8761658031088083), 'tpr': np.float64(0.8710337768679631), 'fpr': np.float64(0.11857292759706191), 'precision': np.float64(0.8827800829875518), 'f1-score': np.float64(0.8768675940236991)}
+{'acc': np.float64(0.8761658031088083), 'tpr': np.float64(0.8710337768679631), 'fpr': np.float64(0.11857292759706191), 'precision': np.float64(0.8827800829875518), 'f1-score': np.float64(0.8768675940236991), 'f0.5-score': np.float64(0.8804055452100145)}
 contamination=0.5 | n_estimators=20 | max_samples=0.92 | max_features=0.09
-{'acc': np.float64(0.8761658031088083), 'tpr': np.float64(0.8710337768679631), 'fpr': np.float64(0.11857292759706191), 'precision': np.float64(0.8827800829875518), 'f1-score': np.float64(0.8768675940236991)}
+{'acc': np.float64(0.8761658031088083), 'tpr': np.float64(0.8710337768679631), 'fpr': np.float64(0.11857292759706191), 'precision': np.float64(0.8827800829875518), 'f1-score': np.float64(0.8768675940236991), 'f0.5-score': np.float64(0.8804055452100145)}
 contamination=0.5 | n_estimators=20 | max_samples=0.92 | max_features=0.1
-{'acc': np.float64(0.8746113989637305), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.878475798146241), 'f1-score': np.float64(0.8757700205338808)}
+{'acc': np.float64(0.8746113989637305), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.878475798146241), 'f1-score': np.float64(0.8757700205338808), 'f0.5-score': np.float64(0.8773914832339025)}
 contamination=0.5 | n_estimators=20 | max_samples=0.92 | max_features=0.11
-{'acc': np.float64(0.8746113989637305), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.878475798146241), 'f1-score': np.float64(0.8757700205338808)}
+{'acc': np.float64(0.8746113989637305), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.878475798146241), 'f1-score': np.float64(0.8757700205338808), 'f0.5-score': np.float64(0.8773914832339025)}
 contamination=0.5 | n_estimators=20 | max_samples=0.92 | max_features=0.12
-{'acc': np.float64(0.8746113989637305), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.878475798146241), 'f1-score': np.float64(0.8757700205338808)}
+{'acc': np.float64(0.8746113989637305), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.878475798146241), 'f1-score': np.float64(0.8757700205338808), 'f0.5-score': np.float64(0.8773914832339025)}
 contamination=0.5 | n_estimators=20 | max_samples=0.92 | max_features=0.13
-{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.14060860440713535), 'precision': np.float64(0.8622816032887975), 'f1-score': np.float64(0.8605128205128205)}
+{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.14060860440713535), 'precision': np.float64(0.8622816032887975), 'f1-score': np.float64(0.8605128205128205), 'f0.5-score': np.float64(0.8615732183199836)}
 contamination=0.5 | n_estimators=20 | max_samples=0.93 | max_features=0.07
-{'acc': np.float64(0.8813471502590674), 'tpr': np.float64(0.8700102354145343), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8928571428571429), 'f1-score': np.float64(0.8812856402280975)}
+{'acc': np.float64(0.8813471502590674), 'tpr': np.float64(0.8700102354145343), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8928571428571429), 'f1-score': np.float64(0.8812856402280975), 'f0.5-score': np.float64(0.8881922675026124)}
 contamination=0.5 | n_estimators=20 | max_samples=0.93 | max_features=0.08
-{'acc': np.float64(0.8813471502590674), 'tpr': np.float64(0.8700102354145343), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8928571428571429), 'f1-score': np.float64(0.8812856402280975)}
+{'acc': np.float64(0.8813471502590674), 'tpr': np.float64(0.8700102354145343), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8928571428571429), 'f1-score': np.float64(0.8812856402280975), 'f0.5-score': np.float64(0.8881922675026124)}
 contamination=0.5 | n_estimators=20 | max_samples=0.93 | max_features=0.09
-{'acc': np.float64(0.8813471502590674), 'tpr': np.float64(0.8700102354145343), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8928571428571429), 'f1-score': np.float64(0.8812856402280975)}
+{'acc': np.float64(0.8813471502590674), 'tpr': np.float64(0.8700102354145343), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8928571428571429), 'f1-score': np.float64(0.8812856402280975), 'f0.5-score': np.float64(0.8881922675026124)}
 contamination=0.5 | n_estimators=20 | max_samples=0.93 | max_features=0.1
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8638689866939611), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8683127572016461), 'f1-score': np.float64(0.8660851718830169)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8638689866939611), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8683127572016461), 'f1-score': np.float64(0.8660851718830169), 'f0.5-score': np.float64(0.8674203494347379)}
 contamination=0.5 | n_estimators=20 | max_samples=0.93 | max_features=0.11
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8638689866939611), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8683127572016461), 'f1-score': np.float64(0.8660851718830169)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8638689866939611), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8683127572016461), 'f1-score': np.float64(0.8660851718830169), 'f0.5-score': np.float64(0.8674203494347379)}
 contamination=0.5 | n_estimators=20 | max_samples=0.93 | max_features=0.12
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8638689866939611), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8683127572016461), 'f1-score': np.float64(0.8660851718830169)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8638689866939611), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8683127572016461), 'f1-score': np.float64(0.8660851718830169), 'f0.5-score': np.float64(0.8674203494347379)}
 contamination=0.5 | n_estimators=20 | max_samples=0.93 | max_features=0.13
-{'acc': np.float64(0.8575129533678757), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.14270724029380902), 'precision': np.float64(0.8603696098562629), 'f1-score': np.float64(0.8590466427473091)}
+{'acc': np.float64(0.8575129533678757), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.14270724029380902), 'precision': np.float64(0.8603696098562629), 'f1-score': np.float64(0.8590466427473091), 'f0.5-score': np.float64(0.8598399343320337)}
 contamination=0.5 | n_estimators=25 | max_samples=0.87 | max_features=0.07
-{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.1248688352570829), 'precision': np.float64(0.8762993762993763), 'f1-score': np.float64(0.8695203713254254)}
+{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.1248688352570829), 'precision': np.float64(0.8762993762993763), 'f1-score': np.float64(0.8695203713254254), 'f0.5-score': np.float64(0.8735751295336788)}
 contamination=0.5 | n_estimators=25 | max_samples=0.87 | max_features=0.08
-{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.1248688352570829), 'precision': np.float64(0.8762993762993763), 'f1-score': np.float64(0.8695203713254254)}
+{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.1248688352570829), 'precision': np.float64(0.8762993762993763), 'f1-score': np.float64(0.8695203713254254), 'f0.5-score': np.float64(0.8735751295336788)}
 contamination=0.5 | n_estimators=25 | max_samples=0.87 | max_features=0.09
-{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.1248688352570829), 'precision': np.float64(0.8762993762993763), 'f1-score': np.float64(0.8695203713254254)}
+{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.1248688352570829), 'precision': np.float64(0.8762993762993763), 'f1-score': np.float64(0.8695203713254254), 'f0.5-score': np.float64(0.8735751295336788)}
 contamination=0.5 | n_estimators=25 | max_samples=0.87 | max_features=0.1
-{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8724279835390947), 'f1-score': np.float64(0.8701898409440738)}
+{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8724279835390947), 'f1-score': np.float64(0.8701898409440738), 'f0.5-score': np.float64(0.8715313463514902)}
 contamination=0.5 | n_estimators=25 | max_samples=0.87 | max_features=0.11
-{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8724279835390947), 'f1-score': np.float64(0.8701898409440738)}
+{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8724279835390947), 'f1-score': np.float64(0.8701898409440738), 'f0.5-score': np.float64(0.8715313463514902)}
 contamination=0.5 | n_estimators=25 | max_samples=0.87 | max_features=0.12
-{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8724279835390947), 'f1-score': np.float64(0.8701898409440738)}
+{'acc': np.float64(0.8689119170984456), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8724279835390947), 'f1-score': np.float64(0.8701898409440738), 'f0.5-score': np.float64(0.8715313463514902)}
 contamination=0.5 | n_estimators=25 | max_samples=0.87 | max_features=0.13
-{'acc': np.float64(0.8518134715025907), 'tpr': np.float64(0.8474923234390993), 'fpr': np.float64(0.14375655823714587), 'precision': np.float64(0.8580310880829015), 'f1-score': np.float64(0.8527291452111225)}
+{'acc': np.float64(0.8518134715025907), 'tpr': np.float64(0.8474923234390993), 'fpr': np.float64(0.14375655823714587), 'precision': np.float64(0.8580310880829015), 'f1-score': np.float64(0.8527291452111225), 'f0.5-score': np.float64(0.855902418854662)}
 contamination=0.5 | n_estimators=25 | max_samples=0.88 | max_features=0.07
-{'acc': np.float64(0.8694300518134715), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8772112382934444), 'f1-score': np.float64(0.8699690402476781)}
+{'acc': np.float64(0.8694300518134715), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8772112382934444), 'f1-score': np.float64(0.8699690402476781), 'f0.5-score': np.float64(0.8742999377722465)}
 contamination=0.5 | n_estimators=25 | max_samples=0.88 | max_features=0.08
-{'acc': np.float64(0.8694300518134715), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8772112382934444), 'f1-score': np.float64(0.8699690402476781)}
+{'acc': np.float64(0.8694300518134715), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8772112382934444), 'f1-score': np.float64(0.8699690402476781), 'f0.5-score': np.float64(0.8742999377722465)}
 contamination=0.5 | n_estimators=25 | max_samples=0.88 | max_features=0.09
-{'acc': np.float64(0.8694300518134715), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8772112382934444), 'f1-score': np.float64(0.8699690402476781)}
+{'acc': np.float64(0.8694300518134715), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8772112382934444), 'f1-score': np.float64(0.8699690402476781), 'f0.5-score': np.float64(0.8742999377722465)}
 contamination=0.5 | n_estimators=25 | max_samples=0.88 | max_features=0.1
-{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8753894080996885), 'f1-score': np.float64(0.8690721649484536)}
+{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8753894080996885), 'f1-score': np.float64(0.8690721649484536), 'f0.5-score': np.float64(0.8728515220542555)}
 contamination=0.5 | n_estimators=25 | max_samples=0.88 | max_features=0.11
-{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8753894080996885), 'f1-score': np.float64(0.8690721649484536)}
+{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8753894080996885), 'f1-score': np.float64(0.8690721649484536), 'f0.5-score': np.float64(0.8728515220542555)}
 contamination=0.5 | n_estimators=25 | max_samples=0.88 | max_features=0.12
-{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8753894080996885), 'f1-score': np.float64(0.8690721649484536)}
+{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8753894080996885), 'f1-score': np.float64(0.8690721649484536), 'f0.5-score': np.float64(0.8728515220542555)}
 contamination=0.5 | n_estimators=25 | max_samples=0.88 | max_features=0.13
-{'acc': np.float64(0.8217616580310881), 'tpr': np.float64(0.8188331627430911), 'fpr': np.float64(0.17523609653725078), 'precision': np.float64(0.827300930713547), 'f1-score': np.float64(0.823045267489712)}
+{'acc': np.float64(0.8217616580310881), 'tpr': np.float64(0.8188331627430911), 'fpr': np.float64(0.17523609653725078), 'precision': np.float64(0.827300930713547), 'f1-score': np.float64(0.823045267489712), 'f0.5-score': np.float64(0.8255933952528379)}
 contamination=0.5 | n_estimators=25 | max_samples=0.89 | max_features=0.07
-{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.11962224554039874), 'precision': np.float64(0.8808777429467085), 'f1-score': np.float64(0.8717683557394003)}
+{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.11962224554039874), 'precision': np.float64(0.8808777429467085), 'f1-score': np.float64(0.8717683557394003), 'f0.5-score': np.float64(0.8772112382934444)}
 contamination=0.5 | n_estimators=25 | max_samples=0.89 | max_features=0.08
-{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.11962224554039874), 'precision': np.float64(0.8808777429467085), 'f1-score': np.float64(0.8717683557394003)}
+{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.11962224554039874), 'precision': np.float64(0.8808777429467085), 'f1-score': np.float64(0.8717683557394003), 'f0.5-score': np.float64(0.8772112382934444)}
 contamination=0.5 | n_estimators=25 | max_samples=0.89 | max_features=0.09
-{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.11962224554039874), 'precision': np.float64(0.8808777429467085), 'f1-score': np.float64(0.8717683557394003)}
+{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.11962224554039874), 'precision': np.float64(0.8808777429467085), 'f1-score': np.float64(0.8717683557394003), 'f0.5-score': np.float64(0.8772112382934444)}
 contamination=0.5 | n_estimators=25 | max_samples=0.89 | max_features=0.1
-{'acc': np.float64(0.8854922279792746), 'tpr': np.float64(0.8792221084953941), 'fpr': np.float64(0.1080797481636936), 'precision': np.float64(0.8929313929313929), 'f1-score': np.float64(0.88602372356885)}
+{'acc': np.float64(0.8854922279792746), 'tpr': np.float64(0.8792221084953941), 'fpr': np.float64(0.1080797481636936), 'precision': np.float64(0.8929313929313929), 'f1-score': np.float64(0.88602372356885), 'f0.5-score': np.float64(0.8901554404145078)}
 contamination=0.5 | n_estimators=25 | max_samples=0.89 | max_features=0.11
-{'acc': np.float64(0.8854922279792746), 'tpr': np.float64(0.8792221084953941), 'fpr': np.float64(0.1080797481636936), 'precision': np.float64(0.8929313929313929), 'f1-score': np.float64(0.88602372356885)}
+{'acc': np.float64(0.8854922279792746), 'tpr': np.float64(0.8792221084953941), 'fpr': np.float64(0.1080797481636936), 'precision': np.float64(0.8929313929313929), 'f1-score': np.float64(0.88602372356885), 'f0.5-score': np.float64(0.8901554404145078)}
 contamination=0.5 | n_estimators=25 | max_samples=0.89 | max_features=0.12
-{'acc': np.float64(0.8854922279792746), 'tpr': np.float64(0.8792221084953941), 'fpr': np.float64(0.1080797481636936), 'precision': np.float64(0.8929313929313929), 'f1-score': np.float64(0.88602372356885)}
+{'acc': np.float64(0.8854922279792746), 'tpr': np.float64(0.8792221084953941), 'fpr': np.float64(0.1080797481636936), 'precision': np.float64(0.8929313929313929), 'f1-score': np.float64(0.88602372356885), 'f0.5-score': np.float64(0.8901554404145078)}
 contamination=0.5 | n_estimators=25 | max_samples=0.89 | max_features=0.13
-{'acc': np.float64(0.8383419689119171), 'tpr': np.float64(0.8331627430910952), 'fpr': np.float64(0.15634837355718784), 'precision': np.float64(0.8452751817237798), 'f1-score': np.float64(0.8391752577319587)}
+{'acc': np.float64(0.8383419689119171), 'tpr': np.float64(0.8331627430910952), 'fpr': np.float64(0.15634837355718784), 'precision': np.float64(0.8452751817237798), 'f1-score': np.float64(0.8391752577319587), 'f0.5-score': np.float64(0.8428246013667426)}
 contamination=0.5 | n_estimators=25 | max_samples=0.9 | max_features=0.07
-{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.11752360965372508), 'precision': np.float64(0.8824763903462749), 'f1-score': np.float64(0.871502590673575)}
+{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.11752360965372508), 'precision': np.float64(0.8824763903462749), 'f1-score': np.float64(0.871502590673575), 'f0.5-score': np.float64(0.8780538734600125)}
 contamination=0.5 | n_estimators=25 | max_samples=0.9 | max_features=0.08
-{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.11752360965372508), 'precision': np.float64(0.8824763903462749), 'f1-score': np.float64(0.871502590673575)}
+{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.11752360965372508), 'precision': np.float64(0.8824763903462749), 'f1-score': np.float64(0.871502590673575), 'f0.5-score': np.float64(0.8780538734600125)}
 contamination=0.5 | n_estimators=25 | max_samples=0.9 | max_features=0.09
-{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.11752360965372508), 'precision': np.float64(0.8824763903462749), 'f1-score': np.float64(0.871502590673575)}
+{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.11752360965372508), 'precision': np.float64(0.8824763903462749), 'f1-score': np.float64(0.871502590673575), 'f0.5-score': np.float64(0.8780538734600125)}
 contamination=0.5 | n_estimators=25 | max_samples=0.9 | max_features=0.1
-{'acc': np.float64(0.8829015544041451), 'tpr': np.float64(0.8771750255885363), 'fpr': np.float64(0.11122770199370409), 'precision': np.float64(0.8899273104880582), 'f1-score': np.float64(0.8835051546391753)}
+{'acc': np.float64(0.8829015544041451), 'tpr': np.float64(0.8771750255885363), 'fpr': np.float64(0.11122770199370409), 'precision': np.float64(0.8899273104880582), 'f1-score': np.float64(0.8835051546391753), 'f0.5-score': np.float64(0.887347276868917)}
 contamination=0.5 | n_estimators=25 | max_samples=0.9 | max_features=0.11
-{'acc': np.float64(0.8829015544041451), 'tpr': np.float64(0.8771750255885363), 'fpr': np.float64(0.11122770199370409), 'precision': np.float64(0.8899273104880582), 'f1-score': np.float64(0.8835051546391753)}
+{'acc': np.float64(0.8829015544041451), 'tpr': np.float64(0.8771750255885363), 'fpr': np.float64(0.11122770199370409), 'precision': np.float64(0.8899273104880582), 'f1-score': np.float64(0.8835051546391753), 'f0.5-score': np.float64(0.887347276868917)}
 contamination=0.5 | n_estimators=25 | max_samples=0.9 | max_features=0.12
-{'acc': np.float64(0.8829015544041451), 'tpr': np.float64(0.8771750255885363), 'fpr': np.float64(0.11122770199370409), 'precision': np.float64(0.8899273104880582), 'f1-score': np.float64(0.8835051546391753)}
+{'acc': np.float64(0.8829015544041451), 'tpr': np.float64(0.8771750255885363), 'fpr': np.float64(0.11122770199370409), 'precision': np.float64(0.8899273104880582), 'f1-score': np.float64(0.8835051546391753), 'f0.5-score': np.float64(0.887347276868917)}
 contamination=0.5 | n_estimators=25 | max_samples=0.9 | max_features=0.13
-{'acc': np.float64(0.8533678756476684), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.1416579223504722), 'precision': np.float64(0.8599585062240664), 'f1-score': np.float64(0.8541988665636271)}
+{'acc': np.float64(0.8533678756476684), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.1416579223504722), 'precision': np.float64(0.8599585062240664), 'f1-score': np.float64(0.8541988665636271), 'f0.5-score': np.float64(0.8576453548520587)}
 contamination=0.5 | n_estimators=25 | max_samples=0.91 | max_features=0.07
-{'acc': np.float64(0.8699481865284974), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.878125), 'f1-score': np.float64(0.8704181724315951)}
+{'acc': np.float64(0.8699481865284974), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.878125), 'f1-score': np.float64(0.8704181724315951), 'f0.5-score': np.float64(0.8750259497612622)}
 contamination=0.5 | n_estimators=25 | max_samples=0.91 | max_features=0.08
-{'acc': np.float64(0.8699481865284974), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.878125), 'f1-score': np.float64(0.8704181724315951)}
+{'acc': np.float64(0.8699481865284974), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.878125), 'f1-score': np.float64(0.8704181724315951), 'f0.5-score': np.float64(0.8750259497612622)}
 contamination=0.5 | n_estimators=25 | max_samples=0.91 | max_features=0.09
-{'acc': np.float64(0.8699481865284974), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.878125), 'f1-score': np.float64(0.8704181724315951)}
+{'acc': np.float64(0.8699481865284974), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.878125), 'f1-score': np.float64(0.8704181724315951), 'f0.5-score': np.float64(0.8750259497612622)}
 contamination=0.5 | n_estimators=25 | max_samples=0.91 | max_features=0.1
-{'acc': np.float64(0.8870466321243523), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8940809968847352), 'f1-score': np.float64(0.8876288659793815)}
+{'acc': np.float64(0.8870466321243523), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8940809968847352), 'f1-score': np.float64(0.8876288659793815), 'f0.5-score': np.float64(0.8914889211016773)}
 contamination=0.5 | n_estimators=25 | max_samples=0.91 | max_features=0.11
-{'acc': np.float64(0.8870466321243523), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8940809968847352), 'f1-score': np.float64(0.8876288659793815)}
+{'acc': np.float64(0.8870466321243523), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8940809968847352), 'f1-score': np.float64(0.8876288659793815), 'f0.5-score': np.float64(0.8914889211016773)}
 contamination=0.5 | n_estimators=25 | max_samples=0.91 | max_features=0.12
-{'acc': np.float64(0.8870466321243523), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8940809968847352), 'f1-score': np.float64(0.8876288659793815)}
+{'acc': np.float64(0.8870466321243523), 'tpr': np.float64(0.8812691914022518), 'fpr': np.float64(0.10703043022035677), 'precision': np.float64(0.8940809968847352), 'f1-score': np.float64(0.8876288659793815), 'f0.5-score': np.float64(0.8914889211016773)}
 contamination=0.5 | n_estimators=25 | max_samples=0.91 | max_features=0.13
-{'acc': np.float64(0.8564766839378238), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.13955928646379853), 'precision': np.float64(0.8623188405797102), 'f1-score': np.float64(0.8574369531652085)}
+{'acc': np.float64(0.8564766839378238), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.13955928646379853), 'precision': np.float64(0.8623188405797102), 'f1-score': np.float64(0.8574369531652085), 'f0.5-score': np.float64(0.8603594298698616)}
 contamination=0.5 | n_estimators=25 | max_samples=0.92 | max_features=0.07
-{'acc': np.float64(0.8663212435233161), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8788198103266597), 'f1-score': np.float64(0.8660436137071651)}
+{'acc': np.float64(0.8663212435233161), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8788198103266597), 'f1-score': np.float64(0.8660436137071651), 'f0.5-score': np.float64(0.873664362036455)}
 contamination=0.5 | n_estimators=25 | max_samples=0.92 | max_features=0.08
-{'acc': np.float64(0.8663212435233161), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8788198103266597), 'f1-score': np.float64(0.8660436137071651)}
+{'acc': np.float64(0.8663212435233161), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8788198103266597), 'f1-score': np.float64(0.8660436137071651), 'f0.5-score': np.float64(0.873664362036455)}
 contamination=0.5 | n_estimators=25 | max_samples=0.92 | max_features=0.09
-{'acc': np.float64(0.8663212435233161), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8788198103266597), 'f1-score': np.float64(0.8660436137071651)}
+{'acc': np.float64(0.8663212435233161), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8788198103266597), 'f1-score': np.float64(0.8660436137071651), 'f0.5-score': np.float64(0.873664362036455)}
 contamination=0.5 | n_estimators=25 | max_samples=0.92 | max_features=0.1
-{'acc': np.float64(0.8725388601036269), 'tpr': np.float64(0.872057318321392), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8756423432682425), 'f1-score': np.float64(0.8738461538461537)}
+{'acc': np.float64(0.8725388601036269), 'tpr': np.float64(0.872057318321392), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8756423432682425), 'f1-score': np.float64(0.8738461538461537), 'f0.5-score': np.float64(0.8749229821318546)}
 contamination=0.5 | n_estimators=25 | max_samples=0.92 | max_features=0.11
-{'acc': np.float64(0.8725388601036269), 'tpr': np.float64(0.872057318321392), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8756423432682425), 'f1-score': np.float64(0.8738461538461537)}
+{'acc': np.float64(0.8725388601036269), 'tpr': np.float64(0.872057318321392), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8756423432682425), 'f1-score': np.float64(0.8738461538461537), 'f0.5-score': np.float64(0.8749229821318546)}
 contamination=0.5 | n_estimators=25 | max_samples=0.92 | max_features=0.12
-{'acc': np.float64(0.8725388601036269), 'tpr': np.float64(0.872057318321392), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8756423432682425), 'f1-score': np.float64(0.8738461538461537)}
+{'acc': np.float64(0.8725388601036269), 'tpr': np.float64(0.872057318321392), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8756423432682425), 'f1-score': np.float64(0.8738461538461537), 'f0.5-score': np.float64(0.8749229821318546)}
 contamination=0.5 | n_estimators=25 | max_samples=0.92 | max_features=0.13
-{'acc': np.float64(0.8601036269430051), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8670820353063343), 'f1-score': np.float64(0.8608247422680413)}
+{'acc': np.float64(0.8601036269430051), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8670820353063343), 'f1-score': np.float64(0.8608247422680413), 'f0.5-score': np.float64(0.8645682335887347)}
 contamination=0.5 | n_estimators=25 | max_samples=0.93 | max_features=0.07
-{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8742138364779874), 'f1-score': np.float64(0.8638011393060591)}
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8742138364779874), 'f1-score': np.float64(0.8638011393060591), 'f0.5-score': np.float64(0.8700187773836845)}
 contamination=0.5 | n_estimators=25 | max_samples=0.93 | max_features=0.08
-{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8742138364779874), 'f1-score': np.float64(0.8638011393060591)}
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8742138364779874), 'f1-score': np.float64(0.8638011393060591), 'f0.5-score': np.float64(0.8700187773836845)}
 contamination=0.5 | n_estimators=25 | max_samples=0.93 | max_features=0.09
-{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8742138364779874), 'f1-score': np.float64(0.8638011393060591)}
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8742138364779874), 'f1-score': np.float64(0.8638011393060591), 'f0.5-score': np.float64(0.8700187773836845)}
 contamination=0.5 | n_estimators=25 | max_samples=0.93 | max_features=0.1
-{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8724066390041494), 'f1-score': np.float64(0.8665636269963936)}
+{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8724066390041494), 'f1-score': np.float64(0.8665636269963936), 'f0.5-score': np.float64(0.8700600041382164)}
 contamination=0.5 | n_estimators=25 | max_samples=0.93 | max_features=0.11
-{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8724066390041494), 'f1-score': np.float64(0.8665636269963936)}
+{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8724066390041494), 'f1-score': np.float64(0.8665636269963936), 'f0.5-score': np.float64(0.8700600041382164)}
 contamination=0.5 | n_estimators=25 | max_samples=0.93 | max_features=0.12
-{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8724066390041494), 'f1-score': np.float64(0.8665636269963936)}
+{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8724066390041494), 'f1-score': np.float64(0.8665636269963936), 'f0.5-score': np.float64(0.8700600041382164)}
 contamination=0.5 | n_estimators=25 | max_samples=0.93 | max_features=0.13
-{'acc': np.float64(0.8393782383419689), 'tpr': np.float64(0.8382804503582395), 'fpr': np.float64(0.15949632738719832), 'precision': np.float64(0.84346035015448), 'f1-score': np.float64(0.8408624229979466)}
+{'acc': np.float64(0.8393782383419689), 'tpr': np.float64(0.8382804503582395), 'fpr': np.float64(0.15949632738719832), 'precision': np.float64(0.84346035015448), 'f1-score': np.float64(0.8408624229979466), 'f0.5-score': np.float64(0.8424192552972639)}
 contamination=0.5 | n_estimators=30 | max_samples=0.87 | max_features=0.07
-{'acc': np.float64(0.8673575129533678), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8743509865005192), 'f1-score': np.float64(0.8680412371134021)}
+{'acc': np.float64(0.8673575129533678), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8743509865005192), 'f1-score': np.float64(0.8680412371134021), 'f0.5-score': np.float64(0.8718161109960655)}
 contamination=0.5 | n_estimators=30 | max_samples=0.87 | max_features=0.08
-{'acc': np.float64(0.8673575129533678), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8743509865005192), 'f1-score': np.float64(0.8680412371134021)}
+{'acc': np.float64(0.8673575129533678), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8743509865005192), 'f1-score': np.float64(0.8680412371134021), 'f0.5-score': np.float64(0.8718161109960655)}
 contamination=0.5 | n_estimators=30 | max_samples=0.87 | max_features=0.09
-{'acc': np.float64(0.8673575129533678), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8743509865005192), 'f1-score': np.float64(0.8680412371134021)}
+{'acc': np.float64(0.8673575129533678), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8743509865005192), 'f1-score': np.float64(0.8680412371134021), 'f0.5-score': np.float64(0.8718161109960655)}
 contamination=0.5 | n_estimators=30 | max_samples=0.87 | max_features=0.1
-{'acc': np.float64(0.8632124352331606), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8671472708547889), 'f1-score': np.float64(0.864476386036961)}
+{'acc': np.float64(0.8632124352331606), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8671472708547889), 'f1-score': np.float64(0.864476386036961), 'f0.5-score': np.float64(0.8660769389014606)}
 contamination=0.5 | n_estimators=30 | max_samples=0.87 | max_features=0.11
-{'acc': np.float64(0.8632124352331606), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8671472708547889), 'f1-score': np.float64(0.864476386036961)}
+{'acc': np.float64(0.8632124352331606), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8671472708547889), 'f1-score': np.float64(0.864476386036961), 'f0.5-score': np.float64(0.8660769389014606)}
 contamination=0.5 | n_estimators=30 | max_samples=0.87 | max_features=0.12
-{'acc': np.float64(0.8632124352331606), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8671472708547889), 'f1-score': np.float64(0.864476386036961)}
+{'acc': np.float64(0.8632124352331606), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8671472708547889), 'f1-score': np.float64(0.864476386036961), 'f0.5-score': np.float64(0.8660769389014606)}
 contamination=0.5 | n_estimators=30 | max_samples=0.87 | max_features=0.13
-{'acc': np.float64(0.8533678756476684), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.1416579223504722), 'precision': np.float64(0.8599585062240664), 'f1-score': np.float64(0.8541988665636271)}
+{'acc': np.float64(0.8533678756476684), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.1416579223504722), 'precision': np.float64(0.8599585062240664), 'f1-score': np.float64(0.8541988665636271), 'f0.5-score': np.float64(0.8576453548520587)}
 contamination=0.5 | n_estimators=30 | max_samples=0.88 | max_features=0.07
-{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.8731808731808732), 'f1-score': np.float64(0.8664259927797835)}
+{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.8731808731808732), 'f1-score': np.float64(0.8664259927797835), 'f0.5-score': np.float64(0.8704663212435233)}
 contamination=0.5 | n_estimators=30 | max_samples=0.88 | max_features=0.08
-{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.8731808731808732), 'f1-score': np.float64(0.8664259927797835)}
+{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.8731808731808732), 'f1-score': np.float64(0.8664259927797835), 'f0.5-score': np.float64(0.8704663212435233)}
 contamination=0.5 | n_estimators=30 | max_samples=0.88 | max_features=0.09
-{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.8731808731808732), 'f1-score': np.float64(0.8664259927797835)}
+{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.8731808731808732), 'f1-score': np.float64(0.8664259927797835), 'f0.5-score': np.float64(0.8704663212435233)}
 contamination=0.5 | n_estimators=30 | max_samples=0.88 | max_features=0.1
-{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8716356107660456), 'f1-score': np.float64(0.8667009778692741)}
+{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8716356107660456), 'f1-score': np.float64(0.8667009778692741), 'f0.5-score': np.float64(0.8696550299524891)}
 contamination=0.5 | n_estimators=30 | max_samples=0.88 | max_features=0.11
-{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8716356107660456), 'f1-score': np.float64(0.8667009778692741)}
+{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8716356107660456), 'f1-score': np.float64(0.8667009778692741), 'f0.5-score': np.float64(0.8696550299524891)}
 contamination=0.5 | n_estimators=30 | max_samples=0.88 | max_features=0.12
-{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8716356107660456), 'f1-score': np.float64(0.8667009778692741)}
+{'acc': np.float64(0.8658031088082901), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8716356107660456), 'f1-score': np.float64(0.8667009778692741), 'f0.5-score': np.float64(0.8696550299524891)}
 contamination=0.5 | n_estimators=30 | max_samples=0.88 | max_features=0.13
-{'acc': np.float64(0.8409326424870466), 'tpr': np.float64(0.8372569089048106), 'fpr': np.float64(0.155299055613851), 'precision': np.float64(0.8467908902691511), 'f1-score': np.float64(0.8419969119917653)}
+{'acc': np.float64(0.8409326424870466), 'tpr': np.float64(0.8372569089048106), 'fpr': np.float64(0.155299055613851), 'precision': np.float64(0.8467908902691511), 'f1-score': np.float64(0.8419969119917653), 'f0.5-score': np.float64(0.8448667630654824)}
 contamination=0.5 | n_estimators=30 | max_samples=0.89 | max_features=0.07
-{'acc': np.float64(0.8694300518134715), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8779979144942649), 'f1-score': np.float64(0.8698347107438017)}
+{'acc': np.float64(0.8694300518134715), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8779979144942649), 'f1-score': np.float64(0.8698347107438017), 'f0.5-score': np.float64(0.874714315395803)}
 contamination=0.5 | n_estimators=30 | max_samples=0.89 | max_features=0.08
-{'acc': np.float64(0.8694300518134715), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8779979144942649), 'f1-score': np.float64(0.8698347107438017)}
+{'acc': np.float64(0.8694300518134715), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8779979144942649), 'f1-score': np.float64(0.8698347107438017), 'f0.5-score': np.float64(0.874714315395803)}
 contamination=0.5 | n_estimators=30 | max_samples=0.89 | max_features=0.09
-{'acc': np.float64(0.8694300518134715), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8779979144942649), 'f1-score': np.float64(0.8698347107438017)}
+{'acc': np.float64(0.8694300518134715), 'tpr': np.float64(0.8618219037871033), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8779979144942649), 'f1-score': np.float64(0.8698347107438017), 'f0.5-score': np.float64(0.874714315395803)}
 contamination=0.5 | n_estimators=30 | max_samples=0.89 | max_features=0.1
-{'acc': np.float64(0.8782383419689119), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.8848547717842323), 'f1-score': np.float64(0.8789283874291601)}
+{'acc': np.float64(0.8782383419689119), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.8848547717842323), 'f1-score': np.float64(0.8789283874291601), 'f0.5-score': np.float64(0.8824746534243741)}
 contamination=0.5 | n_estimators=30 | max_samples=0.89 | max_features=0.11
-{'acc': np.float64(0.8782383419689119), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.8848547717842323), 'f1-score': np.float64(0.8789283874291601)}
+{'acc': np.float64(0.8782383419689119), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.8848547717842323), 'f1-score': np.float64(0.8789283874291601), 'f0.5-score': np.float64(0.8824746534243741)}
 contamination=0.5 | n_estimators=30 | max_samples=0.89 | max_features=0.12
-{'acc': np.float64(0.8782383419689119), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.8848547717842323), 'f1-score': np.float64(0.8789283874291601)}
+{'acc': np.float64(0.8782383419689119), 'tpr': np.float64(0.8730808597748209), 'fpr': np.float64(0.11647429171038824), 'precision': np.float64(0.8848547717842323), 'f1-score': np.float64(0.8789283874291601), 'f0.5-score': np.float64(0.8824746534243741)}
 contamination=0.5 | n_estimators=30 | max_samples=0.89 | max_features=0.13
-{'acc': np.float64(0.8419689119170984), 'tpr': np.float64(0.8403275332650972), 'fpr': np.float64(0.15634837355718784), 'precision': np.float64(0.8463917525773196), 'f1-score': np.float64(0.8433487416538263)}
+{'acc': np.float64(0.8419689119170984), 'tpr': np.float64(0.8403275332650972), 'fpr': np.float64(0.15634837355718784), 'precision': np.float64(0.8463917525773196), 'f1-score': np.float64(0.8433487416538263), 'f0.5-score': np.float64(0.845171916821083)}
 contamination=0.5 | n_estimators=30 | max_samples=0.9 | max_features=0.07
-{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.11752360965372508), 'precision': np.float64(0.8824763903462749), 'f1-score': np.float64(0.871502590673575)}
+{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.11752360965372508), 'precision': np.float64(0.8824763903462749), 'f1-score': np.float64(0.871502590673575), 'f0.5-score': np.float64(0.8780538734600125)}
 contamination=0.5 | n_estimators=30 | max_samples=0.9 | max_features=0.08
-{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.11752360965372508), 'precision': np.float64(0.8824763903462749), 'f1-score': np.float64(0.871502590673575)}
+{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.11752360965372508), 'precision': np.float64(0.8824763903462749), 'f1-score': np.float64(0.871502590673575), 'f0.5-score': np.float64(0.8780538734600125)}
 contamination=0.5 | n_estimators=30 | max_samples=0.9 | max_features=0.09
-{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.11752360965372508), 'precision': np.float64(0.8824763903462749), 'f1-score': np.float64(0.871502590673575)}
+{'acc': np.float64(0.8715025906735752), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.11752360965372508), 'precision': np.float64(0.8824763903462749), 'f1-score': np.float64(0.871502590673575), 'f0.5-score': np.float64(0.8780538734600125)}
 contamination=0.5 | n_estimators=30 | max_samples=0.9 | max_features=0.1
-{'acc': np.float64(0.8725388601036269), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8787564766839379), 'f1-score': np.float64(0.8733264675592173)}
+{'acc': np.float64(0.8725388601036269), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8787564766839379), 'f1-score': np.float64(0.8733264675592173), 'f0.5-score': np.float64(0.8765763903245813)}
 contamination=0.5 | n_estimators=30 | max_samples=0.9 | max_features=0.11
-{'acc': np.float64(0.8725388601036269), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8787564766839379), 'f1-score': np.float64(0.8733264675592173)}
+{'acc': np.float64(0.8725388601036269), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8787564766839379), 'f1-score': np.float64(0.8733264675592173), 'f0.5-score': np.float64(0.8765763903245813)}
 contamination=0.5 | n_estimators=30 | max_samples=0.9 | max_features=0.12
-{'acc': np.float64(0.8725388601036269), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8787564766839379), 'f1-score': np.float64(0.8733264675592173)}
+{'acc': np.float64(0.8725388601036269), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8787564766839379), 'f1-score': np.float64(0.8733264675592173), 'f0.5-score': np.float64(0.8765763903245813)}
 contamination=0.5 | n_estimators=30 | max_samples=0.9 | max_features=0.13
-{'acc': np.float64(0.8569948186528498), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8662486938349008), 'f1-score': np.float64(0.8572905894519132)}
+{'acc': np.float64(0.8569948186528498), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8662486938349008), 'f1-score': np.float64(0.8572905894519132), 'f0.5-score': np.float64(0.8626430801248699)}
 contamination=0.5 | n_estimators=30 | max_samples=0.91 | max_features=0.07
-{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8789473684210526), 'f1-score': np.float64(0.8666320705760249)}
+{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8789473684210526), 'f1-score': np.float64(0.8666320705760249), 'f0.5-score': np.float64(0.8739794850324472)}
 contamination=0.5 | n_estimators=30 | max_samples=0.91 | max_features=0.08
-{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8789473684210526), 'f1-score': np.float64(0.8666320705760249)}
+{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8789473684210526), 'f1-score': np.float64(0.8666320705760249), 'f0.5-score': np.float64(0.8739794850324472)}
 contamination=0.5 | n_estimators=30 | max_samples=0.91 | max_features=0.09
-{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8789473684210526), 'f1-score': np.float64(0.8666320705760249)}
+{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8789473684210526), 'f1-score': np.float64(0.8666320705760249), 'f0.5-score': np.float64(0.8739794850324472)}
 contamination=0.5 | n_estimators=30 | max_samples=0.91 | max_features=0.1
-{'acc': np.float64(0.872020725388601), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8778467908902692), 'f1-score': np.float64(0.8728769943386515)}
+{'acc': np.float64(0.872020725388601), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8778467908902692), 'f1-score': np.float64(0.8728769943386515), 'f0.5-score': np.float64(0.8758520966742409)}
 contamination=0.5 | n_estimators=30 | max_samples=0.91 | max_features=0.11
-{'acc': np.float64(0.872020725388601), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8778467908902692), 'f1-score': np.float64(0.8728769943386515)}
+{'acc': np.float64(0.872020725388601), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8778467908902692), 'f1-score': np.float64(0.8728769943386515), 'f0.5-score': np.float64(0.8758520966742409)}
 contamination=0.5 | n_estimators=30 | max_samples=0.91 | max_features=0.12
-{'acc': np.float64(0.872020725388601), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8778467908902692), 'f1-score': np.float64(0.8728769943386515)}
+{'acc': np.float64(0.872020725388601), 'tpr': np.float64(0.8679631525076765), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8778467908902692), 'f1-score': np.float64(0.8728769943386515), 'f0.5-score': np.float64(0.8758520966742409)}
 contamination=0.5 | n_estimators=30 | max_samples=0.91 | max_features=0.13
-{'acc': np.float64(0.8497409326424871), 'tpr': np.float64(0.8474923234390993), 'fpr': np.float64(0.14795383001049317), 'precision': np.float64(0.8544891640866873), 'f1-score': np.float64(0.8509763617677286)}
+{'acc': np.float64(0.8497409326424871), 'tpr': np.float64(0.8474923234390993), 'fpr': np.float64(0.14795383001049317), 'precision': np.float64(0.8544891640866873), 'f1-score': np.float64(0.8509763617677286), 'f0.5-score': np.float64(0.8530805687203792)}
 contamination=0.5 | n_estimators=30 | max_samples=0.92 | max_features=0.07
-{'acc': np.float64(0.8606217616580311), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8702928870292888), 'f1-score': np.float64(0.8608380755302638)}
+{'acc': np.float64(0.8606217616580311), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8702928870292888), 'f1-score': np.float64(0.8608380755302638), 'f0.5-score': np.float64(0.8664861487190169)}
 contamination=0.5 | n_estimators=30 | max_samples=0.92 | max_features=0.08
-{'acc': np.float64(0.8606217616580311), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8702928870292888), 'f1-score': np.float64(0.8608380755302638)}
+{'acc': np.float64(0.8606217616580311), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8702928870292888), 'f1-score': np.float64(0.8608380755302638), 'f0.5-score': np.float64(0.8664861487190169)}
 contamination=0.5 | n_estimators=30 | max_samples=0.92 | max_features=0.09
-{'acc': np.float64(0.8606217616580311), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8702928870292888), 'f1-score': np.float64(0.8608380755302638)}
+{'acc': np.float64(0.8606217616580311), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8702928870292888), 'f1-score': np.float64(0.8608380755302638), 'f0.5-score': np.float64(0.8664861487190169)}
 contamination=0.5 | n_estimators=30 | max_samples=0.92 | max_features=0.1
-{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8700102354145343), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8790072388831437), 'f1-score': np.float64(0.874485596707819)}
+{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8700102354145343), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8790072388831437), 'f1-score': np.float64(0.874485596707819), 'f0.5-score': np.float64(0.8771929824561403)}
 contamination=0.5 | n_estimators=30 | max_samples=0.92 | max_features=0.11
-{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8700102354145343), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8790072388831437), 'f1-score': np.float64(0.874485596707819)}
+{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8700102354145343), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8790072388831437), 'f1-score': np.float64(0.874485596707819), 'f0.5-score': np.float64(0.8771929824561403)}
 contamination=0.5 | n_estimators=30 | max_samples=0.92 | max_features=0.12
-{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8700102354145343), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8790072388831437), 'f1-score': np.float64(0.874485596707819)}
+{'acc': np.float64(0.8735751295336788), 'tpr': np.float64(0.8700102354145343), 'fpr': np.float64(0.12277019937040923), 'precision': np.float64(0.8790072388831437), 'f1-score': np.float64(0.874485596707819), 'f0.5-score': np.float64(0.8771929824561403)}
 contamination=0.5 | n_estimators=30 | max_samples=0.92 | max_features=0.13
-{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8444216990788127), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8647798742138365), 'f1-score': np.float64(0.8544795442775766)}
+{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8444216990788127), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8647798742138365), 'f1-score': np.float64(0.8544795442775766), 'f0.5-score': np.float64(0.8606300855414145)}
 contamination=0.5 | n_estimators=30 | max_samples=0.93 | max_features=0.07
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8760504201680672), 'f1-score': np.float64(0.8646967340590981)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8760504201680672), 'f1-score': np.float64(0.8646967340590981), 'f0.5-score': np.float64(0.8714733542319749)}
 contamination=0.5 | n_estimators=30 | max_samples=0.93 | max_features=0.08
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8760504201680672), 'f1-score': np.float64(0.8646967340590981)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8760504201680672), 'f1-score': np.float64(0.8646967340590981), 'f0.5-score': np.float64(0.8714733542319749)}
 contamination=0.5 | n_estimators=30 | max_samples=0.93 | max_features=0.09
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8760504201680672), 'f1-score': np.float64(0.8646967340590981)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.12381951731374606), 'precision': np.float64(0.8760504201680672), 'f1-score': np.float64(0.8646967340590981), 'f0.5-score': np.float64(0.8714733542319749)}
 contamination=0.5 | n_estimators=30 | max_samples=0.93 | max_features=0.1
-{'acc': np.float64(0.861139896373057), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8688865764828304), 'f1-score': np.float64(0.8617131062951496)}
+{'acc': np.float64(0.861139896373057), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8688865764828304), 'f1-score': np.float64(0.8617131062951496), 'f0.5-score': np.float64(0.8660029039618337)}
 contamination=0.5 | n_estimators=30 | max_samples=0.93 | max_features=0.11
-{'acc': np.float64(0.861139896373057), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8688865764828304), 'f1-score': np.float64(0.8617131062951496)}
+{'acc': np.float64(0.861139896373057), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8688865764828304), 'f1-score': np.float64(0.8617131062951496), 'f0.5-score': np.float64(0.8660029039618337)}
 contamination=0.5 | n_estimators=30 | max_samples=0.93 | max_features=0.12
-{'acc': np.float64(0.861139896373057), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8688865764828304), 'f1-score': np.float64(0.8617131062951496)}
+{'acc': np.float64(0.861139896373057), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8688865764828304), 'f1-score': np.float64(0.8617131062951496), 'f0.5-score': np.float64(0.8660029039618337)}
 contamination=0.5 | n_estimators=30 | max_samples=0.93 | max_features=0.13
-{'acc': np.float64(0.8352331606217617), 'tpr': np.float64(0.827021494370522), 'fpr': np.float64(0.15634837355718784), 'precision': np.float64(0.8443051201671892), 'f1-score': np.float64(0.8355739400206825)}
+{'acc': np.float64(0.8352331606217617), 'tpr': np.float64(0.827021494370522), 'fpr': np.float64(0.15634837355718784), 'precision': np.float64(0.8443051201671892), 'f1-score': np.float64(0.8355739400206825), 'f0.5-score': np.float64(0.8407908428720083)}
 contamination=0.5 | n_estimators=35 | max_samples=0.87 | max_features=0.07
-{'acc': np.float64(0.8616580310880829), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.865979381443299), 'f1-score': np.float64(0.8628659476117103)}
+{'acc': np.float64(0.8616580310880829), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.865979381443299), 'f1-score': np.float64(0.8628659476117103), 'f0.5-score': np.float64(0.8647313156269302)}
 contamination=0.5 | n_estimators=35 | max_samples=0.87 | max_features=0.08
-{'acc': np.float64(0.8616580310880829), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.865979381443299), 'f1-score': np.float64(0.8628659476117103)}
+{'acc': np.float64(0.8616580310880829), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.865979381443299), 'f1-score': np.float64(0.8628659476117103), 'f0.5-score': np.float64(0.8647313156269302)}
 contamination=0.5 | n_estimators=35 | max_samples=0.87 | max_features=0.09
-{'acc': np.float64(0.8616580310880829), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.865979381443299), 'f1-score': np.float64(0.8628659476117103)}
+{'acc': np.float64(0.8616580310880829), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.865979381443299), 'f1-score': np.float64(0.8628659476117103), 'f0.5-score': np.float64(0.8647313156269302)}
 contamination=0.5 | n_estimators=35 | max_samples=0.87 | max_features=0.1
-{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.14375655823714587), 'precision': np.float64(0.8587628865979381), 'f1-score': np.float64(0.8556753980482794)}
+{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.14375655823714587), 'precision': np.float64(0.8587628865979381), 'f1-score': np.float64(0.8556753980482794), 'f0.5-score': np.float64(0.8575252213300392)}
 contamination=0.5 | n_estimators=35 | max_samples=0.87 | max_features=0.11
-{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.14375655823714587), 'precision': np.float64(0.8587628865979381), 'f1-score': np.float64(0.8556753980482794)}
+{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.14375655823714587), 'precision': np.float64(0.8587628865979381), 'f1-score': np.float64(0.8556753980482794), 'f0.5-score': np.float64(0.8575252213300392)}
 contamination=0.5 | n_estimators=35 | max_samples=0.87 | max_features=0.12
-{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.14375655823714587), 'precision': np.float64(0.8587628865979381), 'f1-score': np.float64(0.8556753980482794)}
+{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.14375655823714587), 'precision': np.float64(0.8587628865979381), 'f1-score': np.float64(0.8556753980482794), 'f0.5-score': np.float64(0.8575252213300392)}
 contamination=0.5 | n_estimators=35 | max_samples=0.87 | max_features=0.13
-{'acc': np.float64(0.8538860103626943), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.14060860440713535), 'precision': np.float64(0.8608515057113187), 'f1-score': np.float64(0.8546391752577319)}
+{'acc': np.float64(0.8538860103626943), 'tpr': np.float64(0.8485158648925282), 'fpr': np.float64(0.14060860440713535), 'precision': np.float64(0.8608515057113187), 'f1-score': np.float64(0.8546391752577319), 'f0.5-score': np.float64(0.8583557672395942)}
 contamination=0.5 | n_estimators=35 | max_samples=0.88 | max_features=0.07
-{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.12172088142707241), 'precision': np.float64(0.8785340314136125), 'f1-score': np.float64(0.8685300207039338)}
+{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.12172088142707241), 'precision': np.float64(0.8785340314136125), 'f1-score': np.float64(0.8685300207039338), 'f0.5-score': np.float64(0.8745048988951428)}
 contamination=0.5 | n_estimators=35 | max_samples=0.88 | max_features=0.08
-{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.12172088142707241), 'precision': np.float64(0.8785340314136125), 'f1-score': np.float64(0.8685300207039338)}
+{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.12172088142707241), 'precision': np.float64(0.8785340314136125), 'f1-score': np.float64(0.8685300207039338), 'f0.5-score': np.float64(0.8745048988951428)}
 contamination=0.5 | n_estimators=35 | max_samples=0.88 | max_features=0.09
-{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.12172088142707241), 'precision': np.float64(0.8785340314136125), 'f1-score': np.float64(0.8685300207039338)}
+{'acc': np.float64(0.8683937823834197), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.12172088142707241), 'precision': np.float64(0.8785340314136125), 'f1-score': np.float64(0.8685300207039338), 'f0.5-score': np.float64(0.8745048988951428)}
 contamination=0.5 | n_estimators=35 | max_samples=0.88 | max_features=0.1
-{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8580246913580247), 'f1-score': np.float64(0.8558234992303745)}
+{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8580246913580247), 'f1-score': np.float64(0.8558234992303745), 'f0.5-score': np.float64(0.8571428571428571)}
 contamination=0.5 | n_estimators=35 | max_samples=0.88 | max_features=0.11
-{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8580246913580247), 'f1-score': np.float64(0.8558234992303745)}
+{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8580246913580247), 'f1-score': np.float64(0.8558234992303745), 'f0.5-score': np.float64(0.8571428571428571)}
 contamination=0.5 | n_estimators=35 | max_samples=0.88 | max_features=0.12
-{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8580246913580247), 'f1-score': np.float64(0.8558234992303745)}
+{'acc': np.float64(0.8544041450777202), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8580246913580247), 'f1-score': np.float64(0.8558234992303745), 'f0.5-score': np.float64(0.8571428571428571)}
 contamination=0.5 | n_estimators=35 | max_samples=0.88 | max_features=0.13
-{'acc': np.float64(0.8326424870466321), 'tpr': np.float64(0.834186284544524), 'fpr': np.float64(0.1689401888772298), 'precision': np.float64(0.8350409836065574), 'f1-score': np.float64(0.8346134152585765)}
+{'acc': np.float64(0.8326424870466321), 'tpr': np.float64(0.834186284544524), 'fpr': np.float64(0.1689401888772298), 'precision': np.float64(0.8350409836065574), 'f1-score': np.float64(0.8346134152585765), 'f0.5-score': np.float64(0.8348699037082565)}
 contamination=0.5 | n_estimators=35 | max_samples=0.89 | max_features=0.07
-{'acc': np.float64(0.8663212435233161), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8740894901144641), 'f1-score': np.float64(0.86687306501548)}
+{'acc': np.float64(0.8663212435233161), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8740894901144641), 'f1-score': np.float64(0.86687306501548), 'f0.5-score': np.float64(0.8711885500933416)}
 contamination=0.5 | n_estimators=35 | max_samples=0.89 | max_features=0.08
-{'acc': np.float64(0.8663212435233161), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8740894901144641), 'f1-score': np.float64(0.86687306501548)}
+{'acc': np.float64(0.8663212435233161), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8740894901144641), 'f1-score': np.float64(0.86687306501548), 'f0.5-score': np.float64(0.8711885500933416)}
 contamination=0.5 | n_estimators=35 | max_samples=0.89 | max_features=0.09
-{'acc': np.float64(0.8663212435233161), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8740894901144641), 'f1-score': np.float64(0.86687306501548)}
+{'acc': np.float64(0.8663212435233161), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8740894901144641), 'f1-score': np.float64(0.86687306501548), 'f0.5-score': np.float64(0.8711885500933416)}
 contamination=0.5 | n_estimators=35 | max_samples=0.89 | max_features=0.1
-{'acc': np.float64(0.8730569948186528), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8804573804573804), 'f1-score': np.float64(0.8736462093862816)}
+{'acc': np.float64(0.8730569948186528), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8804573804573804), 'f1-score': np.float64(0.8736462093862816), 'f0.5-score': np.float64(0.877720207253886)}
 contamination=0.5 | n_estimators=35 | max_samples=0.89 | max_features=0.11
-{'acc': np.float64(0.8730569948186528), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8804573804573804), 'f1-score': np.float64(0.8736462093862816)}
+{'acc': np.float64(0.8730569948186528), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8804573804573804), 'f1-score': np.float64(0.8736462093862816), 'f0.5-score': np.float64(0.877720207253886)}
 contamination=0.5 | n_estimators=35 | max_samples=0.89 | max_features=0.12
-{'acc': np.float64(0.8730569948186528), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8804573804573804), 'f1-score': np.float64(0.8736462093862816)}
+{'acc': np.float64(0.8730569948186528), 'tpr': np.float64(0.8669396110542477), 'fpr': np.float64(0.12067156348373557), 'precision': np.float64(0.8804573804573804), 'f1-score': np.float64(0.8736462093862816), 'f0.5-score': np.float64(0.877720207253886)}
 contamination=0.5 | n_estimators=35 | max_samples=0.89 | max_features=0.13
-{'acc': np.float64(0.8606217616580311), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8702928870292888), 'f1-score': np.float64(0.8608380755302638)}
+{'acc': np.float64(0.8606217616580311), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8702928870292888), 'f1-score': np.float64(0.8608380755302638), 'f0.5-score': np.float64(0.8664861487190169)}
 contamination=0.5 | n_estimators=35 | max_samples=0.9 | max_features=0.07
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.8729166666666667), 'f1-score': np.float64(0.8652555498193082)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.8729166666666667), 'f1-score': np.float64(0.8652555498193082), 'f0.5-score': np.float64(0.8698359975088229)}
 contamination=0.5 | n_estimators=35 | max_samples=0.9 | max_features=0.08
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.8729166666666667), 'f1-score': np.float64(0.8652555498193082)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.8729166666666667), 'f1-score': np.float64(0.8652555498193082), 'f0.5-score': np.float64(0.8698359975088229)}
 contamination=0.5 | n_estimators=35 | max_samples=0.9 | max_features=0.09
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.8729166666666667), 'f1-score': np.float64(0.8652555498193082)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.8729166666666667), 'f1-score': np.float64(0.8652555498193082), 'f0.5-score': np.float64(0.8698359975088229)}
 contamination=0.5 | n_estimators=35 | max_samples=0.9 | max_features=0.1
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8638689866939611), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8683127572016461), 'f1-score': np.float64(0.8660851718830169)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8638689866939611), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8683127572016461), 'f1-score': np.float64(0.8660851718830169), 'f0.5-score': np.float64(0.8674203494347379)}
 contamination=0.5 | n_estimators=35 | max_samples=0.9 | max_features=0.11
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8638689866939611), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8683127572016461), 'f1-score': np.float64(0.8660851718830169)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8638689866939611), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8683127572016461), 'f1-score': np.float64(0.8660851718830169), 'f0.5-score': np.float64(0.8674203494347379)}
 contamination=0.5 | n_estimators=35 | max_samples=0.9 | max_features=0.12
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8638689866939611), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8683127572016461), 'f1-score': np.float64(0.8660851718830169)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8638689866939611), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8683127572016461), 'f1-score': np.float64(0.8660851718830169), 'f0.5-score': np.float64(0.8674203494347379)}
 contamination=0.5 | n_estimators=35 | max_samples=0.9 | max_features=0.13
-{'acc': np.float64(0.8518134715025907), 'tpr': np.float64(0.849539406345957), 'fpr': np.float64(0.1458551941238195), 'precision': np.float64(0.8565531475748194), 'f1-score': np.float64(0.8530318602261049)}
+{'acc': np.float64(0.8518134715025907), 'tpr': np.float64(0.849539406345957), 'fpr': np.float64(0.1458551941238195), 'precision': np.float64(0.8565531475748194), 'f1-score': np.float64(0.8530318602261049), 'f0.5-score': np.float64(0.8551411498042448)}
 contamination=0.5 | n_estimators=35 | max_samples=0.91 | max_features=0.07
-{'acc': np.float64(0.8621761658031089), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8706986444212722), 'f1-score': np.float64(0.862603305785124)}
+{'acc': np.float64(0.8621761658031089), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8706986444212722), 'f1-score': np.float64(0.862603305785124), 'f0.5-score': np.float64(0.8674423436526075)}
 contamination=0.5 | n_estimators=35 | max_samples=0.91 | max_features=0.08
-{'acc': np.float64(0.8621761658031089), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8706986444212722), 'f1-score': np.float64(0.862603305785124)}
+{'acc': np.float64(0.8621761658031089), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8706986444212722), 'f1-score': np.float64(0.862603305785124), 'f0.5-score': np.float64(0.8674423436526075)}
 contamination=0.5 | n_estimators=35 | max_samples=0.91 | max_features=0.09
-{'acc': np.float64(0.8621761658031089), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8706986444212722), 'f1-score': np.float64(0.862603305785124)}
+{'acc': np.float64(0.8621761658031089), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8706986444212722), 'f1-score': np.float64(0.862603305785124), 'f0.5-score': np.float64(0.8674423436526075)}
 contamination=0.5 | n_estimators=35 | max_samples=0.91 | max_features=0.1
-{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8726708074534162), 'f1-score': np.float64(0.8677303139475038)}
+{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8726708074534162), 'f1-score': np.float64(0.8677303139475038), 'f0.5-score': np.float64(0.8706878744061144)}
 contamination=0.5 | n_estimators=35 | max_samples=0.91 | max_features=0.11
-{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8726708074534162), 'f1-score': np.float64(0.8677303139475038)}
+{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8726708074534162), 'f1-score': np.float64(0.8677303139475038), 'f0.5-score': np.float64(0.8706878744061144)}
 contamination=0.5 | n_estimators=35 | max_samples=0.91 | max_features=0.12
-{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8726708074534162), 'f1-score': np.float64(0.8677303139475038)}
+{'acc': np.float64(0.866839378238342), 'tpr': np.float64(0.8628454452405322), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8726708074534162), 'f1-score': np.float64(0.8677303139475038), 'f0.5-score': np.float64(0.8706878744061144)}
 contamination=0.5 | n_estimators=35 | max_samples=0.91 | max_features=0.13
-{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.13326337880377753), 'precision': np.float64(0.867570385818561), 'f1-score': np.float64(0.8595041322314051)}
+{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.13326337880377753), 'precision': np.float64(0.867570385818561), 'f1-score': np.float64(0.8595041322314051), 'f0.5-score': np.float64(0.8643257843340951)}
 contamination=0.5 | n_estimators=35 | max_samples=0.92 | max_features=0.07
-{'acc': np.float64(0.8601036269430051), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8693834900731452), 'f1-score': np.float64(0.860392967942089)}
+{'acc': np.float64(0.8601036269430051), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8693834900731452), 'f1-score': np.float64(0.860392967942089), 'f0.5-score': np.float64(0.8657648283038502)}
 contamination=0.5 | n_estimators=35 | max_samples=0.92 | max_features=0.08
-{'acc': np.float64(0.8601036269430051), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8693834900731452), 'f1-score': np.float64(0.860392967942089)}
+{'acc': np.float64(0.8601036269430051), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8693834900731452), 'f1-score': np.float64(0.860392967942089), 'f0.5-score': np.float64(0.8657648283038502)}
 contamination=0.5 | n_estimators=35 | max_samples=0.92 | max_features=0.09
-{'acc': np.float64(0.8601036269430051), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8693834900731452), 'f1-score': np.float64(0.860392967942089)}
+{'acc': np.float64(0.8601036269430051), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8693834900731452), 'f1-score': np.float64(0.860392967942089), 'f0.5-score': np.float64(0.8657648283038502)}
 contamination=0.5 | n_estimators=35 | max_samples=0.92 | max_features=0.1
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.870600414078675), 'f1-score': np.float64(0.8656716417910447)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.870600414078675), 'f1-score': np.float64(0.8656716417910447), 'f0.5-score': np.float64(0.8686221854988638)}
 contamination=0.5 | n_estimators=35 | max_samples=0.92 | max_features=0.11
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.870600414078675), 'f1-score': np.float64(0.8656716417910447)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.870600414078675), 'f1-score': np.float64(0.8656716417910447), 'f0.5-score': np.float64(0.8686221854988638)}
 contamination=0.5 | n_estimators=35 | max_samples=0.92 | max_features=0.12
-{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.870600414078675), 'f1-score': np.float64(0.8656716417910447)}
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.870600414078675), 'f1-score': np.float64(0.8656716417910447), 'f0.5-score': np.float64(0.8686221854988638)}
 contamination=0.5 | n_estimators=35 | max_samples=0.92 | max_features=0.13
-{'acc': np.float64(0.8512953367875647), 'tpr': np.float64(0.8444216990788127), 'fpr': np.float64(0.1416579223504722), 'precision': np.float64(0.859375), 'f1-score': np.float64(0.8518327310273619)}
+{'acc': np.float64(0.8512953367875647), 'tpr': np.float64(0.8444216990788127), 'fpr': np.float64(0.1416579223504722), 'precision': np.float64(0.859375), 'f1-score': np.float64(0.8518327310273619), 'f0.5-score': np.float64(0.8563421216524808)}
 contamination=0.5 | n_estimators=35 | max_samples=0.93 | max_features=0.07
-{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8668054110301769), 'f1-score': np.float64(0.8596491228070177)}
+{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8668054110301769), 'f1-score': np.float64(0.8596491228070177), 'f0.5-score': np.float64(0.8639286455092304)}
 contamination=0.5 | n_estimators=35 | max_samples=0.93 | max_features=0.08
-{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8668054110301769), 'f1-score': np.float64(0.8596491228070177)}
+{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8668054110301769), 'f1-score': np.float64(0.8596491228070177), 'f0.5-score': np.float64(0.8639286455092304)}
 contamination=0.5 | n_estimators=35 | max_samples=0.93 | max_features=0.09
-{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8668054110301769), 'f1-score': np.float64(0.8596491228070177)}
+{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8668054110301769), 'f1-score': np.float64(0.8596491228070177), 'f0.5-score': np.float64(0.8639286455092304)}
 contamination=0.5 | n_estimators=35 | max_samples=0.93 | max_features=0.1
-{'acc': np.float64(0.8528497409326425), 'tpr': np.float64(0.8505629477993859), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8575851393188855), 'f1-score': np.float64(0.854059609455293)}
+{'acc': np.float64(0.8528497409326425), 'tpr': np.float64(0.8505629477993859), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8575851393188855), 'f1-score': np.float64(0.854059609455293), 'f0.5-score': np.float64(0.8561714403461776)}
 contamination=0.5 | n_estimators=35 | max_samples=0.93 | max_features=0.11
-{'acc': np.float64(0.8528497409326425), 'tpr': np.float64(0.8505629477993859), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8575851393188855), 'f1-score': np.float64(0.854059609455293)}
+{'acc': np.float64(0.8528497409326425), 'tpr': np.float64(0.8505629477993859), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8575851393188855), 'f1-score': np.float64(0.854059609455293), 'f0.5-score': np.float64(0.8561714403461776)}
 contamination=0.5 | n_estimators=35 | max_samples=0.93 | max_features=0.12
-{'acc': np.float64(0.8528497409326425), 'tpr': np.float64(0.8505629477993859), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8575851393188855), 'f1-score': np.float64(0.854059609455293)}
+{'acc': np.float64(0.8528497409326425), 'tpr': np.float64(0.8505629477993859), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8575851393188855), 'f1-score': np.float64(0.854059609455293), 'f0.5-score': np.float64(0.8561714403461776)}
 contamination=0.5 | n_estimators=35 | max_samples=0.93 | max_features=0.13
-{'acc': np.float64(0.8507772020725388), 'tpr': np.float64(0.8464687819856704), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8569948186528498), 'f1-score': np.float64(0.8516992790937179)}
+{'acc': np.float64(0.8507772020725388), 'tpr': np.float64(0.8464687819856704), 'fpr': np.float64(0.14480587618048268), 'precision': np.float64(0.8569948186528498), 'f1-score': np.float64(0.8516992790937179), 'f0.5-score': np.float64(0.854868720281166)}

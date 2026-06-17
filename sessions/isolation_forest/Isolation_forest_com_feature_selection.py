@@ -51,7 +51,7 @@ def rodar():
     n_estimators_grid = [310]
     max_samples_grid = [0.88]
     max_features_grid = [0.045]
-    # Melhor resultado foi assim
+    # Melhor resultado de f1-score foi assim
     # acc: 0.865285
     # tpr: 0.856704
     # fpr: 0.125918

@@ -1,6 +1,7 @@
 import itertools
 from sklearn.ensemble import IsolationForest
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import fbeta_score
 from utils import documentar
 from utilsDoProfessor import get_overall_metrics, plot_confusion_matrix
 from pipeline import carregar, normalizar
@@ -40,7 +41,7 @@ def rodar():
     n_estimators_grid = [15, 20, 25, 30, 35]
     max_samples_grid = [0.87, 0.88, 0.89, 0.90, 0.91, 0.92, 0.93]
     max_features_grid = [0.07, 0.08, 0.09, 0.10, 0.11, 0.12, 0.13]
-    # Melhor métrica desse grid: n_estimators=15 | max_samples=0.89 | max_features=0.1
+    # Melhor métrica desse grid (usando f1-score): n_estimators=15 | max_samples=0.89 | max_features=0.1
 
     grid = itertools.product(
         n_estimators_grid,
@@ -56,11 +57,14 @@ def rodar():
             contamination=CONTAMINATION,
             random_state=RAND_STATE,
         ).fit(nomr_X_train)
-        isf_model.score_samples()
+        isf_model.score_samples(norm_X_test)
         predicoes_val = isf_model.predict(norm_X_val)
 
         predicoes_val[predicoes_val == 1] = 1
         predicoes_val[predicoes_val == -1] = 0
+
+        # calculamos fbeta pois optamos por precisão sendo mais importante que o recall
+        f05 = fbeta_score(y_val, predicoes_val, beta=0.5)
 
         header = (
             f"contamination={CONTAMINATION} | "
@@ -69,8 +73,13 @@ def rodar():
             f"max_features={max_feat}\n"
         )
 
+        # Pega as métricas e adiciona F0.5
+        metricas = str(get_overall_metrics(y_val, predicoes_val))
+        # Remove a chave final e adiciona F0.5
+        metricas_com_f05 = metricas[:-1] + f", 'f0.5-score': np.float64({f05})}}"
+
         documentar(
             "IsolationForest2",
-            header + str(get_overall_metrics(y_val, predicoes_val)),
+            header + metricas_com_f05,
             categoria="isolation_forest",
         )
