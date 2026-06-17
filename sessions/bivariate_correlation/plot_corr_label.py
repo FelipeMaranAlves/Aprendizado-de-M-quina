@@ -1,4 +1,4 @@
-from utils import documentar, configurar
+from utils import documentar, configurar, caminho_imagem
 from pipeline import carregar
 import pandas as pd
 import numpy as np
@@ -29,4 +29,4 @@ def rodar():
     plt.grid(True)
 
     plt.tight_layout()
-    plt.savefig('correlacao_bi_spearmen')
+    plt.savefig(caminho_imagem('correlacao_bi_spearmen.png', 'bivariate_correlation'))

@@ -1,4 +1,3 @@
-import os
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
@@ -6,6 +5,7 @@ from sklearn.manifold import TSNE
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from utils import caminho_imagem
 
 
 def _preparar_dados():
@@ -32,8 +32,6 @@ def _preparar_dados():
 
 
 def gerar_graficos(clustering_results):
-    os.makedirs("Images", exist_ok=True)
-
     Ks = [r["n_clusters"] for r in clustering_results]
     silhouettes = [r["silhouette"] for r in clustering_results]
     inertias = [r["inertia"] for r in clustering_results]
@@ -43,7 +41,7 @@ def gerar_graficos(clustering_results):
     plt.xlabel("Numero de Clusters (K)")
     plt.ylabel("Silhouette Score")
     plt.title("Silhouette Score por Numero de Clusters")
-    plt.savefig("Images/clustering_silhouette.png")
+    plt.savefig(caminho_imagem("clustering_silhouette.png", "clustering"))
     plt.close()
 
     plt.figure()
@@ -51,13 +49,11 @@ def gerar_graficos(clustering_results):
     plt.xlabel("Numero de Clusters (K)")
     plt.ylabel("Inertia")
     plt.title("Elbow Method")
-    plt.savefig("Images/clustering_elbow.png")
+    plt.savefig(caminho_imagem("clustering_elbow.png", "clustering"))
     plt.close()
 
 
 def gerar_graficos_pca(clustering_results):
-    os.makedirs("Images", exist_ok=True)
-
     X_train, X_test, y_test = _preparar_dados()
     labels_train = clustering_results[0]["labels"]  # K=2
 
@@ -89,9 +85,9 @@ def gerar_graficos_pca(clustering_results):
     axes[1].set_ylabel(f"PC2 ({var2:.1f}%)")
 
     plt.tight_layout()
-    plt.savefig("Images/clustering_pca.png")
+    plt.savefig(caminho_imagem("clustering_pca.png", "clustering"))
     plt.close()
-    print("PCA salvo: Images/clustering_pca.png")
+    print("PCA salvo: Images/clustering/clustering_pca.png")
 
     n_components = min(20, X_train.shape[1])
     pca_full = PCA(n_components=n_components, random_state=2)
@@ -106,14 +102,12 @@ def gerar_graficos_pca(clustering_results):
     plt.title("PCA - Variância Explicada Acumulada")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Images/clustering_pca_variancia.png")
+    plt.savefig(caminho_imagem("clustering_pca_variancia.png", "clustering"))
     plt.close()
-    print("Variância PCA salva: Images/clustering_pca_variancia.png")
+    print("Variância PCA salva: Images/clustering/clustering_pca_variancia.png")
 
 
 def gerar_graficos_tsne(clustering_results, sample_size=2000):
-    os.makedirs("Images", exist_ok=True)
-
     X_train, _, _ = _preparar_dados()
     labels_train = clustering_results[0]["labels"]  # K=2
 
@@ -140,9 +134,9 @@ def gerar_graficos_tsne(clustering_results, sample_size=2000):
     plt.xlabel("t-SNE 1")
     plt.ylabel("t-SNE 2")
     plt.tight_layout()
-    plt.savefig("Images/clustering_tsne.png")
+    plt.savefig(caminho_imagem("clustering_tsne.png", "clustering"))
     plt.close()
-    print("t-SNE salvo: Images/clustering_tsne.png")
+    print("t-SNE salvo: Images/clustering/clustering_tsne.png")
 
 
 # ============================================================

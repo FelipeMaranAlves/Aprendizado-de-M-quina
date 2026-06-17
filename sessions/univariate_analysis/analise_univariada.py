@@ -6,6 +6,7 @@ from pathlib import Path
 
 from scipy.stats import skew, kurtosis
 from pipeline import carregar
+from utils import caminho_imagem
 
 df = carregar()
 
@@ -22,7 +23,8 @@ numeric_cols = df.select_dtypes(include=[np.number]).columns
 numeric_cols = [col for col in numeric_cols if col != 'label']
 
 desc_stats = df[numeric_cols].describe()
-desc_stats.to_csv('Documentation/analise_univariada_estatisticas.csv')
+Path('Documentation/univariate_analysis').mkdir(parents=True, exist_ok=True)
+desc_stats.to_csv('Documentation/univariate_analysis/analise_univariada_estatisticas.csv')
 
 null_counts = df[numeric_cols].isnull().sum()
 null_counts = null_counts[null_counts > 0]
@@ -35,8 +37,6 @@ for col in numeric_cols:
         zero_variance.append(col)
 if len(zero_variance) > 0:
     print(f"{len(zero_variance)} colunas têm variância zero: {zero_variance}")
-
-Path('Documentation/univariate_plots').mkdir(exist_ok=True)
 
 for col in numeric_cols:
     fig, axes = plt.subplots(1, 2, figsize=(12, 4))
@@ -51,7 +51,7 @@ for col in numeric_cols:
     axes[1].set_ylabel(col)
     
     plt.tight_layout()
-    plt.savefig(f'Documentation/univariate_plots/{col}.png', dpi=100)
+    plt.savefig(caminho_imagem(f'{col}.png', 'univariate_analysis/univariate_plots'), dpi=100)
     plt.close()
 
 outliers_info = {}
@@ -70,7 +70,7 @@ for col in numeric_cols:
         'upper_bound': upper_bound
     }
 outliers_df = pd.DataFrame(outliers_info).T
-outliers_df.to_csv('Documentation/analise_outliers.csv')
+outliers_df.to_csv('Documentation/univariate_analysis/analise_outliers.csv')
 
 skewness = {}
 kurt = {}
@@ -79,7 +79,7 @@ for col in numeric_cols:
     kurt[col] = kurtosis(df[col].dropna())
 
 skew_df = pd.DataFrame([skewness, kurt], index=['Skewness', 'Kurtosis']).T
-skew_df.to_csv('Documentation/analise_assimetria_curtose.csv')
+skew_df.to_csv('Documentation/univariate_analysis/analise_assimetria_curtose.csv')
 
 plt.figure(figsize=(8, 5))
 df['label'].value_counts().plot(kind='bar', color=['green', 'red'])
@@ -90,10 +90,10 @@ plt.xticks(rotation=0)
 for i, v in enumerate(df['label'].value_counts().values):
     plt.text(i, v + 100, str(v), ha='center', fontweight='bold')
 plt.tight_layout()
-plt.savefig('Documentation/distribuicao_classes.png', dpi=100)
+plt.savefig(caminho_imagem('distribuicao_classes.png', 'univariate_analysis'), dpi=100)
 plt.close()
 
-with open('Documentation/analise_univariada_resumo.txt', 'w') as f:
+with open('Documentation/univariate_analysis/analise_univariada_resumo.txt', 'w') as f:
     f.write(f"Dataset: PDF_All_feature_Clean.csv\n")
     f.write(f"Total de amostras: {len(df)}\n")
     f.write(f"Total de features: {len(numeric_cols)}\n\n")
@@ -108,4 +108,4 @@ with open('Documentation/analise_univariada_resumo.txt', 'w') as f:
     high_skew = skew_df[abs(skew_df['Skewness']) > 2]
     f.write(f"  - Features com alta assimetria: {len(high_skew)}\n")
 
-print("Analise univariada concluida. Arquivos salvos em Documentation/")
+print("Analise univariada concluida. Arquivos salvos em Documentation/univariate_analysis/ e Images/univariate_analysis/")

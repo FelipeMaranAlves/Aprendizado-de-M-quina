@@ -1,0 +1,76 @@
+ORGANIZAÇÃO DO REPOSITÓRIO
+===========================
+
+Este arquivo explica a nova estrutura de pastas do projeto e a convenção que
+todo código novo deve seguir para que documentação e imagens sejam salvas
+automaticamente no lugar certo.
+
+POR QUE REORGANIZAR
+--------------------
+Antes, `sessions/` misturava scripts de temas totalmente diferentes (feature
+engineering, correlação, isolation forest, clustering...) numa pasta só, e
+dentro de `sessions/clustering/` havia arquivos que não eram clustering de
+fato (autoencoder, dbscan e k-means usados como detectores de anomalia, e não
+como exploração de clusters). `Documentation/` e `Images/` eram pastas únicas
+e "achatadas", com dezenas de arquivos de análises diferentes misturados, sem
+nenhuma separação por tema. Agora cada tema tem sua própria subpasta nas três
+árvores (`sessions/`, `Documentation/`, `Images/`), sempre com o mesmo nome.
+
+NOVA ESTRUTURA
+---------------
+sessions/
+    structural_analysis/      -> exploração inicial do dataframe (describe, tipos, classes)
+    univariate_analysis/      -> estatísticas, outliers, assimetria/curtose, histogramas por feature
+    bivariate_correlation/    -> correlação de cada feature com a label (pearson/spearman/kendall)
+    feature_engineering/      -> criação/limpeza de features (ex: entropia do título)
+    feature_selection/        -> seleção de features (importância via Random Forest)
+    isolation_forest/         -> detecção de anomalia com Isolation Forest
+    clustering/                -> treino e avaliação de clusters K-Means (clustering.py,
+                                   visualization.py, metrics.py, feature_analysis.py)
+    anomaly_detection/         -> detectores de anomalia treinados nos PDFs benignos e avaliados
+                                   no conjunto de teste (K-Means, DBSCAN, Autoencoder)
+
+Documentation/<tema>/   -> um .txt/.csv de saída para cada tema acima
+Images/<tema>/          -> um .png de saída para cada tema acima
+Documentation/geral/    -> notas e documentação do projeto que não são de uma análise específica
+models/                 -> modelos treinados salvos em disco (ex: checkpoint do autoencoder)
+
+Por que separar "clustering" de "anomaly_detection"? `clustering.py`,
+`visualization.py`, `metrics.py` e `feature_analysis.py` formam um só fluxo:
+treinam K-Means para vários K e exploram/avaliam esses clusters. Já
+`kmeans_anomaly.py`, `dbscan_anomaly.py` e `autoencoder_anomaly.py` são uma
+tarefa diferente — usar um modelo (treinado só nos PDFs benignos) como
+detector de anomalia, medindo AUC-ROC/F1 no conjunto de teste. Por isso ficam
+em pastas separadas mesmo usando técnicas parecidas.
+
+`utils.py`, `utilsDoProfessor.py`, `pipeline.py` e `main.py` continuam na raiz
+do projeto: são infraestrutura compartilhada por todos os temas e os scripts
+de `sessions/` sempre os importam de forma absoluta (`from utils import ...`),
+assumindo que são executados a partir da raiz do repositório.
+
+COMO NOVAS ANÁLISES/IMAGENS DEVEM SER SALVAS
+----------------------------------------------
+Use sempre as funções de `utils.py`, passando a categoria (= nome da subpasta
+do tema) como parâmetro. Elas criam a pasta automaticamente se não existir:
+
+    from utils import documentar, caminho_imagem
+
+    documentar("titulo_do_arquivo", texto, categoria="clustering")
+    # grava em Documentation/clustering/titulo_do_arquivo.txt
+
+    plt.savefig(caminho_imagem("meu_grafico.png", categoria="clustering"))
+    # cria Images/clustering/ se preciso e salva Images/clustering/meu_grafico.png
+
+Se a categoria passada não existir ainda em `Documentation/`/`Images/`, ela é
+criada automaticamente — não é necessário (e não deve ser feito) escrever o
+caminho manualmente como "Documentation/x.txt" ou "Images/x.png".
+
+Ao criar um novo script de análise, crie-o dentro da subpasta de `sessions/`
+correspondente ao tema (ou crie uma nova subpasta se for um tema novo) e use
+essa mesma categoria nas chamadas de `documentar`/`caminho_imagem`.
+
+FONTE DOS DATASETS
+--------------------
+Nejati, N. et al.
+"A Comprehensive Multi-Format Malicious Attachment Dataset for Email Threat Detection."
+Canadian Institute for Cybersecurity (CIC), University of New Brunswick, 2025.

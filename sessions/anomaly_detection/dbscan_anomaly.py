@@ -1,4 +1,3 @@
-import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -7,7 +6,7 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score, roc_curve
-from utils import documentar
+from utils import documentar, caminho_imagem
 from utilsDoProfessor import get_overall_metrics
 
 
@@ -49,14 +48,12 @@ def _gerar_kdistance_plot(X_train, min_samples):
     plt.ylabel(f"Distância ao {min_samples}º vizinho mais próximo")
     plt.title(f"K-distance plot para estimar eps (min_samples={min_samples})")
     plt.tight_layout()
-    plt.savefig("Images/dbscan_kdistance.png")
+    plt.savefig(caminho_imagem("dbscan_kdistance.png", "anomaly_detection"))
     plt.close()
-    print("K-distance plot salvo: Images/dbscan_kdistance.png")
+    print("K-distance plot salvo: Images/anomaly_detection/dbscan_kdistance.png")
 
 
 def rodar():
-    os.makedirs("Images", exist_ok=True)
-
     X_train, X_val, y_val, X_test, y_test = _preparar_dados()
 
     MIN_SAMPLES = 5
@@ -152,7 +149,7 @@ def rodar():
         f"  AUC-ROC:   {auc_test:.4f}\n"
     )
     print(doc)
-    documentar("AnomalyDetection_DBSCAN", doc)
+    documentar("AnomalyDetection_DBSCAN", doc, categoria="anomaly_detection")
 
     fpr, tpr, _ = roc_curve(y_test, scores_test)
     plt.figure()
@@ -163,7 +160,7 @@ def rodar():
     plt.title("ROC - DBSCAN Anomaly Detection")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Images/anomaly_dbscan_roc.png")
+    plt.savefig(caminho_imagem("anomaly_dbscan_roc.png", "anomaly_detection"))
     plt.close()
 
     epss = [r["eps"] for r in resultados]
@@ -174,7 +171,7 @@ def rodar():
     plt.ylabel("AUC-ROC (validação)")
     plt.title(f"DBSCAN - AUC-ROC por eps (min_samples={MIN_SAMPLES})")
     plt.tight_layout()
-    plt.savefig("Images/dbscan_auc_por_eps.png")
+    plt.savefig(caminho_imagem("dbscan_auc_por_eps.png", "anomaly_detection"))
     plt.close()
 
     return {

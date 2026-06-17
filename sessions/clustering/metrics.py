@@ -71,5 +71,5 @@ def avaliar_clusters(X, clustering_results):
             f"calinski_harabasz={m['calinski_harabasz']}\n"
         )
 
-    documentar("Metricas", doc_texto)
+    documentar("Metricas", doc_texto, categoria="clustering")
     return metrics_results

@@ -1,0 +1,10 @@
+Avaliacao de metricas adicionais dos clusters
+K=2 | silhouette=0.900990654406533 | davies_bouldin=1.6215413892495196 | calinski_harabasz=615.0001752485895
+K=3 | silhouette=0.3272542132340993 | davies_bouldin=1.5014762293574158 | calinski_harabasz=623.9428641625852
+K=4 | silhouette=0.23477858032089965 | davies_bouldin=1.435356241779941 | calinski_harabasz=632.0757590872169
+K=5 | silhouette=0.2443955439695892 | davies_bouldin=1.4928221395901429 | calinski_harabasz=675.7202294502729
+K=6 | silhouette=0.23907820854384224 | davies_bouldin=1.3537645677496284 | calinski_harabasz=651.1129778832116
+K=7 | silhouette=0.24737902169513287 | davies_bouldin=1.7150153925442293 | calinski_harabasz=608.1084643415106
+K=8 | silhouette=0.2502480243851917 | davies_bouldin=1.0488257406421027 | calinski_harabasz=595.2209015673396
+K=9 | silhouette=0.23665569899990915 | davies_bouldin=1.4095441809466187 | calinski_harabasz=583.0185068520104
+K=10 | silhouette=0.26044178857402367 | davies_bouldin=0.8687604786629871 | calinski_harabasz=587.7020742489264

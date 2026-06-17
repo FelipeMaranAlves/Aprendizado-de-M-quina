@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from utils import documentar
@@ -30,7 +31,8 @@ def analisar_features(df, labels):
     medias = grouped.mean()
     desvios = grouped.std()
 
-    medias.to_csv("Documentation/cluster_feature_means.csv")
+    os.makedirs("Documentation/clustering", exist_ok=True)
+    medias.to_csv("Documentation/clustering/cluster_feature_means.csv")
     doc_texto = "Analise de Features por Cluster\n"
 
     feature_cols = [c for c in df_analise.columns if c != "cluster"]
@@ -53,5 +55,5 @@ def analisar_features(df, labels):
             f"Diferenca: {diferenca}\n"
         )
 
-    documentar("Analise de Features", doc_texto)
+    documentar("Analise de Features", doc_texto, categoria="clustering")
     return medias, desvios
