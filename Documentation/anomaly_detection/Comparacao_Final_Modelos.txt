@@ -1,0 +1,45 @@
+Comparacao final: melhor K-Means, DBSCAN, Isolation Forest e Autoencoder
+Criterio de selecao do threshold/hiperparametros em todos os modelos: F0.5
+(mesmo conjunto de teste para todos — ver cabecalho do script para a prova)
+
+K-Means (K=2)
+  Config:    threshold=10.5391
+  Accuracy:  0.9010
+  Precision: 0.9617
+  Recall:    0.8399
+  F1-Score:  0.8967
+  F0.5:      0.9346
+  AUC-ROC:   0.9722
+
+DBSCAN (eps=3.0)
+  Config:    threshold=1.7662
+  Accuracy:  0.9580
+  Precision: 0.9613
+  Recall:    0.9564
+  F1-Score:  0.9589
+  F0.5:      0.9603
+  AUC-ROC:   0.9853
+
+Isolation Forest
+  Config:    n_estimators=15, max_samples=0.89, max_features=0.1
+  Accuracy:  0.8974
+  Precision: 0.9219
+  Recall:    0.8734
+  F1-Score:  0.8970
+  F0.5:      0.9118
+  AUC-ROC:   0.9191
+
+Autoencoder (3 camadas)
+  Config:    arquitetura 33-24-20-16-20-24-33, threshold=0.051258
+  Accuracy:  0.8720
+  Precision: 0.9973
+  Recall:    0.7518
+  F1-Score:  0.8573
+  F0.5:      0.9362
+  AUC-ROC:   0.9776
+
+Ranking por F0.5 (metrica de referencia deste experimento):
+  1. DBSCAN (eps=3.0) (F0.5=0.9603)
+  2. Autoencoder (3 camadas) (F0.5=0.9362)
+  3. K-Means (K=2) (F0.5=0.9346)
+  4. Isolation Forest (F0.5=0.9118)

@@ -1,0 +1,17 @@
+Isolation Forest - avaliacao no conjunto de teste
+Config (melhor F0.5 na validacao, ver IsolationForest2.txt): contamination=0.5 | n_estimators=15 | max_samples=0.89 | max_features=0.1
+
+Metricas na validacao (checagem de consistencia com IsolationForest2.txt):
+  Accuracy:   0.8959
+  Precision:  0.9050
+  Recall:     0.8874
+  F1-Score:   0.8961
+  F0.5-Score: 0.9014
+
+Metricas no conjunto de teste:
+  Accuracy:   0.8974
+  Precision:  0.9219
+  Recall:     0.8734
+  F1-Score:   0.8970
+  F0.5-Score: 0.9118
+  AUC-ROC:    0.9191

@@ -1,0 +1,7 @@
+Comparacao de curvas ROC - K-Means, DBSCAN, Isolation Forest e Autoencoder
+(mesmo conjunto de teste para todos)
+
+K-Means (K=2): AUC-ROC = 0.9722
+DBSCAN (eps=3.0): AUC-ROC = 0.9853
+Isolation Forest: AUC-ROC = 0.9191
+Autoencoder (3 camadas): AUC-ROC = 0.9776
