@@ -1,0 +1,12 @@
+============================================================
+       DIAGNÓSTICO VISUAL - ISOLATION FOREST (ISF)
+============================================================
+
+1. CALIBRAÇÃO DE LIMITES NA VALIDAÇÃO:
+  - Otimização via F1-Score:  -0.1043
+  - Otimização via Youden:    -0.1037
+
+2. ANÁLISE COMPORTAMENTAL DO MODELO:
+Como o Isolation Forest isola pontos através de divisões no espaço amostral,
+o gráfico de scores mostra se os malwares (vermelho) foram isolados com poucos
+cortes (scores altos à direita) em comparação com a estrutura compacta benigna.
