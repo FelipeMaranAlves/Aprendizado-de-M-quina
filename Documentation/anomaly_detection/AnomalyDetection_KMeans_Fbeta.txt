@@ -1,0 +1,27 @@
+K-Means Anomaly Detection (K=2) - Distancia ao Centroide
+Selecao do threshold por F-beta (em vez de F1) na validacao
+
+AUC-ROC no teste (nao depende do threshold): 0.9722
+
+Comparacao por beta (beta<1 prioriza Precision, beta=1 equivale ao F1 original, beta>1 prioriza Recall):
+
+beta=0.5 | threshold(val)=10.5391 | F0.5 no val=0.9398
+  Accuracy:    0.9010
+  Precision:   0.9617
+  Recall:      0.8399
+  F1-Score:    0.8967
+  F0.5-Score:   0.9346  (metrica usada para escolher o threshold)
+
+beta=1 | threshold(val)=4.1786 | F1 no val=0.9107
+  Accuracy:    0.8974
+  Precision:   0.8677
+  Recall:      0.9433
+  F1-Score:    0.9039
+  F1-Score:   0.9039  (metrica usada para escolher o threshold)
+
+beta=2 | threshold(val)=3.6556 | F2 no val=0.9406
+  Accuracy:    0.8767
+  Precision:   0.8166
+  Recall:      0.9787
+  F1-Score:    0.8903
+  F2-Score:   0.9413  (metrica usada para escolher o threshold)

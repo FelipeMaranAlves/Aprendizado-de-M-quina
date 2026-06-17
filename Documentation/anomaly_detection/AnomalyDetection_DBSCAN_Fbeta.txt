@@ -1,0 +1,28 @@
+DBSCAN Anomaly Detection (min_samples=5)
+Selecao do threshold por F-beta (em vez de F1) na validacao
+
+Melhor eps escolhido por AUC-ROC na validacao (criterio nao muda com beta, pois AUC e calculado sobre o score continuo, sem threshold): 3.0 (AUC_val=0.9884)
+AUC-ROC no teste (nao depende do threshold): 0.9853
+
+Comparacao por beta (beta<1 prioriza Precision, beta=1 equivale ao F1 original, beta>1 prioriza Recall):
+
+beta=0.5 | threshold(val)=1.7662 | F0.5 no val=0.9675
+  Accuracy:    0.9580
+  Precision:   0.9613
+  Recall:      0.9564
+  F1-Score:    0.9589
+  F0.5-Score:   0.9603  (metrica usada para escolher o threshold)
+
+beta=1 | threshold(val)=1.7662 | F1 no val=0.9640
+  Accuracy:    0.9580
+  Precision:   0.9613
+  Recall:      0.9564
+  F1-Score:    0.9589
+  F1-Score:   0.9589  (metrica usada para escolher o threshold)
+
+beta=2 | threshold(val)=0.5125 | F2 no val=0.9831
+  Accuracy:    0.9503
+  Precision:   0.9114
+  Recall:      1.0000
+  F1-Score:    0.9536
+  F2-Score:   0.9809  (metrica usada para escolher o threshold)

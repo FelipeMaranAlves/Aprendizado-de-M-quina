@@ -1,0 +1,129 @@
+Comparacao: selecao de threshold por F-beta vs. F1 (K-Means e DBSCAN)
+========================================================================
+
+OBJETIVO
+--------
+Os experimentos originais (AnomalyDetection_KMeans.txt e AnomalyDetection_DBSCAN.txt)
+escolhem o threshold que transforma o score continuo de anomalia em uma
+predicao 0/1 maximizando o F1-score na validacao, que pesa Precision e
+Recall igualmente. Este experimento (kmeans_anomaly_fbeta.py e
+dbscan_anomaly_fbeta.py) repete a mesma ideia trocando o criterio de
+selecao do threshold pelo F-beta, testando beta em {0.5, 1.0, 2.0}:
+
+  F_beta = (1 + beta^2) * Precision * Recall / (beta^2 * Precision + Recall)
+
+- beta=0.5 (F0.5): Precision pesa 4x mais que Recall.
+- beta=1.0 (F1): equivalente ao experimento original (usado como checagem
+  de consistencia).
+- beta=2.0 (F2): Recall pesa 4x mais que Precision.
+
+O modelo treinado (K-Means com K=2; DBSCAN com eps escolhido por AUC-ROC na
+validacao) NAO muda entre os betas — apenas o ponto de corte no score
+continuo muda. Isso isola o efeito da escolha de threshold do efeito de
+mudar o modelo em si.
+
+CHECAGEM DE CONSISTENCIA (beta=1 vs. experimento original)
+------------------------------------------------------------
+            | threshold | Accuracy | Precision | Recall | F1     | AUC-ROC
+K-Means F1  | 4.1786     | 0.8974   | 0.8677    | 0.9433 | 0.9039 | 0.9722
+K-Means b=1 | 4.1786     | 0.8974   | 0.8677    | 0.9433 | 0.9039 | 0.9722
+
+DBSCAN F1   | 1.7662     | 0.9580   | 0.9613    | 0.9564 | 0.9589 | 0.9853
+DBSCAN b=1  | 1.7662     | 0.9580   | 0.9613    | 0.9564 | 0.9589 | 0.9853
+
+Os valores batem exatamente com os ja documentados (mesmo random_state=2,
+mesmos splits treino/validacao/teste, mesmo modelo). Isso confirma que a
+unica mudanca introduzida por este experimento e' o criterio de escolha do
+threshold.
+
+RESULTADO PRINCIPAL: K-MEANS, beta=0.5 vs. beta=1.0 (F1 original)
+---------------------------------------------------------------------
+              | threshold | Accuracy | Precision | Recall | F1     | AUC-ROC
+F1 (original) | 4.1786    | 0.8974   | 0.8677    | 0.9433 | 0.9039 | 0.9722
+F0.5 (novo)   | 10.5391   | 0.9010   | 0.9617    | 0.8399 | 0.8967 | 0.9722
+
+Ao trocar o criterio para F0.5, o threshold escolhido sobe de 4.18 para
+10.54 (mais conservador: so marca como anomalia distancias bem maiores ao
+centroide). Isso troca Recall por Precision: a Precision sobe de 0.8677
+para 0.9617 (+9.4 p.p.), enquanto o Recall cai de 0.9433 para 0.8399
+(-10.3 p.p.). A Accuracy melhora levemente (0.8974 -> 0.9010) porque o
+dataset de teste nao e' extremamente desbalanceado neste split (ainda
+assim, Accuracy isolada e' uma metrica fraca para anomalias raras — ver
+discussao abaixo). O AUC-ROC nao muda, pois e' calculado sobre o score
+continuo, antes de qualquer corte.
+
+RESULTADO PRINCIPAL: DBSCAN, beta=0.5 vs. beta=1.0 (F1 original)
+---------------------------------------------------------------------
+              | threshold | Accuracy | Precision | Recall | F1     | AUC-ROC
+F1 (original) | 1.7662    | 0.9580   | 0.9613    | 0.9564 | 0.9589 | 0.9853
+F0.5 (novo)   | 1.7662    | 0.9580   | 0.9613    | 0.9564 | 0.9589 | 0.9853
+
+No DBSCAN, o threshold que maximiza F0.5 na validacao e' exatamente o
+mesmo que maximiza F1 dentro da grade de percentis testada (10% a 95%, em
+passos de 5%). Isso indica que, para este modelo, a regiao de scores em
+torno do "cotovelo" benigno/malicioso e' bem separada: ja existe um
+threshold que entrega Precision e Recall altos e proximos (0.9613 e
+0.9564), sem necessidade de sacrificar um pelo outro. So ao empurrar o
+criterio para o extremo oposto (F2, que prioriza Recall) o threshold se
+move de forma visivel (1.7662 -> 0.5125), atingindo Recall=1.0 ao custo de
+Precision=0.9114. Isso sugere que o DBSCAN com eps=3.0 e' mais robusto a
+escolha de beta do que o K-Means nesse dataset.
+
+K-MEANS vs. DBSCAN (beta=0.5)
+------------------------------
+            | Accuracy | Precision | Recall | F1     | F0.5   | AUC-ROC
+K-Means     | 0.9010   | 0.9617    | 0.8399 | 0.8967 | 0.9346 | 0.9722
+DBSCAN      | 0.9580   | 0.9613    | 0.9564 | 0.9589 | 0.9603 | 0.9853
+
+Mesmo otimizando os dois para Precision (F0.5), o DBSCAN segue superior ao
+K-Means em todas as metricas, incluindo Precision empatada (~0.961) mas
+com Recall muito maior (0.9564 vs 0.8399). Isso repete o padrao ja
+observado no experimento original com F1: o DBSCAN, por nao assumir que os
+PDFs benignos formam um unico formato de cluster (ele aprende regioes de
+densidade arbitrarias), modela melhor a "normalidade" do que o K-Means,
+que so consegue medir distancia a centroides esfericos.
+
+POR QUE TESTAR F-BETA (E NAO SO F1) NESTE EXPERIMENTO
+---------------------------------------------------------
+O enunciado do trabalho pede (a) metricas adequadas para classes
+desbalanceadas e (b) testar diferentes hiperparametros para avaliar a
+robustez dos metodos. O F1 e' um caso particular do F-beta (beta=1) e
+assume, implicitamente, que um falso positivo e um falso negativo tem o
+mesmo custo. Isso raramente e' verdade em deteccao de anomalias real:
+
+- Seguranca/anexos maliciosos (este dataset): um falso positivo bloqueia
+  ou atrasa um e-mail legitimo e gera trabalho de triagem para um
+  analista; um falso negativo deixa passar um ataque. Times de seguranca
+  com volume alto de e-mail e poucos analistas tendem a preferir F0.5
+  (menos alertas falsos, mesmo aceitando deixar passar alguns casos),
+  enquanto times preocupados com ataques de alto impacto (ransomware,
+  spear-phishing direcionado) preferem F2 (menos falsos negativos, mesmo
+  com mais alertas para revisar).
+- Fraude financeira: custo de um falso negativo (fraude nao detectada,
+  perda financeira direta) costuma superar o custo de um falso positivo
+  (transacao legitima bloqueada/revisada), favorecendo F2.
+- Manutencao preditiva: depende do custo de parar a maquina para
+  inspecionar (falso positivo) vs. deixar uma falha real passar (falso
+  negativo, possivelmente um equipamento danificado).
+
+Por isso, em vez de fixar beta=0.5 como unico ponto, este experimento
+reporta beta em {0.5, 1.0, 2.0}: a tabela serve tanto para validar que a
+implementacao reproduz o F1 original (beta=1) quanto para ilustrar, com
+numeros reais do mesmo modelo, o quanto o threshold (e o trade-off
+Precision/Recall resultante) muda dependendo de qual erro se quer evitar
+mais.
+
+LIMITACOES
+----------
+- A grade de thresholds testada (percentis 10% a 95% em passos de 5% dos
+  scores de validacao) e' a mesma usada no experimento original; ela e'
+  grosseira o suficiente para que, no DBSCAN, beta=0.5 e beta=1.0 tenham
+  empatado no mesmo ponto da grade. Uma busca mais fina (passos menores)
+  poderia revelar um threshold intermediario que diferencie melhor F0.5 de
+  F1 no DBSCAN.
+- O eps do DBSCAN continua sendo escolhido por AUC-ROC na validacao (nao
+  por F-beta), entao este experimento avalia apenas o efeito do beta na
+  ETAPA DE THRESHOLD, e nao um re-tuning completo do eps para cada beta.
+- Os resultados vem de um unico split de treino/validacao/teste
+  (random_state=2); nao ha' validacao cruzada nem teste de significancia
+  estatistica entre os betas neste experimento especifico.
