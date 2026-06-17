@@ -33,7 +33,7 @@ def rodar():
     df['title_entropy'] = df['file_path'].apply(calculate_entropy)
     sobre_entropia = "exemplo de como ficou a entropia baseada no titulo e sua relacao com label"
     sobre_entropia += str(df[['file_path','title_entropy','label']].head(20))
-    documentar('segundo_contato',sobre_entropia)
+    documentar('segundo_contato', sobre_entropia, categoria="feature_engineering")
     # df['title_entropy_with_lenght'] = df['title_entropy'].apply()
     # documentar('segundo_contato',)
     # for col in colunas:

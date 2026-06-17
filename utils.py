@@ -1,21 +1,29 @@
 ##Esse codigo assume uma arquitetura do tipo, e que vc ta rodando na main
 #.
-#\Documentation
+#\Documentation\{categoria}
 from os import path, makedirs
 from math import log2
 import pandas as pd
-def documentar(titulo: str, conteudo: str):
+def documentar(titulo: str, conteudo: str, categoria: str = "geral"):
     '''Exemplos de uso: \n
-     documentar("testeTitulo", "testeConteudo") \n
-     documentar("testePandas",str(df.head(5)))'''
-    makedirs("./Documentation", exist_ok=True)
+     documentar("testeTitulo", "testeConteudo", categoria="clustering") \n
+     documentar("testePandas",str(df.head(5)), categoria="feature_selection")'''
+    pasta = path.join("Documentation", categoria)
+    makedirs(pasta, exist_ok=True)
+    arquivo = path.join(pasta, f"{titulo}.txt")
 
-    if (path.isfile(f"./Documentation/{titulo}.txt")):
-        with open(f"./Documentation/{titulo}.txt", "a") as f:
+    if path.isfile(arquivo):
+        with open(arquivo, "a") as f:
             f.write(f"\n{conteudo}")
     else:
-        with open(f"./Documentation/{titulo}.txt", "w", encoding="utf-8") as f:
+        with open(arquivo, "w", encoding="utf-8") as f:
             f.write(conteudo)
+
+def caminho_imagem(nome_arquivo: str, categoria: str = "geral") -> str:
+    '''Garante a pasta Images/{categoria} e retorna o caminho completo para usar em plt.savefig(...).'''
+    pasta = path.join("Images", categoria)
+    makedirs(pasta, exist_ok=True)
+    return path.join(pasta, nome_arquivo)
 
 def configurar():
     pd.set_option('display.max_columns', None)

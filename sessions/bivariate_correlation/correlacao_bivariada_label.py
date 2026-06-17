@@ -14,4 +14,4 @@ def rodar():
     # sns.heatmap(corr_matrix,xticklabels=True,yticklabels=True,cmap='jet')
     # plt.show()
     corrs = df.select_dtypes(include=['number']).corr()['label'].abs().apply(lambda x: x*x).sort_values(ascending=False)
-    documentar("quarto_contato.txt",str(corrs))
+    documentar("quarto_contato", str(corrs), categoria="bivariate_correlation")

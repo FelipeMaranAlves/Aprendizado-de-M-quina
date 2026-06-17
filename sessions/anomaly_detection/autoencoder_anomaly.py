@@ -8,7 +8,7 @@ import torch.optim as optim
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score, roc_curve
-from utils import documentar
+from utils import documentar, caminho_imagem
 from utilsDoProfessor import get_overall_metrics
 
 
@@ -39,7 +39,7 @@ def _preparar_dados():
 
 
 class _EarlyStopping:
-    def __init__(self, patience=5, delta=1e-4, path='checkpoint_ae.pt'):
+    def __init__(self, patience=5, delta=1e-4, path='models/checkpoint_ae.pt'):
         self.patience = patience
         self.delta = delta
         self.path = path
@@ -131,7 +131,7 @@ def _scores_anomalia(model, X_t):
 
 
 def rodar():
-    os.makedirs("Images", exist_ok=True)
+    os.makedirs("models", exist_ok=True)
     RAND_STATE = 2
     torch.manual_seed(RAND_STATE)
     np.random.seed(RAND_STATE)
@@ -186,7 +186,7 @@ def rodar():
         f"  AUC-ROC:   {auc:.4f}\n"
     )
     print(doc)
-    documentar("AnomalyDetection_Autoencoder", doc)
+    documentar("AnomalyDetection_Autoencoder", doc, categoria="anomaly_detection")
 
     fpr, tpr, _ = roc_curve(y_test, scores_test)
     plt.figure()
@@ -197,7 +197,7 @@ def rodar():
     plt.title("ROC - Autoencoder Anomaly Detection")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Images/anomaly_autoencoder_roc.png")
+    plt.savefig(caminho_imagem("anomaly_autoencoder_roc.png", "anomaly_detection"))
     plt.close()
 
     plt.figure()
@@ -209,7 +209,7 @@ def rodar():
     plt.title("Autoencoder - Curva de Aprendizado")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Images/autoencoder_loss.png")
+    plt.savefig(caminho_imagem("autoencoder_loss.png", "anomaly_detection"))
     plt.close()
 
     return {

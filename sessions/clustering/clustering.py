@@ -65,6 +65,6 @@ def rodar():
     for r in clustering_results:
         doc_texto += f"K={r['n_clusters']} | silhouette={r['silhouette']} | inertia={r['inertia']}\n"
 
-    documentar("Clustering", doc_texto)
+    documentar("Clustering", doc_texto, categoria="clustering")
 
     return clustering_results

@@ -18,4 +18,4 @@ def rodar():
     rf.fit(X_train,y_train)
     importances = pd.Series(rf.feature_importances_,index=X_train.columns)
     importances.sort_values(ascending=False,inplace=True)
-    documentar("Quinto_contato_Sp3",str(importances))
+    documentar("Quinto_contato_Sp3", str(importances), categoria="feature_selection")

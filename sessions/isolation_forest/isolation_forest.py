@@ -33,7 +33,7 @@ def rodar():
         predicoes_val = isf_model.predict(norm_X_val)
         predicoes_val[predicoes_val == 1] = 1
         predicoes_val[predicoes_val == -1] = 0
-        documentar("IsolationForest2",f"Metricas com o valor de contaminacao: {CONTAMINATION}\n"+str(get_overall_metrics(y_val,predicoes_val)))
+        documentar("IsolationForest2",f"Metricas com o valor de contaminacao: {CONTAMINATION}\n"+str(get_overall_metrics(y_val,predicoes_val)), categoria="isolation_forest")
     """
 
     CONTAMINATION = 0.5
@@ -71,5 +71,6 @@ def rodar():
 
         documentar(
             "IsolationForest2",
-            header + str(get_overall_metrics(y_val, predicoes_val))
+            header + str(get_overall_metrics(y_val, predicoes_val)),
+            categoria="isolation_forest",
         )

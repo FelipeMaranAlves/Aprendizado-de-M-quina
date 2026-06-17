@@ -1,4 +1,3 @@
-import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -6,7 +5,7 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score, roc_curve
-from utils import documentar
+from utils import documentar, caminho_imagem
 from utilsDoProfessor import get_overall_metrics
 
 
@@ -37,7 +36,6 @@ def _preparar_dados():
 
 
 def rodar():
-    os.makedirs("Images", exist_ok=True)
     RAND_STATE = 2
 
     X_train, X_val, y_val, X_test, y_test = _preparar_dados()
@@ -79,7 +77,7 @@ def rodar():
         f"  AUC-ROC:   {auc:.4f}\n"
     )
     print(doc)
-    documentar("AnomalyDetection_KMeans", doc)
+    documentar("AnomalyDetection_KMeans", doc, categoria="anomaly_detection")
 
     fpr, tpr, _ = roc_curve(y_test, scores_test)
     plt.figure()
@@ -90,7 +88,7 @@ def rodar():
     plt.title("ROC - K-Means Anomaly Detection")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Images/anomaly_kmeans_roc.png")
+    plt.savefig(caminho_imagem("anomaly_kmeans_roc.png", "anomaly_detection"))
     plt.close()
 
     return {
