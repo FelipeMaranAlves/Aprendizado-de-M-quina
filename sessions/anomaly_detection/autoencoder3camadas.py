@@ -11,11 +11,13 @@ from sklearn.metrics import roc_auc_score, roc_curve
 from utils import documentar
 from utilsDoProfessor import get_overall_metrics
 from sklearn.metrics import roc_curve
+from sklearn.metrics import fbeta_score
+
 import json
 import os
 
 BEST_MODEL_INFO = "models/best_ae_3.json"
-BEST_MODEL_PATH = "models/checkpoint_ae_3_camadas.pt"
+BEST_MODEL_PATH = "models/checkpoint_ae_3_camadas24-20-16.pt"
 def salvar_se_melhor(model, score_atual, threshold, auc_val, metrica="youden"):
     melhor_score = -np.inf
 
@@ -101,31 +103,31 @@ class _EarlyStopping:
 
 
 class _Autoencoder(nn.Module):
-    def __init__(self, in_features, dropout_rate=0.2):
+    def __init__(self, in_features, a,b,c, dropout_rate=0.2):
         super().__init__()
         self.encoder = nn.Sequential(
-            nn.Linear(in_features, 24),
-            nn.BatchNorm1d(24),
+            nn.Linear(in_features, a),
+            nn.BatchNorm1d(a),
             nn.ReLU(),
             nn.Dropout(dropout_rate),
-            nn.Linear(24, 16),
-            nn.BatchNorm1d(16),
+            nn.Linear(a, b),
+            nn.BatchNorm1d(b),
             nn.ReLU(),
             nn.Dropout(dropout_rate),
-            nn.Linear(16, 8),
-            nn.BatchNorm1d(8),
+            nn.Linear(b, c),
+            nn.BatchNorm1d(c),
             nn.ReLU(),
         )
         self.decoder = nn.Sequential(
-            nn.Linear(8, 16),
-            nn.BatchNorm1d(16),
+            nn.Linear(c, b),
+            nn.BatchNorm1d(b),
             nn.ReLU(),
             nn.Dropout(dropout_rate),
-            nn.Linear(16, 24),
-            nn.BatchNorm1d(24),
+            nn.Linear(b, a),
+            nn.BatchNorm1d(a),
             nn.ReLU(),
             nn.Dropout(dropout_rate),
-            nn.Linear(24, in_features),
+            nn.Linear(a, in_features),
             nn.BatchNorm1d(in_features),
             nn.Sigmoid(),
         )
@@ -146,7 +148,7 @@ def _treinar(model, X_train_t, X_val_benign_t, criterion, optimizer,
             batch = X_train_t[i:i + batch_size]
             loss = criterion(model(batch), batch)
             optimizer.zero_grad()
-            loss.backward()
+            loss.backward() 
             optimizer.step()
             ep_losses.append(loss.item())
         train_avg = float(np.mean(ep_losses))
@@ -193,53 +195,74 @@ def rodar():
     X_val_t = torch.FloatTensor(X_val)
     X_test_t = torch.FloatTensor(X_test)
 
-    model = _Autoencoder(in_features)
-    criterion = nn.MSELoss()
-    optimizer = optim.Adam(model.parameters(), lr=5e-3)
+    CAMADA2 = 24
+    CAMADA3 = 20
+    CAMADA4 = 16
 
-    NUM_EPOCHS = 100
+    NUM_EPOCHS = 50
     BATCH_SIZE = 256
     PATIENCE = 5
     DELTA = 1e-4
+
+    model = _Autoencoder(in_features,CAMADA2,CAMADA3,CAMADA4, 0.2)
+    criterion = nn.MSELoss()
+    optimizer = optim.Adam(model.parameters(), lr=5e-3)
+
     train_losses, val_losses = _treinar(
         model, X_train_t, X_val_benign_t, criterion, optimizer,
         num_epochs=NUM_EPOCHS, batch_size=BATCH_SIZE, patience=PATIENCE, delta=DELTA,
     )
 
     scores_val = _scores_anomalia(model, X_val_t)
-    fpr, tpr, thresholds = roc_curve(y_val, scores_val)
 
-    youden_index = tpr - fpr
+    _, _, thresholds = roc_curve(y_val, scores_val)
 
-    best_idx = np.argmax(youden_index)
+    best_score = -1
+    best_threshold = thresholds[0]
 
+    for t in thresholds:
+        preds = (scores_val > t).astype(int)
 
-    best_threshold = thresholds[best_idx]
-    best_youden = youden_index[best_idx]
+        if preds.sum() == 0 or preds.sum() == len(preds):
+            continue
+
+        score = fbeta_score(
+            y_val,
+            preds,
+            beta=0.5
+        )
+
+        if score > best_score:
+            best_score = score
+            best_threshold = t
 
     auc_val = roc_auc_score(y_val, scores_val)
 
-
     scores_test = _scores_anomalia(model, X_test_t)
+
     preds_test = (scores_test > best_threshold).astype(int)
+
     m_test = get_overall_metrics(y_test, preds_test)
-    salvar_se_melhor(
-    model,
-    best_youden,
-    best_threshold,
-    auc_val,
-    "youden"
-    )
+
     auc = roc_auc_score(y_test, scores_test)
 
+    salvar_se_melhor(
+        model,
+        best_score,
+        best_threshold,
+        auc_val,
+        "f0.5"
+    )
+
+
+
     doc = (
-        f"Selecionando modelo usando Youden Index\n"
-        f"Autoencoder Anomaly Detection\n"
+        f"Melhor threshold (val, max F0.5): {best_threshold:.6f}\n"
+        f"Melhor F0.5: {best_score:.4f}\n"
         f"Parametros: num_epochs: {NUM_EPOCHS} batch_size: {BATCH_SIZE} patience: {PATIENCE}, delta: {DELTA},"
-        f"Arquitetura: {in_features} -> 24 -> 16 -> 8 -> 16 -> 24 -> {in_features}\n"
+        f"Arquitetura: {in_features} -> {CAMADA2} -> {CAMADA3} -> {CAMADA4} -> {CAMADA3} -> {CAMADA2} -> {in_features}\n"
         f"Épocas treinadas: {len(train_losses)}\n"
-        f"Melhor threshold (val, max Youden_Index): {best_threshold:.6f}\n"
-        f"Melhor Youden Index: {best_youden} "
+        f"Melhor threshold (val, max F0.5): {best_threshold:.6f}\n"
         "\nMétricas no conjunto de teste:\n"
         f"  Accuracy:  {m_test['acc']:.4f}\n"
         f"  Precision: {m_test['precision']:.4f}\n"
@@ -256,10 +279,10 @@ def rodar():
     plt.plot([0, 1], [0, 1], 'k--', label='Aleatório')
     plt.xlabel("FPR")
     plt.ylabel("TPR")
-    plt.title("ROC - Autoencoder Anomaly Detection 3")
+    plt.title("ROC - Autoencoder Anomaly Detection 3 fbeta")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Images/anomaly_autoencoder_3_camadas_roc.png")
+    plt.savefig("Images/anomaly_autoencoder_3_camadas_roc_fbeta.png")
     plt.close()
 
     plt.figure()
@@ -268,10 +291,10 @@ def rodar():
     plt.plot(epochs_axis, val_losses, label='Val Loss (benignos)')
     plt.xlabel("Época")
     plt.ylabel("MSE Loss")
-    plt.title("Autoencoder - Curva de Aprendizado 3")
+    plt.title("Autoencoder - Curva de Aprendizado 3 fbeta")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Images/autoencoder_3_camadas_loss.png")
+    plt.savefig("Images/autoencoder_3_camadas_loss_fbeta.png")
     plt.close()
 
     return {

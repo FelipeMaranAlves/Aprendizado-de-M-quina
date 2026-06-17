@@ -12,3 +12,199 @@ Métricas no conjunto de teste:
   Recall:    0.8105
   F1-Score:  0.8611
   AUC-ROC:   0.9264
+
+Selecionando modelo usando Youden Index
+Autoencoder Anomaly Detection
+Parametros: num_epochs: 200 batch_size: 256 patience: 10, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 158
+Melhor threshold (val, max Youden_Index): 0.002395
+Melhor Youden Index: 0.8075183576939063 
+Métricas no conjunto de teste:
+  Accuracy:  0.9016
+  Precision: 0.8523
+  Recall:    0.9767
+  F1-Score:  0.9103
+  AUC-ROC:   0.9685
+
+Selecionando modelo usando Youden Index
+Autoencoder Anomaly Detection
+Parametros: num_epochs: 100 batch_size: 512 patience: 10, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 100
+Melhor threshold (val, max Youden_Index): 0.052869
+Melhor Youden Index: 0.7553220396506856 
+Métricas no conjunto de teste:
+  Accuracy:  0.8689
+  Precision: 0.9946
+  Recall:    0.7477
+  F1-Score:  0.8537
+  AUC-ROC:   0.9597
+
+Selecionando modelo usando Youden Index
+Autoencoder Anomaly Detection
+Parametros: num_epochs: 100 batch_size: 64 patience: 10, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 55
+Melhor threshold (val, max Youden_Index): 0.053406
+Melhor Youden Index: 0.7553220396506856 
+Métricas no conjunto de teste:
+  Accuracy:  0.8694
+  Precision: 0.9960
+  Recall:    0.7477
+  F1-Score:  0.8542
+  AUC-ROC:   0.9555
+
+Selecionando modelo usando Youden Index
+Autoencoder Anomaly Detection
+Parametros: num_epochs: 500 batch_size: 128 patience: 20, delta: 5e-05,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 208
+Melhor threshold (val, max Youden_Index): 0.001810
+Melhor Youden Index: 0.8440715684242295 
+Métricas no conjunto de teste:
+  Accuracy:  0.9223
+  Precision: 0.9091
+  Recall:    0.9422
+  F1-Score:  0.9254
+  AUC-ROC:   0.9743
+
+Selecionando modelo usando F0.5
+Melhor threshold (val, max F0.5): 0.032810
+Melhor F0.5: 0.9379
+Parametros: num_epochs: 100 batch_size: 128 patience: 10, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 92
+Melhor threshold (val, max F0.5): 0.032810
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8715
+  Precision: 0.9960
+  Recall:    0.7518
+  F1-Score:  0.8568
+  AUC-ROC:   0.9606
+
+Melhor threshold (val, max F0.5): 0.032682
+Melhor F0.5: 0.9379
+Parametros: num_epochs: 100 batch_size: 256 patience: 10, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 100
+Melhor threshold (val, max F0.5): 0.032682
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8715
+  Precision: 0.9960
+  Recall:    0.7518
+  F1-Score:  0.8568
+  AUC-ROC:   0.9604
+
+Melhor threshold (val, max F0.5): 0.052869
+Melhor F0.5: 0.9376
+Parametros: num_epochs: 100 batch_size: 512 patience: 10, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 100
+Melhor threshold (val, max F0.5): 0.052869
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8689
+  Precision: 0.9946
+  Recall:    0.7477
+  F1-Score:  0.8537
+  AUC-ROC:   0.9597
+
+Melhor threshold (val, max F0.5): 0.032810
+Melhor F0.5: 0.9379
+Parametros: num_epochs: 500 batch_size: 128 patience: 10, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 92
+Melhor threshold (val, max F0.5): 0.032810
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8715
+  Precision: 0.9960
+  Recall:    0.7518
+  F1-Score:  0.8568
+  AUC-ROC:   0.9606
+
+Melhor threshold (val, max F0.5): 0.051533
+Melhor F0.5: 0.9376
+Parametros: num_epochs: 500 batch_size: 128 patience: 30, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 225
+Melhor threshold (val, max F0.5): 0.051533
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8694
+  Precision: 0.9973
+  Recall:    0.7467
+  F1-Score:  0.8540
+  AUC-ROC:   0.9754
+
+Melhor threshold (val, max F0.5): 0.051258
+Melhor F0.5: 0.9376
+Parametros: num_epochs: 500 batch_size: 128 patience: 30, delta: 5e-05,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 243
+Melhor threshold (val, max F0.5): 0.051258
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8720
+  Precision: 0.9973
+  Recall:    0.7518
+  F1-Score:  0.8573
+  AUC-ROC:   0.9776
+
+Melhor threshold (val, max F0.5): 0.051258
+Melhor F0.5: 0.9376
+Parametros: num_epochs: 500 batch_size: 64 patience: 10, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 55
+Melhor threshold (val, max F0.5): 0.051258
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8720
+  Precision: 0.9973
+  Recall:    0.7518
+  F1-Score:  0.8573
+  AUC-ROC:   0.9776
+
+Melhor threshold (val, max F0.5): 0.051258
+Melhor F0.5: 0.9376
+Parametros: num_epochs: 500 batch_size: 64 patience: 30, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 92
+Melhor threshold (val, max F0.5): 0.051258
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8720
+  Precision: 0.9973
+  Recall:    0.7518
+  F1-Score:  0.8573
+  AUC-ROC:   0.9776
+
+Melhor threshold (val, max F0.5): 0.051258
+Melhor F0.5: 0.9376
+Parametros: num_epochs: 500 batch_size: 128 patience: 30, delta: 5e-05,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 243
+Melhor threshold (val, max F0.5): 0.051258
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8720
+  Precision: 0.9973
+  Recall:    0.7518
+  F1-Score:  0.8573
+  AUC-ROC:   0.9776
+
+Melhor threshold (val, max F0.5): 0.051258
+Melhor F0.5: 0.9376
+Parametros: num_epochs: 10 batch_size: 128 patience: 5, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 10
+Melhor threshold (val, max F0.5): 0.051258
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8720
+  Precision: 0.9973
+  Recall:    0.7518
+  F1-Score:  0.8573
+  AUC-ROC:   0.9776
+
+Melhor threshold (val, max F0.5): 0.051258
+Melhor F0.5: 0.9376
+Parametros: num_epochs: 50 batch_size: 256 patience: 5, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 50
+Melhor threshold (val, max F0.5): 0.051258
+
+Métricas no conjunto de teste:
+  Accuracy:  0.8720
+  Precision: 0.9973
+  Recall:    0.7518
+  F1-Score:  0.8573
+  AUC-ROC:   0.9776

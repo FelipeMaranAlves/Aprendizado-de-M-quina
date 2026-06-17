@@ -1,0 +1,90 @@
+Selecionando modelo usando Youden Index
+Autoencoder Anomaly Detection
+Parametros: num_epochs: 100 batch_size: 256 patience: 10, delta: 0.0001,Arquitetura: 33 -> 24 -> 16 -> 8 -> 16 -> 24 -> 33
+Épocas treinadas: 50
+Melhor threshold (val, max Youden_Index): 0.049165
+Melhor Youden Index: 0.7552447101809617 
+Métricas no conjunto de teste:
+  Accuracy:  0.8720
+  Precision: 0.9907
+  Recall:    0.7568
+  F1-Score:  0.8581
+  AUC-ROC:   0.9549
+
+Selecionando modelo usando Youden Index
+Autoencoder Anomaly Detection
+Parametros: num_epochs: 100 batch_size: 256 patience: 10, delta: 0.0001,Arquitetura: 33 -> 24 -> 12 -> 8 -> 12 -> 24 -> 33
+Épocas treinadas: 100
+Melhor threshold (val, max Youden_Index): 0.015714
+Melhor Youden Index: 0.7572402401080035 
+Métricas no conjunto de teste:
+  Accuracy:  0.8756
+  Precision: 0.9895
+  Recall:    0.7649
+  F1-Score:  0.8629
+  AUC-ROC:   0.9591
+
+Selecionando modelo usando Youden Index
+Autoencoder Anomaly Detection
+Parametros: num_epochs: 100 batch_size: 256 patience: 10, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 8 -> 20 -> 24 -> 33
+Épocas treinadas: 59
+Melhor threshold (val, max Youden_Index): 0.046974
+Melhor Youden Index: 0.7604139704279219 
+Métricas no conjunto de teste:
+  Accuracy:  0.8751
+  Precision: 0.9895
+  Recall:    0.7639
+  F1-Score:  0.8622
+  AUC-ROC:   0.9500
+
+Selecionando modelo usando Youden Index
+Autoencoder Anomaly Detection
+Parametros: num_epochs: 100 batch_size: 256 patience: 10, delta: 0.0001,Arquitetura: 33 -> 15 -> 7 -> 2 -> 7 -> 15 -> 33
+Épocas treinadas: 80
+Melhor threshold (val, max Youden_Index): 0.051638
+Melhor Youden Index: 0.7553220396506856 
+Métricas no conjunto de teste:
+  Accuracy:  0.8689
+  Precision: 0.9933
+  Recall:    0.7487
+  F1-Score:  0.8538
+  AUC-ROC:   0.9510
+
+Selecionando modelo usando Youden Index
+Autoencoder Anomaly Detection
+Parametros: num_epochs: 100 batch_size: 256 patience: 10, delta: 0.0001,Arquitetura: 33 -> 15 -> 7 -> 2 -> 7 -> 15 -> 33
+Épocas treinadas: 80
+Melhor threshold (val, max Youden_Index): 0.051638
+Melhor Youden Index: 0.7553220396506856 
+Métricas no conjunto de teste:
+  Accuracy:  0.8689
+  Precision: 0.9933
+  Recall:    0.7487
+  F1-Score:  0.8538
+  AUC-ROC:   0.9510
+
+Selecionando modelo usando Youden Index
+Autoencoder Anomaly Detection
+Parametros: num_epochs: 100 batch_size: 256 patience: 10, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 10 -> 20 -> 24 -> 33
+Épocas treinadas: 48
+Melhor threshold (val, max Youden_Index): 0.046104
+Melhor Youden Index: 0.7541180627679009 
+Métricas no conjunto de teste:
+  Accuracy:  0.8736
+  Precision: 0.9856
+  Recall:    0.7639
+  F1-Score:  0.8607
+  AUC-ROC:   0.9553
+
+Selecionando modelo usando Youden Index
+Autoencoder Anomaly Detection
+Parametros: num_epochs: 100 batch_size: 256 patience: 10, delta: 0.0001,Arquitetura: 33 -> 24 -> 20 -> 16 -> 20 -> 24 -> 33
+Épocas treinadas: 100
+Melhor threshold (val, max Youden_Index): 0.003215
+Melhor Youden Index: 0.7734063953619502 
+Métricas no conjunto de teste:
+  Accuracy:  0.8839
+  Precision: 0.8428
+  Recall:    0.9504
+  F1-Score:  0.8933
+  AUC-ROC:   0.9604
