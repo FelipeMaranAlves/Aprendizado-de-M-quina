@@ -1,0 +1,151 @@
+
+contamination=0.5 | n_estimators=290 | max_samples=0.88 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8626943005181347), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8708333333333333), 'f1-score': np.float64(0.8631905007743934)}
+contamination=0.5 | n_estimators=290 | max_samples=0.88 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8626943005181347), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8708333333333333), 'f1-score': np.float64(0.8631905007743934)}
+contamination=0.5 | n_estimators=290 | max_samples=0.88 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8626943005181347), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8708333333333333), 'f1-score': np.float64(0.8631905007743934)}
+contamination=0.5 | n_estimators=290 | max_samples=0.89 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8575129533678757), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.8648648648648649), 'f1-score': np.float64(0.8581743166580711)}
+contamination=0.5 | n_estimators=290 | max_samples=0.89 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8575129533678757), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.8648648648648649), 'f1-score': np.float64(0.8581743166580711)}
+contamination=0.5 | n_estimators=290 | max_samples=0.89 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8575129533678757), 'tpr': np.float64(0.8515864892528148), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.8648648648648649), 'f1-score': np.float64(0.8581743166580711)}
+contamination=0.5 | n_estimators=290 | max_samples=0.9 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8626943005181347), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8692946058091287), 'f1-score': np.float64(0.8634724368882021)}
+contamination=0.5 | n_estimators=290 | max_samples=0.9 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8626943005181347), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8692946058091287), 'f1-score': np.float64(0.8634724368882021)}
+contamination=0.5 | n_estimators=290 | max_samples=0.9 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8626943005181347), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8692946058091287), 'f1-score': np.float64(0.8634724368882021)}
+contamination=0.5 | n_estimators=290 | max_samples=0.91 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.861139896373057), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8688865764828304), 'f1-score': np.float64(0.8617131062951496)}
+contamination=0.5 | n_estimators=290 | max_samples=0.91 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.861139896373057), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8688865764828304), 'f1-score': np.float64(0.8617131062951496)}
+contamination=0.5 | n_estimators=290 | max_samples=0.91 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.861139896373057), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8688865764828304), 'f1-score': np.float64(0.8617131062951496)}
+contamination=0.5 | n_estimators=290 | max_samples=0.92 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.8652849740932642), 'f1-score': np.float64(0.8599382080329557)}
+contamination=0.5 | n_estimators=290 | max_samples=0.92 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.8652849740932642), 'f1-score': np.float64(0.8599382080329557)}
+contamination=0.5 | n_estimators=290 | max_samples=0.92 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.8652849740932642), 'f1-score': np.float64(0.8599382080329557)}
+contamination=0.5 | n_estimators=295 | max_samples=0.88 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.872651356993737), 'f1-score': np.float64(0.8640826873385012)}
+contamination=0.5 | n_estimators=295 | max_samples=0.88 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.872651356993737), 'f1-score': np.float64(0.8640826873385012)}
+contamination=0.5 | n_estimators=295 | max_samples=0.88 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.872651356993737), 'f1-score': np.float64(0.8640826873385012)}
+contamination=0.5 | n_estimators=295 | max_samples=0.89 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8580310880829015), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.8650051921079959), 'f1-score': np.float64(0.8587628865979382)}
+contamination=0.5 | n_estimators=295 | max_samples=0.89 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8580310880829015), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.8650051921079959), 'f1-score': np.float64(0.8587628865979382)}
+contamination=0.5 | n_estimators=295 | max_samples=0.89 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8580310880829015), 'tpr': np.float64(0.8526100307062436), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.8650051921079959), 'f1-score': np.float64(0.8587628865979382)}
+contamination=0.5 | n_estimators=295 | max_samples=0.9 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8711018711018711), 'f1-score': np.float64(0.8643630737493554)}
+contamination=0.5 | n_estimators=295 | max_samples=0.9 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8711018711018711), 'f1-score': np.float64(0.8643630737493554)}
+contamination=0.5 | n_estimators=295 | max_samples=0.9 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8711018711018711), 'f1-score': np.float64(0.8643630737493554)}
+contamination=0.5 | n_estimators=295 | max_samples=0.91 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8626943005181347), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8700623700623701), 'f1-score': np.float64(0.8633316142341413)}
+contamination=0.5 | n_estimators=295 | max_samples=0.91 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8626943005181347), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8700623700623701), 'f1-score': np.float64(0.8633316142341413)}
+contamination=0.5 | n_estimators=295 | max_samples=0.91 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8626943005181347), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8700623700623701), 'f1-score': np.float64(0.8633316142341413)}
+contamination=0.5 | n_estimators=295 | max_samples=0.92 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.861139896373057), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8673575129533678), 'f1-score': np.float64(0.8619979402677651)}
+contamination=0.5 | n_estimators=295 | max_samples=0.92 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.861139896373057), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8673575129533678), 'f1-score': np.float64(0.8619979402677651)}
+contamination=0.5 | n_estimators=295 | max_samples=0.92 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.861139896373057), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.13431269674711438), 'precision': np.float64(0.8673575129533678), 'f1-score': np.float64(0.8619979402677651)}
+contamination=0.5 | n_estimators=300 | max_samples=0.88 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.872651356993737), 'f1-score': np.float64(0.8640826873385012)}
+contamination=0.5 | n_estimators=300 | max_samples=0.88 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.872651356993737), 'f1-score': np.float64(0.8640826873385012)}
+contamination=0.5 | n_estimators=300 | max_samples=0.88 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.12801678908709338), 'precision': np.float64(0.872651356993737), 'f1-score': np.float64(0.8640826873385012)}
+contamination=0.5 | n_estimators=300 | max_samples=0.89 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8601036269430051), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.8655635987590486), 'f1-score': np.float64(0.8611111111111112)}
+contamination=0.5 | n_estimators=300 | max_samples=0.89 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8601036269430051), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.8655635987590486), 'f1-score': np.float64(0.8611111111111112)}
+contamination=0.5 | n_estimators=300 | max_samples=0.89 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8601036269430051), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.13641133263378805), 'precision': np.float64(0.8655635987590486), 'f1-score': np.float64(0.8611111111111112)}
+contamination=0.5 | n_estimators=300 | max_samples=0.9 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8642487046632125), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8712357217030114), 'f1-score': np.float64(0.8649484536082475)}
+contamination=0.5 | n_estimators=300 | max_samples=0.9 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8642487046632125), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8712357217030114), 'f1-score': np.float64(0.8649484536082475)}
+contamination=0.5 | n_estimators=300 | max_samples=0.9 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8642487046632125), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8712357217030114), 'f1-score': np.float64(0.8649484536082475)}
+contamination=0.5 | n_estimators=300 | max_samples=0.91 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8621761658031089), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.13326337880377753), 'precision': np.float64(0.8683937823834197), 'f1-score': np.float64(0.86302780638517)}
+contamination=0.5 | n_estimators=300 | max_samples=0.91 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8621761658031089), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.13326337880377753), 'precision': np.float64(0.8683937823834197), 'f1-score': np.float64(0.86302780638517)}
+contamination=0.5 | n_estimators=300 | max_samples=0.91 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8621761658031089), 'tpr': np.float64(0.857727737973388), 'fpr': np.float64(0.13326337880377753), 'precision': np.float64(0.8683937823834197), 'f1-score': np.float64(0.86302780638517)}
+contamination=0.5 | n_estimators=300 | max_samples=0.92 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8695652173913043), 'f1-score': np.float64(0.8646423057128153)}
+contamination=0.5 | n_estimators=300 | max_samples=0.92 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8695652173913043), 'f1-score': np.float64(0.8646423057128153)}
+contamination=0.5 | n_estimators=300 | max_samples=0.92 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8597748208802457), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8695652173913043), 'f1-score': np.float64(0.8646423057128153)}
+contamination=0.5 | n_estimators=305 | max_samples=0.88 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8642487046632125), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8735632183908046), 'f1-score': np.float64(0.8645294725956567)}
+contamination=0.5 | n_estimators=305 | max_samples=0.88 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8642487046632125), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8735632183908046), 'f1-score': np.float64(0.8645294725956567)}
+contamination=0.5 | n_estimators=305 | max_samples=0.88 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8642487046632125), 'tpr': np.float64(0.8556806550665302), 'fpr': np.float64(0.12696747114375656), 'precision': np.float64(0.8735632183908046), 'f1-score': np.float64(0.8645294725956567)}
+contamination=0.5 | n_estimators=305 | max_samples=0.89 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8606217616580311), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8664596273291926), 'f1-score': np.float64(0.8615542974781266)}
+contamination=0.5 | n_estimators=305 | max_samples=0.89 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8606217616580311), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8664596273291926), 'f1-score': np.float64(0.8615542974781266)}
+contamination=0.5 | n_estimators=305 | max_samples=0.89 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8606217616580311), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8664596273291926), 'f1-score': np.float64(0.8615542974781266)}
+contamination=0.5 | n_estimators=305 | max_samples=0.9 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8721413721413721), 'f1-score': np.float64(0.8653945332645693)}
+contamination=0.5 | n_estimators=305 | max_samples=0.9 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8721413721413721), 'f1-score': np.float64(0.8653945332645693)}
+contamination=0.5 | n_estimators=305 | max_samples=0.9 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8647668393782384), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.12906610703043023), 'precision': np.float64(0.8721413721413721), 'f1-score': np.float64(0.8653945332645693)}
+contamination=0.5 | n_estimators=305 | max_samples=0.91 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8642487046632125), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8697001034126164), 'f1-score': np.float64(0.8652263374485597)}
+contamination=0.5 | n_estimators=305 | max_samples=0.91 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8642487046632125), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8697001034126164), 'f1-score': np.float64(0.8652263374485597)}
+contamination=0.5 | n_estimators=305 | max_samples=0.91 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8642487046632125), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8697001034126164), 'f1-score': np.float64(0.8652263374485597)}
+contamination=0.5 | n_estimators=305 | max_samples=0.92 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.13326337880377753), 'precision': np.float64(0.868801652892562), 'f1-score': np.float64(0.8647814910025706)}
+contamination=0.5 | n_estimators=305 | max_samples=0.92 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.13326337880377753), 'precision': np.float64(0.868801652892562), 'f1-score': np.float64(0.8647814910025706)}
+contamination=0.5 | n_estimators=305 | max_samples=0.92 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8637305699481865), 'tpr': np.float64(0.8607983623336745), 'fpr': np.float64(0.13326337880377753), 'precision': np.float64(0.868801652892562), 'f1-score': np.float64(0.8647814910025706)}
+contamination=0.5 | n_estimators=310 | max_samples=0.88 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8652849740932642), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8746081504702194), 'f1-score': np.float64(0.8655635987590486)}
+contamination=0.5 | n_estimators=310 | max_samples=0.88 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8652849740932642), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8746081504702194), 'f1-score': np.float64(0.8655635987590486)}
+contamination=0.5 | n_estimators=310 | max_samples=0.88 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8652849740932642), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.1259181532004197), 'precision': np.float64(0.8746081504702194), 'f1-score': np.float64(0.8655635987590486)}
+contamination=0.5 | n_estimators=310 | max_samples=0.89 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8660436137071651), 'f1-score': np.float64(0.8597938144329896)}
+contamination=0.5 | n_estimators=310 | max_samples=0.89 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8660436137071651), 'f1-score': np.float64(0.8597938144329896)}
+contamination=0.5 | n_estimators=310 | max_samples=0.89 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8590673575129534), 'tpr': np.float64(0.8536335721596725), 'fpr': np.float64(0.1353620146904512), 'precision': np.float64(0.8660436137071651), 'f1-score': np.float64(0.8597938144329896)}
+contamination=0.5 | n_estimators=310 | max_samples=0.9 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8642487046632125), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8712357217030114), 'f1-score': np.float64(0.8649484536082475)}
+contamination=0.5 | n_estimators=310 | max_samples=0.9 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8642487046632125), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8712357217030114), 'f1-score': np.float64(0.8649484536082475)}
+contamination=0.5 | n_estimators=310 | max_samples=0.9 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8642487046632125), 'tpr': np.float64(0.8587512794268168), 'fpr': np.float64(0.13011542497376705), 'precision': np.float64(0.8712357217030114), 'f1-score': np.float64(0.8649484536082475)}
+contamination=0.5 | n_estimators=310 | max_samples=0.91 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8621761658031089), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8691588785046729), 'f1-score': np.float64(0.8628865979381444)}
+contamination=0.5 | n_estimators=310 | max_samples=0.91 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8621761658031089), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8691588785046729), 'f1-score': np.float64(0.8628865979381444)}
+contamination=0.5 | n_estimators=310 | max_samples=0.91 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8621761658031089), 'tpr': np.float64(0.8567041965199591), 'fpr': np.float64(0.1322140608604407), 'precision': np.float64(0.8691588785046729), 'f1-score': np.float64(0.8628865979381444)}
+contamination=0.5 | n_estimators=310 | max_samples=0.92 | max_features=0.045 | features_selected=17
+{'acc': np.float64(0.8616580310880829), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8697916666666666), 'f1-score': np.float64(0.8621579762519359)}
+contamination=0.5 | n_estimators=310 | max_samples=0.92 | max_features=0.05 | features_selected=17
+{'acc': np.float64(0.8616580310880829), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8697916666666666), 'f1-score': np.float64(0.8621579762519359)}
+contamination=0.5 | n_estimators=310 | max_samples=0.92 | max_features=0.055 | features_selected=17
+{'acc': np.float64(0.8616580310880829), 'tpr': np.float64(0.8546571136131014), 'fpr': np.float64(0.1311647429171039), 'precision': np.float64(0.8697916666666666), 'f1-score': np.float64(0.8621579762519359)}
