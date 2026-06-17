@@ -19,35 +19,8 @@ def rodar_analise_grafica():
     # Separar as features para o cálculo da correlação (sem a label)
     X = df.drop(columns=['label'])
     
-    # ============================================================
-    # 1. GERAÇÃO DO HEATMAP DE CORRELAÇÃO (PEARSON)
-    # ============================================================
     matriz_corr = X.corr(method='pearson')
-    
-    plt.figure(figsize=(18, 14))
-    # Máscara para esconder a metade superior simétrica, deixando o gráfico limpo
-    mask = np.triu(np.ones_like(matriz_corr, dtype=bool))
-    
-    sns.heatmap(
-        matriz_corr, 
-        mask=mask, 
-        annot=False,            # False para não sobrecarregar visualmente devido ao número de features
-        cmap='coolwarm', 
-        vmin=-1, 
-        vmax=1, 
-        linewidths=0.5
-    )
-    plt.title("Matriz de Correlação Linear (Pearson) - PDF Features", fontsize=16)
-    plt.tight_layout()
-    
-    heatmap_path = "Images/novo_heatmap_features_pearson.png"
-    plt.savefig(heatmap_path)
-    plt.close()
-    print(f"Heatmap salvo com sucesso em: {heatmap_path}")
-    
-    # Salvar a matriz em modo texto conforme o padrão do repositório (ex: matrix_pearson.txt)
-    with open("matrix_pearson_atualizada.txt", "w") as f:
-        f.write(matriz_corr.to_string())
+
         
     # ============================================================
     # 2. GERAÇÃO DOS HISTOGRAMAS (DISTRIBUIÇÃO BENIGNO VS MALICIOSO)
