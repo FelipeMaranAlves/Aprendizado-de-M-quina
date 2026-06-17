@@ -12,3 +12,41 @@ A área azul à esquerda da linha preta representa os PDFs benignos classificado
 A área vermelha à direita da linha representa as ameaças (malwares) detectadas com sucesso.
 Qualquer vermelho à esquerda da linha é um Falso Negativo (vírus que passou).
 Qualquer azul à direita da linha é um Falso Positivo (arquivo limpo bloqueado).
+
+============================================================
+          DIAGNÓSTICO VISUAL DE ANOMALIAS (K-MEANS)
+============================================================
+
+1. CALIBRAÇÃO DE THRESHOLD (COMPARAÇÃO):
+Foi realizada uma calibração cruzada utilizando o conjunto de Validação,
+comparando duas métricas de otimização de limiar:
+  - Otimização via F1-Score:  4.1786 (F1 Max: 0.9107)
+  - Otimização via Youden:    17.0614 (Youden Max: 0.8431)
+
+O Índice de Youden foi adotado como limiar final por maximizar a distância entre a
+Taxa de Verdadeiros Positivos (TPR) e Falsos Positivos (FPR), garantindo maior robustez
+em cenários desbalanceados de segurança da informação.
+
+2. INTERPRETAÇÃO DO GRÁFICO (CONJUNTO DE TESTE):
+A linha sólida preta representa o corte do Índice de Youden, enquanto a pontilhada roxa
+representa o F1-Score. A área azul à esquerda da linha preta representa os PDFs benignos
+corretamente validados. A área vermelha à direita são os malwares bloqueados.
+
+============================================================
+          DIAGNÓSTICO VISUAL DE ANOMALIAS (K-MEANS)
+============================================================
+
+1. CALIBRAÇÃO DE THRESHOLD (COMPARAÇÃO):
+Foi realizada uma calibração cruzada utilizando o conjunto de Validação,
+comparando duas métricas de otimização de limiar:
+  - Otimização via F1-Score:  4.1786 (F1 Max: 0.9107)
+  - Otimização via Youden:    17.0614 (Youden Max: 0.8431)
+
+O Índice de Youden foi adotado como limiar final por maximizar a distância entre a
+Taxa de Verdadeiros Positivos (TPR) e Falsos Positivos (FPR), garantindo maior robustez
+em cenários desbalanceados de segurança da informação.
+
+2. INTERPRETAÇÃO DO GRÁFICO (CONJUNTO DE TESTE):
+A linha sólida preta representa o corte do Índice de Youden, enquanto a pontilhada roxa
+representa o F1-Score. A área azul à esquerda da linha preta representa os PDFs benignos
+corretamente validados. A área vermelha à direita são os malwares bloqueados.

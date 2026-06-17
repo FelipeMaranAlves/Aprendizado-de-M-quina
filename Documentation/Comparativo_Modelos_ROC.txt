@@ -1,0 +1,30 @@
+============================================================
+       COMPARAÇÃO DE MODELOS - ANOMALY DETECTION
+============================================================
+
+Foi realizada uma avaliação frente a frente dos modelos K-Means e
+Isolation Forest utilizando o mesmo conjunto de testes para evitar viés.
+
+RESULTADOS (Área Sob a Curva ROC):
+  - K-Means:          0.9722
+  - Isolation Forest: 0.8224
+
+CONCLUSÃO:
+O modelo K-Means apresentou a maior AUC, indicando uma capacidade superior de distinguir entre PDFs benignos e maliciosos independentemente do limiar (threshold) escolhido.
+
+============================================================
+       COMPARAÇÃO DE MODELOS - ANOMALY DETECTION
+============================================================
+
+Foi realizada uma avaliação frente a frente dos três modelos base utilizando o
+mesmo conjunto estrito de testes para garantir a ausência de viés metodológico.
+O parâmetro eps do DBSCAN foi afinado autonomamente via conjunto de validação.
+
+RESULTADOS (Área Sob a Curva ROC - AUC):
+  - K-Means:          0.9722
+  - DBSCAN:           0.9853 (Melhor eps: 3.0)
+  - Isolation Forest: 0.8224
+
+CONCLUSÃO:
+O modelo DBSCAN apresentou a maior AUC, comprovando ser a arquitetura mais
+robusta para detetar ficheiros PDF maliciosos neste conjunto de dados.

@@ -1,9 +1,9 @@
 import os
-from sessions.analise_visual_avancada import rodar
+from sessions.comparativo_roc import rodar
 
 if __name__ == "__main__":
     
-    print("Executando Análise Avançada...")
+    print("Executando Comparativo...")
     rodar()
     
 
