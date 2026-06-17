@@ -4,29 +4,16 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from utils import documentar
+from pipeline import carregar
 
-def _preparar_dados():
-    # Padrão de carregamento do repositório
-    df = pd.read_csv("data/PDF_All_feature_Clean.csv")
-    if 'file_path' in df.columns:
-        df.drop(columns='file_path', inplace=True)
-    return df
-
-def rodar_analise_grafica():
+def rodar():
     os.makedirs("Images", exist_ok=True)
-    df = _preparar_dados()
+    df = carregar()
     
-    # Separar as features para o cálculo da correlação (sem a label)
+    # Separar as features para plotagem (sem a label)
     X = df.drop(columns=['label'])
     
-    matriz_corr = X.corr(method='pearson')
-
-        
-    # ============================================================
-    # 2. GERAÇÃO DOS HISTOGRAMAS (DISTRIBUIÇÃO BENIGNO VS MALICIOSO)
-    # ============================================================
-    # Como o dataset possui mais de 30 features, plotar todas em um único grid 
-    # deixaria os gráficos ilegíveis. Vamos dividir em blocos de 12 features.
+    # 1. GERAÇÃO DOS HISTOGRAMAS (DISTRIBUIÇÃO BENIGNO VS MALICIOSO)
     features_list = list(X.columns)
     tamanho_bloco = 12
     
@@ -41,6 +28,8 @@ def rodar_analise_grafica():
         fig, axes = plt.subplots(nrows=n_rows, ncols=n_cols, figsize=(16, 4 * n_rows))
         axes = axes.flatten()
         
+        # Variável para rastrear o índice interno do subplot preenchido
+        idx_feat = 0
         for idx_feat, col in enumerate(bloco_features):
             # Histograma comparativo usando hue='label' (0=Benigno, 1=Malicioso)
             sns.histplot(
@@ -58,7 +47,7 @@ def rodar_analise_grafica():
             axes[idx_feat].set_xlabel("")
             axes[idx_feat].set_ylabel("Frequência")
             
-        # Ocultar subplots vazios caso o último bloco não complete o grid
+        # Ocultar subplots vazios caso o último bloco não complete o grid 4x3
         for j in range(idx_feat + 1, len(axes)):
             fig.delaxes(axes[j])
             
@@ -68,31 +57,19 @@ def rodar_analise_grafica():
         plt.close()
         print(f"Bloco {idx_bloco + 1} de Histogramas salvo em: {hist_path}")
 
-    # ============================================================
-    # 3. DOCUMENTAÇÃO DAS CONCLUSÕES E NOTAS
-    # ============================================================
-    # Identificar as correlações mais fortes para registrar no relatório
-    corr_flat = matriz_corr.unstack()
-    corr_ordenada = corr_flat[corr_flat != 1.0].drop_duplicates().abs().sort_values(ascending=False)
-    top_correlacionadas = corr_ordenada.head(5)
-    
+    # 2. DOCUMENTAÇÃO DAS CONCLUSÕES E NOTAS
     doc_texto = (
         "============================================================\n"
-        "         RELATÓRIO DE ANÁLISE VISUAL E CORRELAÇÃO\n"
+        "         RELATÓRIO DE ANÁLISE VISUAL DE DISTRIBUIÇÃO\n"
         "============================================================\n\n"
-        "1. ANÁLISE DE MULTICOLINEARIDADE (HEATMAP):\n"
-        "Abaixo estão listadas os pares de features com maior correlação linear absoluta,\n"
-        "o que pode gerar redundância em algoritmos baseados em distância (K-Means/DBSCAN):\n"
-    )
-    for (f1, f2), val in top_correlacionadas.items():
-        doc_texto += f"  - {f1} <-> {f2} | Correlação Absoluta: {val:.4f}\n"
-        
-    doc_texto += (
-        "\n2. ANÁLISE DE DISTRIBUIÇÃO (HISTOGRAMAS):\n"
+        "1. ANÁLISE DE DISTRIBUIÇÃO (HISTOGRAMAS):\n"
         "Os histogramas gerados dividem a frequência das features por classe (0 = Benigno, 1 = Malicioso).\n"
         "Observou-se que features estruturais do PDF (ex: contagem de objetos ou streams específicos)\n"
         "apresentam forte assimetria à direita, concentrando a classe benigna próxima de zero,\n"
-        "enquanto anomalias/malwares deslocam-se para caudas mais longas com valores elevados.\n"
+        "enquanto anomalias/malwares deslocam-se para caudas mais longas com valores elevados.\n\n"
+        "Esses gráficos confirmam visualmente a viabilidade de utilizar algoritmos de detecção\n"
+        "de anomalias (K-Means/DBSCAN), dado que o comportamento dos metadados maliciosos quebra\n"
+        "significativamente o padrão de densidade e escala estabelecido pelos arquivos benignos.\n"
     )
     
     documentar("Analise_Visual_Features", doc_texto)

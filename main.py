@@ -1,5 +1,9 @@
-from sessions.anomaly_detection.autoencoder3camadas import rodar as rodar_autoencoder
+import os
+from sessions.analise_visual_avancada import rodar
 
-rodar_autoencoder()
-
+if __name__ == "__main__":
+    
+    print("Executando Análise Avançada...")
+    rodar()
+    
 

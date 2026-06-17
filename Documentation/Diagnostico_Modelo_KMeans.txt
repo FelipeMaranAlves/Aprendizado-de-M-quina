@@ -1,0 +1,14 @@
+============================================================
+          DIAGNÓSTICO VISUAL DE ANOMALIAS (K-MEANS)
+============================================================
+
+1. METODOLOGIA (ZERO DATA LEAKAGE):
+O limiar de corte (Threshold) foi calibrado utilizando exclusivamente o conjunto
+de Validação, encontrando o valor ótimo de 4.1786 (Max F1: 0.9107).
+Este limite foi então projetado cegamente no conjunto de Teste.
+
+2. INTERPRETAÇÃO DO GRÁFICO:
+A área azul à esquerda da linha preta representa os PDFs benignos classificados corretamente.
+A área vermelha à direita da linha representa as ameaças (malwares) detectadas com sucesso.
+Qualquer vermelho à esquerda da linha é um Falso Negativo (vírus que passou).
+Qualquer azul à direita da linha é um Falso Positivo (arquivo limpo bloqueado).

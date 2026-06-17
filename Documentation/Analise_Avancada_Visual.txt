@@ -1,0 +1,18 @@
+============================================================
+       RELATÓRIO DE VISUALIZAÇÃO AVANÇADA E DIAGNÓSTICO
+============================================================
+
+1. HISTOGRAMAS LOGARÍTMICOS:
+A aplicação de escala logarítmica no eixo Y permitiu visualizar ameaças discretas
+escondidas nas caudas longas das distribuições de contagem estrutural.
+
+2. VIOLIN PLOTS:
+Validou-se visualmente a hipótese de densidade do DBSCAN: a classe benigna (0)
+forma corpos compactos e estreitos de alta densidade, enquanto a classe maliciosa
+se dispersa de forma irregular com forte presença de outliers geométricos.
+
+3. DIAGNÓSTICO DE SCORES DE ANOMALIA:
+O gráfico de scores demonstra graficamente a separabilidade das classes por distância.
+PDFs que acumulam scores baixos (à esquerda) pertencem à população benigna. À medida
+que o score avança à direita da linha de corte (Threshold), a concentração de falsos
+negativos cai e a detecção de malwares é isolada com sucesso.
