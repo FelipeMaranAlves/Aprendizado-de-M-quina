@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score, roc_curve
 from utils import documentar, caminho_imagem
 from utilsDoProfessor import get_overall_metrics
+from pipeline import tratar_outliers_treino
 
 
 def _preparar_dados():
@@ -25,6 +26,8 @@ def _preparar_dados():
     X_val = Xy_val.drop(columns=['label'])
     y_test = Xy_test['label'].values
     X_test = Xy_test.drop(columns=['label'])
+
+    X_train, X_val, X_test = tratar_outliers_treino(X_train, X_val, X_test)
 
     std_scaler = StandardScaler()
     std_scaler.fit(X_train)

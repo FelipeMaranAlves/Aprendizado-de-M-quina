@@ -173,3 +173,14 @@ K=8 | silhouette=0.2502480243851917 | inertia=152470.95010350633
 K=9 | silhouette=0.23665569899990915 | inertia=146189.50611475037
 >>>>>>> 8f4de4b (Adiciona heatmap de Pearson e histogramas das features em blocos):Documentation/Clustering.txt
 K=10 | silhouette=0.26044178857402367 | inertia=138995.19303605077
+
+Experimento K-Means - silhouette e inertia por K
+K=2 | silhouette=0.32094159166518976 | inertia=95794.53913189642
+K=3 | silhouette=0.24143684117134423 | inertia=81369.67196781943
+K=4 | silhouette=0.24768528633373216 | inertia=72137.11745452357
+K=5 | silhouette=0.2502302237671708 | inertia=63815.39691284707
+K=6 | silhouette=0.25817451611161196 | inertia=58440.4528347922
+K=7 | silhouette=0.25049312383003136 | inertia=54669.25143032524
+K=8 | silhouette=0.23929793457219933 | inertia=51512.346667228005
+K=9 | silhouette=0.2537786150292841 | inertia=48445.553899327206
+K=10 | silhouette=0.2525808233843113 | inertia=46511.437799550644

@@ -1,8 +1,8 @@
 import os
-from sessions.diagnostico_isolation_forast import rodar
+from sessions.clustering.clustering import rodar
 
 if __name__ == "__main__":
     
-    print("Executando Diagnóstico...")
+    print("Executando cluster...")
     rodar()
 
