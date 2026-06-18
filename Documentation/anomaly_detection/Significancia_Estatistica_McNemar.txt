@@ -1,0 +1,29 @@
+Teste de significancia estatistica (McNemar exato) entre os modelos
+Tamanho do conjunto de teste: 1930 amostras
+H0: os dois modelos tem a mesma taxa de erro (discordancias divididas 50/50 entre os dois sentidos).
+Comparando, par a par, apenas as amostras em que os dois modelos discordam entre si.
+
+K-Means vs DBSCAN
+  Só K-Means acerta: 15 | Só DBSCAN acerta: 125
+  p-valor (McNemar exato): 8.895e-23 | diferença significativa (alpha=0.05)? SIM
+
+K-Means vs Isolation Forest
+  Só K-Means acerta: 85 | Só Isolation Forest acerta: 78
+  p-valor (McNemar exato): 0.6385 | diferença significativa (alpha=0.05)? nao
+
+K-Means vs Autoencoder
+  Só K-Means acerta: 87 | Só Autoencoder acerta: 31
+  p-valor (McNemar exato): 2.482e-07 | diferença significativa (alpha=0.05)? SIM
+
+DBSCAN vs Isolation Forest
+  Só DBSCAN acerta: 165 | Só Isolation Forest acerta: 48
+  p-valor (McNemar exato): 3.187e-16 | diferença significativa (alpha=0.05)? SIM
+
+DBSCAN vs Autoencoder
+  Só DBSCAN acerta: 203 | Só Autoencoder acerta: 37
+  p-valor (McNemar exato): 6.277e-29 | diferença significativa (alpha=0.05)? SIM
+
+Isolation Forest vs Autoencoder
+  Só Isolation Forest acerta: 126 | Só Autoencoder acerta: 77
+  p-valor (McNemar exato): 0.0007156 | diferença significativa (alpha=0.05)? SIM
+
